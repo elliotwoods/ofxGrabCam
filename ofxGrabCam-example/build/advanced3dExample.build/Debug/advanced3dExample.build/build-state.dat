@@ -1,1985 +1,0 @@
-Tadvanced3dExample
-v3
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist openFrameworks-Info.plist
-cProcessPCH++ /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-cLd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug normal i386
-cPhaseScriptExecution "Run Script" /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-cPBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
-cTouch /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004E29B7DF00000000000000EE
-t1311356895
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
-c000000004A12050C0000000000000475
-t1242694924
-s1141
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-c000000004C23BF2D00000000000005FF
-t1277411117
-s1535
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
-c000000004A11F0980000000000000400
-t1242689688
-s1024
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenAL.framework/Headers/al.h
-c000000004C23B11200000000000064F9
-t1277407506
-s25849
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenAL.framework/Headers/alc.h
-c000000004C23B1120000000000001F41
-t1277407506
-s8001
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h
-c000000004BD2501F0000000000025B59
-t1272074271
-s154457
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h
-c000000004BD2501F0000000000003F84
-t1272074271
-s16260
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/QuickTime.framework/Headers/QuickTime.h
-c000000004C23C4D00000000000000659
-t1277412560
-s1625
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/TargetConditionals.h
-c000000004A11A9B300000000000031E9
-t1242671539
-s12777
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/errno.h
-c000000004BBD2CE900000000000003EB
-t1270689001
-s1003
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/inttypes.h
-c000000004BBD2CE900000000000027D1
-t1270689001
-s10193
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/libkern/OSAtomic.h
-c000000004BBD2CE90000000000002519
-t1270689001
-s9497
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
-c000000004BBD2CE900000000000038F0
-t1270689001
-s14576
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/setjmp.h
-c000000004BBD2CE90000000000000438
-t1270689001
-s1080
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdint.h
-c000000004DFA706800000000000018EF
-t1308258408
-s6383
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004BBD2CE90000000000004174
-t1270689001
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
-c000000004BBD2CE90000000000002DF5
-t1270689001
-s11765
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
-c000000004BBD2CE90000000000001731
-t1270689001
-s5937
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h
-c000000004C2399490000000000001845
-t1277401417
-s6213
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/select.h
-c000000004C23994700000000000016A2
-t1277401415
-s5794
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/termios.h
-c000000004BBD2CE900000000000004D4
-t1270689001
-s1236
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
-c000000004BBD2CE9000000000000563E
-t1270689001
-s22078
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
-c000000004D55C8270000000000000D03
-t1297467431
-s3331
-i"syslimits.h"
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
-c000000004D55C8260000000000003197
-t1297467430
-s12695
-i<machine/ansi.h>
-i<sys/_types.h>
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
-c000000004D55CD3B000000000000190C
-t1297468731
-s6412
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/syslimits.h
-c000000004D55C5660000000000000155
-t1297466726
-s341
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/limits.h
-c000000004DD0AF080000000000000D03
-t1305521928
-s3331
-i"syslimits.h"
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/stddef.h
-c000000004DD0AF080000000000003197
-t1305521928
-s12695
-i<machine/ansi.h>
-i<sys/_types.h>
-
-N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include/syslimits.h
-c000000004DD0ADAD0000000000000155
-t1305521581
-s341
-
-N/System/Library/Frameworks/AGL.framework/AGL
-c000000004E29905F000000000001BA20
-t1311346783
-s113184
-
-N/System/Library/Frameworks/AppKit.framework/AppKit
-c000000004E298FE00000000002334120
-t1311346656
-s36913440
-
-N/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
-c000000004E298FE1000000000000B750
-t1311346657
-s46928
-
-N/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
-c000000004AC6B3050000000000000477
-t1254535941
-s1143
-
-N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c000000004E298FE3000000000039E500
-t1311346659
-s3794176
-
-N/System/Library/Frameworks/Carbon.framework/Carbon
-c000000004E298FE20000000000006530
-t1311346658
-s25904
-
-N/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-c00000000000000000000000000000000
-t2
-s0
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004E298FE20000000000006560
-t1311346658
-s25952
-
-N/System/Library/Frameworks/CoreAudio.framework/CoreAudio
-c000000004E298FE30000000000117470
-t1311346659
-s1143920
-
-N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-c000000004E298FE2000000000060D5E0
-t1311346658
-s6346208
-
-N/System/Library/Frameworks/CoreServices.framework/CoreServices
-c000000004E298FE5000000000000B870
-t1311346661
-s47216
-
-N/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
-c000000004B90FA5D0000000000000401
-t1267792477
-s1025
-
-N/System/Library/Frameworks/IOKit.framework/IOKit
-c000000004E298FED000000000011FD50
-t1311346669
-s1178960
-
-N/System/Library/Frameworks/OpenAL.framework/Headers/al.h
-c000000004B9106A400000000000064F9
-t1267795620
-s25849
-
-N/System/Library/Frameworks/OpenAL.framework/Headers/alc.h
-c000000004B9106A40000000000001F41
-t1267795620
-s8001
-
-N/System/Library/Frameworks/OpenGL.framework/Headers/gl.h
-c000000004B8E4E9E0000000000025B59
-t1267617438
-s154457
-
-N/System/Library/Frameworks/OpenGL.framework/Headers/glu.h
-c000000004B8E4E9E0000000000003F84
-t1267617438
-s16260
-
-N/System/Library/Frameworks/OpenGL.framework/OpenGL
-c000000004E298FF3000000000002D2A0
-t1311346675
-s184992
-
-N/System/Library/Frameworks/QuickTime.framework/Headers/QuickTime.h
-c000000004CC420410000000000000659
-t1287921729
-s1625
-
-N/System/Library/Frameworks/QuickTime.framework/QuickTime
-c000000004E2990B2000000000032B6C0
-t1311346866
-s3323584
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx/freeimage.a
-c000000004D74C2B30000000000535E34
-t1299497651
-s5463604
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/include/fmod.h
-c000000004D74C2B50000000000028E68
-t1299497653
-s167528
-i"fmod_codec.h"
-i"fmod_dsp.h"
-i"fmod_memoryinfo.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/include/fmod_errors.h
-c000000004D74C2B50000000000003408
-t1299497653
-s13320
-i"fmod.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/lib/osx/libfmodex.dylib
-c000000004D74C2B500000000001DD8CC
-t1299497653
-s1956044
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freetype/lib/osx/freetype.a
-c000000004D74C2B700000000000AB9E8
-t1299497655
-s702952
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/include/GL/glew.h
-c000000004D74C2B700000000000C1916
-t1299497655
-s792854
-i<stddef.h>
-i<inttypes.h>
-i<stdint.h>
-i<inttypes.h>
-i<OpenGL/glu.h>
-i<GL/glu.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx/glew.a
-c000000004D74C2B7000000000009ECC8
-t1299497655
-s650440
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx/GLUT.framework
-c000000004D74C2B700000000000000CC
-t1299497655
-s204
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx/GLUT.framework/GLUT
-c000000004D74C2B70000000000092A98
-t1299497655
-s600728
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoFoundation.a
-c000000004D74C2BE000000000027E698
-t1299497662
-s2614936
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoNet.a
-c000000004D74C2BE00000000001854B0
-t1299497662
-s1594544
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoUtil.a
-c000000004D74C2BE0000000000090708
-t1299497662
-s591624
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoXML.a
-c000000004D74C2BE0000000000107FD0
-t1299497662
-s1081296
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/rtAudio/lib/osx/rtAudio.a
-c000000004D74C2CE00000000000BC8E8
-t1299497678
-s772328
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
-t1314945768
-s102
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
-t1299498290
-s204
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist
-t1314945756
-s1019
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug
-t1314945768
-s3728304
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/PkgInfo
-t1314945756
-s8
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
-t1299498290
-s631
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o
-t1314945762
-s88160
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o
-t1314945763
-s86008
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o
-t1314945764
-s92980
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/advanced3dExampleDebug.LinkFileList
-c000000004DF091E4000000000000034E
-t1307611620
-s846
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o
-t1314945761
-s122364
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o
-t1314945762
-s129964
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-c000000004DF091E4000000000000010F
-t1307611620
-s271
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist
-c000000004D74C2AC0000000000000277
-t1299497644
-s631
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp
-c000000004D74C2AC0000000000000940
-t1299497644
-s2368
-i"Grid.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h
-c000000004D74C2AC000000000000014D
-t1299497644
-s333
-i"ofMain.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp
-c000000004DBD20E600000000000003D8
-t1304240358
-s984
-i"OrthoCamera.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h
-c000000004D74C2AC000000000000019C
-t1299497644
-s412
-i"ofMain.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp
-c000000004D74C2AC0000000000000E30
-t1299497644
-s3632
-i"Swarm.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h
-c000000004D74C2AC000000000000027A
-t1299497644
-s634
-i"ofMain.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp
-c000000004D74C2AC000000000000019E
-t1299497644
-s414
-i"ofMain.h"
-i"testApp.h"
-i"ofAppGlutWindow.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp
-c000000004DF08C6E00000000000024C3
-t1307610222
-s9411
-i"testApp.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h
-c000000004D74C2AC0000000000000780
-t1299497644
-s1920
-i"ofMain.h"
-i"Swarm.h"
-i"Grid.h"
-i"OrthoCamera.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod.h
-c000000004D74C2B50000000000028E68
-t1299497653
-s167528
-i"fmod_codec.h"
-i"fmod_dsp.h"
-i"fmod_memoryinfo.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_codec.h
-c000000004D74C2B5000000000000334A
-t1299497653
-s13130
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_dsp.h
-c000000004D74C2B5000000000000892F
-t1299497653
-s35119
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_errors.h
-c000000004D74C2B50000000000003408
-t1299497653
-s13320
-i"fmod.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_memoryinfo.h
-c000000004D74C2B50000000000003C95
-t1299497653
-s15509
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/glew/include/GL/glew.h
-c000000004D74C2B700000000000C1916
-t1299497655
-s792854
-i<stddef.h>
-i<inttypes.h>
-i<stdint.h>
-i<inttypes.h>
-i<OpenGL/glu.h>
-i<GL/glu.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/of3dUtils.h
-c000000004E527F4B0000000000000047
-t1314029387
-s71
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofCamera.h
-c000000004E0626550000000000000858
-t1309025877
-s2136
-i"ofRectangle.h"
-i"ofAppRunner.h"
-i"ofNode.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofEasyCam.h
-c000000004DBD20E7000000000000053C
-t1304240359
-s1340
-i"ofCamera.h"
-i"ofEvents.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofLight.h
-c000000004D74C2B70000000000000565
-t1299497655
-s1381
-i"ofNode.h"
-i"ofColor.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofMesh.h
-c000000004DF08C6E0000000000001041
-t1307610222
-s4161
-i"ofVec3f.h"
-i"ofVec2f.h"
-i"ofColor.h"
-i"ofUtils.h"
-i"ofConstants.h"
-i"ofGLUtils.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofNode.h
-c000000004D74C2B7000000000000143C
-t1299497655
-s5180
-i"ofVectorMath.h"
-i"of3dUtils.h"
-i"ofGraphics.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofPrimitive.h
-c000000004D74C2B700000000000013CD
-t1299497655
-s5069
-i"ofVec3f.h"
-i"ofVec2f.h"
-i"ofColor.h"
-i"ofUtils.h"
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofVbo.h
-c000000004D74C2B700000000000008CC
-t1299497655
-s2252
-i"ofConstants.h"
-i"ofVec3f.h"
-i"ofColor.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofAppBaseWindow.h
-c000000004DF08C6E0000000000000595
-t1307610222
-s1429
-i"ofPoint.h"
-i"ofTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofAppGlutWindow.h
-c000000004DF08C6E00000000000006AA
-t1307610222
-s1706
-i"ofConstants.h"
-i"ofAppBaseWindow.h"
-i"ofEvents.h"
-i"ofTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofAppRunner.h
-c000000004DF08C6E000000000000075D
-t1307610222
-s1885
-i"ofConstants.h"
-i"ofPoint.h"
-i"ofRectangle.h"
-i"ofTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofBaseApp.h
-c000000004DF08C6E0000000000000377
-t1307610222
-s887
-i"ofPoint.h"
-i"ofEvents.h"
-i"ofBaseTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/communication/ofArduino.h
-c000000004DBD20E70000000000004200
-t1304240359
-s16896
-i<list>
-i<vector>
-i<string>
-i<iostream>
-i"ofEvents.h"
-i"ofSerial.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/communication/ofSerial.h
-c000000004DBD20E70000000000000DA9
-t1304240359
-s3497
-i"ofConstants.h"
-i"ofTypes.h"
-i<termios.h>
-i<winbase.h>
-i<tchar.h>
-i<iostream>
-i<string.h>
-i<setupapi.h>
-i<regstr.h>
-i<winioctl.h>
-i<initguid.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/events/ofEventUtils.h
-c000000004DFC92410000000000000DAD
-t1308398145
-s3501
-i"ofConstants.h"
-i"Poco/FIFOEvent.h"
-i"Poco/Delegate.h"
-i<stdio.h>
-i<stdlib.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/events/ofEvents.h
-c000000004DBD20E70000000000001B97
-t1304240359
-s7063
-i"ofConstants.h"
-i"ofPoint.h"
-i"ofEventUtils.h"
-i"ofxEventUtils.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofFbo.h
-c000000004DF08C6E0000000000000BD1
-t1307610222
-s3025
-i"ofTexture.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofGLUtils.h
-c000000004DBD20E70000000000000A33
-t1304240359
-s2611
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofLight.h
-c000000004DF08C6E000000000000061C
-t1307610222
-s1564
-i"ofNode.h"
-i"ofColor.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofShader.h
-c000000004DF08C2A0000000000000F84
-t1307610154
-s3972
-i"ofConstants.h"
-i"ofBaseTypes.h"
-i"ofTexture.h"
-i<map>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofTexture.h
-c000000004DF08C6E0000000000000F78
-t1307610222
-s3960
-i"ofPoint.h"
-i"ofRectangle.h"
-i"ofBaseTypes.h"
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofVbo.h
-c000000004E18F2950000000000000A11
-t1310257813
-s2577
-i"ofConstants.h"
-i"ofVec3f.h"
-i"ofColor.h"
-i"ofUtils.h"
-i"ofMesh.h"
-i"ofGLUtils.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/gl/ofVboMesh.h
-c000000004DF08C6E0000000000000114
-t1307610222
-s276
-i"ofMesh.h"
-i"ofVbo.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofFbo.h
-c000000004D74C2B70000000000000B79
-t1299497655
-s2937
-i"ofTexture.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofGraphics.h
-c000000004DF08C6E0000000000001CB1
-t1307610222
-s7345
-i"ofConstants.h"
-i"ofColor.h"
-i"ofPoint.h"
-i"ofMatrix4x4.h"
-i"ofRectangle.h"
-i"ofTypes.h"
-i"ofBaseTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofImage.h
-c000000004DF08C6E0000000000001B01
-t1307610222
-s6913
-i"ofFileUtils.h"
-i"ofTexture.h"
-i"ofPixels.h"
-i"ofBaseTypes.h"
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPath.h
-c000000004DF08C6E00000000000010E8
-t1307610222
-s4328
-i"ofConstants.h"
-i"ofPoint.h"
-i"ofColor.h"
-i"ofPolyline.h"
-i"ofBaseTypes.h"
-i"ofMesh.h"
-i"ofTessellator.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPixelUtils.h
-c000000004D74C2B7000000000000020E
-t1299497655
-s526
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPixels.h
-c000000004DF08C6E0000000000000EEC
-t1307610222
-s3820
-i"ofConstants.h"
-i"ofUtils.h"
-i"ofColor.h"
-i"ofMath.h"
-i<limits>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPolyline.h
-c000000004DF08C6E0000000000000C16
-t1307610222
-s3094
-i"ofPoint.h"
-i"ofConstants.h"
-i<deque>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofShader.h
-c000000004D74C2B70000000000000F86
-t1299497655
-s3974
-i"ofConstants.h"
-i"ofBaseTypes.h"
-i"ofTexture.h"
-i<map>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofShape.h
-c000000004D74C2B70000000000001195
-t1299497655
-s4501
-i"ofConstants.h"
-i"ofPoint.h"
-i"ofColor.h"
-i"ofPolyline.h"
-i"ofBaseTypes.h"
-i"ofPrimitive.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofTessellator.h
-c000000004DF08C6E0000000000000459
-t1307610222
-s1113
-i"ofConstants.h"
-i"ofMesh.h"
-i"ofTypes.h"
-i"ofPolyline.h"
-i"tesselator.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofTexture.h
-c000000004D74C2B7000000000000110F
-t1299497655
-s4367
-i"ofPoint.h"
-i"ofRectangle.h"
-i"ofBaseTypes.h"
-i"Poco/SharedPtr.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofTrueTypeFont.h
-c000000004DF08C6E0000000000000891
-t1307610222
-s2193
-i<vector>
-i"ofPoint.h"
-i"ofRectangle.h"
-i"ofConstants.h"
-i"ofPath.h"
-i"ofTexture.h"
-i"ofMesh.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofMath.h
-c000000004D74C2B70000000000000A73
-t1299497655
-s2675
-i"ofPoint.h"
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofMatrix3x3.h
-c000000004D74C2B70000000000000A4C
-t1299497655
-s2636
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofMatrix4x4.h
-c000000004E08CBC60000000000006D64
-t1309199302
-s28004
-i"ofVec3f.h"
-i"ofVec4f.h"
-i"ofQuaternion.h"
-i"ofConstants.h"
-i<cmath>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofQuaternion.h
-c000000004DBD20E700000000000033BD
-t1304240359
-s13245
-i"ofConstants.h"
-i"ofVec3f.h"
-i"ofVec4f.h"
-i<cmath>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVec2f.h
-c000000004D74C2B8000000000000407D
-t1299497656
-s16509
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVec3f.h
-c000000004D74C2B800000000000061A8
-t1299497656
-s25000
-i"ofVec2f.h"
-i"ofVec4f.h"
-i"ofConstants.h"
-i<cmath>
-i<iostream>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVec4f.h
-c000000004D74C2B80000000000002EC3
-t1299497656
-s11971
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVectorMath.h
-c000000004D74C2B80000000000000099
-t1299497656
-s153
-i"ofVec2f.h"
-i"ofVec3f.h"
-i"ofVec4f.h"
-i"ofMatrix3x3.h"
-i"ofMatrix4x4.h"
-i"ofQuaternion.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/ofMain.h
-c000000004DF08C6E000000000000055B
-t1307610222
-s1371
-i"ofConstants.h"
-i"ofFileUtils.h"
-i"ofSystemUtils.h"
-i"ofThread.h"
-i"ofURLFileLoader.h"
-i"ofUtils.h"
-i"ofBaseTypes.h"
-i"ofTypes.h"
-i"ofColor.h"
-i"ofPoint.h"
-i"ofRectangle.h"
-i"ofMath.h"
-i"ofVectorMath.h"
-i"ofSerial.h"
-i"ofArduino.h"
-i"ofTexture.h"
-i"ofTrueTypeFont.h"
-i"ofGraphics.h"
-i"ofImage.h"
-i"ofFbo.h"
-i"ofShader.h"
-i"ofPixels.h"
-i"ofBaseApp.h"
-i"ofAppRunner.h"
-i"ofSoundStream.h"
-i"ofSoundPlayer.h"
-i"ofVideoGrabber.h"
-i"ofVideoPlayer.h"
-i"ofEvents.h"
-i"ofVbo.h"
-i"of3dUtils.h"
-i"ofNode.h"
-i"ofCamera.h"
-i"ofMesh.h"
-i"ofEasyCam.h"
-i"ofLight.h"
-i"ofVboMesh.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofBaseSoundPlayer.h
-c000000004D74C2B80000000000000366
-t1299497656
-s870
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofBaseSoundStream.h
-c000000004DBD20E700000000000002D4
-t1304240359
-s724
-i"ofConstants.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofFmodSoundPlayer.h
-c000000004D74C2B800000000000006D9
-t1299497656
-s1753
-i"ofConstants.h"
-i"ofBaseSoundPlayer.h"
-i"fmod.h"
-i"fmod_errors.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofOpenALSoundPlayer.h
-c000000004DBD20E70000000000000E81
-t1304240359
-s3713
-i"ofConstants.h"
-i"ofBaseSoundPlayer.h"
-i"ofEvents.h"
-i"ofThread.h"
-i<OpenAL/al.h>
-i<OpenAL/alc.h>
-i<AL/al.h>
-i<AL/alc.h>
-i"kiss_fft.h"
-i"kiss_fftr.h"
-i<sndfile.h>
-i<mpg123.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofRtAudioSoundStream.h
-c000000004DF08C6E00000000000004A5
-t1307610222
-s1189
-i"ofConstants.h"
-i"ofBaseSoundStream.h"
-i"ofTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundEffect.h
-c000000004D74C2B80000000000000946
-t1299497656
-s2374
-i"ofSoundUnit.h"
-i<vector>
-i<deque>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundPlayer.h
-c000000004DF08C6E00000000000008F3
-t1307610222
-s2291
-i"ofConstants.h"
-i"ofTypes.h"
-i"fmod.h"
-i"fmod_errors.h"
-i"ofBaseTypes.h"
-i"ofBaseSoundPlayer.h"
-i"ofQuicktimeSoundPlayer.h"
-i"ofFmodSoundPlayer.h"
-i"ofOpenALSoundPlayer.h"
-i"ofxOpenALSoundPlayer.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundStream.h
-c000000004DF08C6E00000000000005FB
-t1307610222
-s1531
-i"ofConstants.h"
-i"ofBaseTypes.h"
-i"ofBaseApp.h"
-i"ofTypes.h"
-i"ofxAndroidSoundStream.h"
-i"ofRtAudioSoundStream.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundUnit.h
-c000000004D74C2B80000000000002542
-t1299497656
-s9538
-i"ofSoundStream.h"
-i"ofTypes.h"
-i"ofUtils.h"
-i<vector>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofBaseTypes.h
-c000000004E0626550000000000002EA4
-t1309025877
-s11940
-i"ofPoint.h"
-i"ofRectangle.h"
-i"ofConstants.h"
-i"ofColor.h"
-i"ofMesh.h"
-i"ofPixels.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofColor.h
-c000000004DBD20E70000000000000B50
-t1304240359
-s2896
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofPoint.h
-c000000004DBD20E7000000000000003D
-t1304240359
-s61
-i"ofVec3f.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofRectangle.h
-c000000004E0626550000000000000454
-t1309025877
-s1108
-i"ofPoint.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofTypes.h
-c000000004DF08C6E0000000000000D27
-t1307610222
-s3367
-i"ofConstants.h"
-i"ofColor.h"
-i<memory>
-i<tr1/memory>
-i"Poco/Mutex.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofConstants.h
-c000000004DF08C6E0000000000003092
-t1307610222
-s12434
-i<TargetConditionals.h>
-i<windows.h>
-i"GL\glew.h"
-i"GL\wglew.h"
-i"glu.h"
-i<unistd.h>
-i"GL/glew.h"
-i<OpenGL/gl.h>
-i<ApplicationServices/ApplicationServices.h>
-i<unistd.h>
-i<GL/glew.h>
-i<GL/gl.h>
-i<GL/glx.h>
-i<OpenGLES/ES1/gl.h>
-i<OpenGLES/ES1/glext.h>
-i<unistd.h>
-i<GLES/gl.h>
-i<GLES/glext.h>
-i"glu.h"
-i<cstdlib>
-i<cstdio>
-i<cstdarg>
-i<cmath>
-i<ctime>
-i<cstdlib>
-i<string>
-i<iostream>
-i<vector>
-i<cstring>
-i<sstream>
-i<iomanip>
-i<fstream>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofDirectoryLister.h
-c000000004D74C2B8000000000000022A
-t1299497656
-s554
-i"ofMain.h"
-i"Poco/File.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofFileUtils.h
-c000000004DF08C6E0000000000001D34
-t1307610222
-s7476
-i"ofConstants.h"
-i"Poco/File.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofLog.h
-c000000004DF08C6E000000000000142D
-t1307610222
-s5165
-i"ofConstants.h"
-i"ofFileUtils.h"
-i"ofTypes.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofSystemUtils.h
-c000000004DBD20E700000000000001AC
-t1304240359
-s428
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofThread.h
-c000000004D74C2B8000000000000050C
-t1299497656
-s1292
-i"ofConstants.h"
-i"ofTypes.h"
-i<process.h>
-i<pthread.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofURLFileLoader.h
-c000000004DF08C6E000000000000077B
-t1307610222
-s1915
-i<deque>
-i<queue>
-i"ofThread.h"
-i"ofEvents.h"
-i"ofFileUtils.h"
-i"Poco/Condition.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofUtils.h
-c000000004DF08C6E00000000000011E2
-t1307610222
-s4578
-i"ofConstants.h"
-i<bitset>
-i"ofLog.h"
-i<shellapi.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofDirectShowGrabber.h
-c000000004D74C2B80000000000000475
-t1299497656
-s1141
-i"ofConstants.h"
-i"ofTexture.h"
-i"ofBaseTypes.h"
-i"ofPixels.h"
-i"videoInput.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofGstUtils.h
-c000000004DBD20E70000000000000FA6
-t1304240359
-s4006
-i"ofConstants.h"
-i<gst/gst.h>
-i<gst/app/gstappsink.h>
-i"ofConstants.h"
-i"ofBaseTypes.h"
-i"ofPixels.h"
-i"ofTypes.h"
-i"ofEvents.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofGstVideoGrabber.h
-c000000004D74C2B80000000000000542
-t1299497656
-s1346
-i"ofGstUtils.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofGstVideoPlayer.h
-c000000004D74C2B80000000000000574
-t1299497656
-s1396
-i"ofGstUtils.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofQtUtils.h
-c000000004D74C2B800000000000006B5
-t1299497656
-s1717
-i"ofConstants.h"
-i<QuickTime/QuickTime.h>
-i<CoreServices/CoreServices.h>
-i<ApplicationServices/ApplicationServices.h>
-i<QTML.h>
-i<FixMath.h>
-i<QuickTimeComponents.h>
-i<TextUtils.h>
-i<MediaHandlers.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofQuickTimeGrabber.h
-c000000004D74C2B80000000000000648
-t1299497656
-s1608
-i"ofConstants.h"
-i"ofQtUtils.h"
-i"ofTexture.h"
-i"ofBaseTypes.h"
-i"ofPixels.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofQuickTimePlayer.h
-c000000004D74C2B800000000000008B8
-t1299497656
-s2232
-i"ofConstants.h"
-i"ofBaseTypes.h"
-i"ofPixels.h"
-i"ofQtUtils.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofVideoGrabber.h
-c000000004DF08C6E00000000000009ED
-t1307610222
-s2541
-i"ofConstants.h"
-i"ofTexture.h"
-i"ofBaseTypes.h"
-i"ofPixels.h"
-i"ofTypes.h"
-i"ofiPhoneVideoGrabber.h"
-i"ofQuickTimeGrabber.h"
-i"ofDirectShowGrabber.h"
-i"ofGstVideoGrabber.h"
-i"ofxAndroidVideoGrabber.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofVideoPlayer.h
-c000000004DF08C6E0000000000000ABD
-t1307610222
-s2749
-i"ofConstants.h"
-i"ofTexture.h"
-i"ofBaseTypes.h"
-i"ofTypes.h"
-i"ofGstVideoPlayer.h"
-i"ofQuickTimePlayer.h"
-i"ofiPhoneVideoPlayer.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofiPhoneVideoGrabber.h
-c000000004DF08C6E000000000000032C
-t1307610222
-s812
-i"ofVideoGrabber.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofiPhoneVideoPlayer.h
-c000000004DBD20E70000000000000612
-t1304240359
-s1554
-i"ofPixels.h"
-i"ofBaseTypes.h"
-i"ofTexture.h"
-i"ofVideoPlayer.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a
-c000000004E5F4B5D0000000001C7E3B8
-t1314868061
-s29877176
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AbstractDelegate.h
-c000000004D74C2B80000000000000B59
-t1299497656
-s2905
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AbstractEvent.h
-c000000004E0443270000000000002D7C
-t1308902183
-s11644
-i"Poco/Foundation.h"
-i"Poco/SingletonHolder.h"
-i"Poco/SharedPtr.h"
-i"Poco/ActiveResult.h"
-i"Poco/ActiveMethod.h"
-i"Poco/Mutex.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveMethod.h
-c000000004D74C2B80000000000001C64
-t1299497656
-s7268
-i"Poco/Foundation.h"
-i"Poco/ActiveResult.h"
-i"Poco/ActiveRunnable.h"
-i"Poco/ActiveStarter.h"
-i"Poco/AutoPtr.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveResult.h
-c000000004D74C2B80000000000002E66
-t1299497656
-s11878
-i"Poco/Foundation.h"
-i"Poco/Mutex.h"
-i"Poco/Event.h"
-i"Poco/RefCountedObject.h"
-i"Poco/Exception.h"
-i<algorithm>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveRunnable.h
-c000000004D74C2B80000000000001785
-t1299497656
-s6021
-i"Poco/Foundation.h"
-i"Poco/ActiveResult.h"
-i"Poco/Runnable.h"
-i"Poco/RefCountedObject.h"
-i"Poco/AutoPtr.h"
-i"Poco/Exception.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveStarter.h
-c000000004D74C2B80000000000000927
-t1299497656
-s2343
-i"Poco/Foundation.h"
-i"Poco/ThreadPool.h"
-i"Poco/ActiveRunnable.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AtomicCounter.h
-c000000004DBD20E70000000000001D13
-t1304240359
-s7443
-i"Poco/Foundation.h"
-i"Poco/UnWindows.h"
-i<libkern/OSAtomic.h>
-i"Poco/Mutex.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AutoPtr.h
-c000000004D74C2B80000000000001E0C
-t1299497656
-s7692
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i<algorithm>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Bugcheck.h
-c000000004D74C2B800000000000014A9
-t1299497656
-s5289
-i"Poco/Foundation.h"
-i<string>
-i<iostream>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/CompareFunctions.h
-c000000004D74C2B800000000000007EC
-t1299497656
-s2028
-i"Poco/Foundation.h"
-i<functional>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Condition.h
-c000000004D74C2B80000000000001236
-t1299497656
-s4662
-i"Poco/Foundation.h"
-i"Poco/Mutex.h"
-i"Poco/ScopedUnlock.h"
-i"Poco/Event.h"
-i"Poco/Exception.h"
-i<deque>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Config.h
-c000000004D74C2B80000000000000E22
-t1299497656
-s3618
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Delegate.h
-c000000004D74C2B80000000000001828
-t1299497656
-s6184
-i"Poco/Foundation.h"
-i"Poco/AbstractDelegate.h"
-i"Poco/FunctionDelegate.h"
-i"Poco/Expire.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Event.h
-c000000004D74C2B80000000000000E21
-t1299497656
-s3617
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i"Poco/Event_WIN32.h"
-i"Poco/Event_POSIX.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Event_POSIX.h
-c000000004D74C2B80000000000000A91
-t1299497656
-s2705
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i<pthread.h>
-i<errno.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Event_WIN32.h
-c000000004D74C2B8000000000000093F
-t1299497656
-s2367
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i"Poco/UnWindows.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Exception.h
-c000000004D74C2B8000000000000283D
-t1299497656
-s10301
-i"Poco/Foundation.h"
-i<stdexcept>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Expire.h
-c000000004D74C2B80000000000000D0D
-t1299497656
-s3341
-i"Poco/Foundation.h"
-i"Poco/AbstractDelegate.h"
-i"Poco/Timestamp.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/FIFOEvent.h
-c000000004D74C2B80000000000000B15
-t1299497656
-s2837
-i"Poco/AbstractEvent.h"
-i"Poco/FIFOStrategy.h"
-i"Poco/AbstractDelegate.h"
-i"Poco/CompareFunctions.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/FIFOStrategy.h
-c000000004D74C2B80000000000001116
-t1299497656
-s4374
-i"Poco/NotificationStrategy.h"
-i<map>
-i<list>
-i<memory>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File.h
-c000000004D74C2B80000000000001F91
-t1299497656
-s8081
-i"Poco/Foundation.h"
-i"Poco/Timestamp.h"
-i<vector>
-i"File_WINCE.h"
-i"Poco/File_WIN32U.h"
-i"Poco/File_WIN32.h"
-i"Poco/File_UNIX.h"
-i"Poco/File_VMS.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_UNIX.h
-c000000004D74C2B80000000000000BC1
-t1299497656
-s3009
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_VMS.h
-c000000004D74C2B80000000000000BBC
-t1299497656
-s3004
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_WIN32.h
-c000000004D74C2B80000000000000C0C
-t1299497656
-s3084
-i"Poco/Foundation.h"
-i"Poco/Timestamp.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_WIN32U.h
-c000000004D74C2B80000000000000C2B
-t1299497656
-s3115
-i"Poco/Foundation.h"
-i"Poco/Timestamp.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_WINCE.h
-c000000004D74C2B80000000000000C2C
-t1299497656
-s3116
-i"Poco/Foundation.h"
-i"Poco/Timestamp.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Foundation.h
-c000000004D74C2B800000000000010BE
-t1299497656
-s4286
-i"Poco/Config.h"
-i"Poco/Platform.h"
-i"Poco/Platform_WIN32.h"
-i"Poco/Platform_VMS.h"
-i"Poco/Platform_POSIX.h"
-i"Poco/Bugcheck.h"
-i"Poco/Types.h"
-i<string>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/FunctionDelegate.h
-c000000004D74C2B800000000000013C8
-t1299497656
-s5064
-i"Poco/Foundation.h"
-i"Poco/AbstractDelegate.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex.h
-c000000004D74C2B80000000000001D9F
-t1299497656
-s7583
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i"Poco/ScopedLock.h"
-i"Poco/Mutex_WINCE.h"
-i"Poco/Mutex_WIN32.h"
-i"Poco/Mutex_POSIX.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex_POSIX.h
-c000000004D74C2B80000000000000AC3
-t1299497656
-s2755
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i<pthread.h>
-i<errno.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex_WIN32.h
-c000000004D74C2B80000000000000A04
-t1299497656
-s2564
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i"Poco/UnWindows.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex_WINCE.h
-c000000004D74C2B80000000000000870
-t1299497656
-s2160
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i"Poco/UnWindows.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/NotificationStrategy.h
-c000000004D74C2B80000000000000B48
-t1299497656
-s2888
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform.h
-c000000004D74C2B80000000000001AF7
-t1299497656
-s6903
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform_POSIX.h
-c000000004D74C2B80000000000000843
-t1299497656
-s2115
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform_VMS.h
-c000000004D74C2B80000000000000BAA
-t1299497656
-s2986
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform_WIN32.h
-c000000004D74C2B80000000000000DCF
-t1299497656
-s3535
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/RefCountedObject.h
-c000000004D74C2B80000000000000BB1
-t1299497656
-s2993
-i"Poco/Foundation.h"
-i"Poco/AtomicCounter.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Runnable.h
-c000000004D74C2B80000000000000861
-t1299497656
-s2145
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ScopedLock.h
-c000000004D74C2B80000000000000B7F
-t1299497656
-s2943
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ScopedUnlock.h
-c000000004D74C2B8000000000000092B
-t1299497656
-s2347
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/SharedPtr.h
-c000000004D74C2B80000000000002278
-t1299497656
-s8824
-i"Poco/Foundation.h"
-i"Poco/Exception.h"
-i"Poco/AtomicCounter.h"
-i<algorithm>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/SignalHandler.h
-c000000004D74C2B800000000000011EB
-t1299497656
-s4587
-i"Poco/Foundation.h"
-i<vector>
-i<setjmp.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/SingletonHolder.h
-c000000004D74C2B80000000000000A67
-t1299497656
-s2663
-i"Poco/Foundation.h"
-i"Poco/Mutex.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread.h
-c000000004D74C2B80000000000001E10
-t1299497656
-s7696
-i"Poco/Foundation.h"
-i"Poco/Mutex.h"
-i"Poco/Thread_WINCE.h"
-i"Poco/Thread_WIN32.h"
-i"Poco/Thread_POSIX.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ThreadPool.h
-c000000004D74C2B80000000000001C8A
-t1299497656
-s7306
-i"Poco/Foundation.h"
-i"Poco/Thread.h"
-i"Poco/Mutex.h"
-i<vector>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread_POSIX.h
-c000000004D74C2B800000000000013B7
-t1299497656
-s5047
-i"Poco/Foundation.h"
-i"Poco/Runnable.h"
-i"Poco/SignalHandler.h"
-i"Poco/Event.h"
-i"Poco/RefCountedObject.h"
-i"Poco/AutoPtr.h"
-i<pthread.h>
-i<limits.h>
-i<sys/select.h>
-i<errno.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread_WIN32.h
-c000000004D74C2B80000000000001301
-t1299497656
-s4865
-i"Poco/Foundation.h"
-i"Poco/Runnable.h"
-i"Poco/UnWindows.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread_WINCE.h
-c000000004D74C2B80000000000001276
-t1299497656
-s4726
-i"Poco/Foundation.h"
-i"Poco/Runnable.h"
-i"Poco/UnWindows.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Timestamp.h
-c000000004D74C2B80000000000001A41
-t1299497656
-s6721
-i"Poco/Foundation.h"
-i<ctime>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Types.h
-c000000004D74C2B80000000000001926
-t1299497656
-s6438
-i"Poco/Foundation.h"
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/UnWindows.h
-c000000004D74C2B80000000000000FC3
-t1299497656
-s4035
-i<windows.h>
-
-N/Users/elliot/dev/openFrameworks/openFrameworks/libs/tess2/include/tesselator.h
-c000000004DF08C6E0000000000001BC4
-t1307610222
-s7108
-
-N/usr/include/TargetConditionals.h
-c000000004A8D4DF700000000000031E9
-t1250774519
-s12777
-
-N/usr/include/errno.h
-c000000004BBD2CE900000000000003EB
-t1270689001
-s1003
-
-N/usr/include/inttypes.h
-c000000004BBD2CE900000000000027D1
-t1270689001
-s10193
-
-N/usr/include/libkern/OSAtomic.h
-c000000004BBD2CE90000000000002519
-t1270689001
-s9497
-
-N/usr/include/pthread.h
-c000000004BBD2CE900000000000038F0
-t1270689001
-s14576
-
-N/usr/include/setjmp.h
-c000000004BBD2CE90000000000000438
-t1270689001
-s1080
-
-N/usr/include/stdio.h
-c000000004BBD2CE90000000000004174
-t1270689001
-s16756
-
-N/usr/include/stdlib.h
-c000000004BBD2CE90000000000002DF5
-t1270689001
-s11765
-
-N/usr/include/string.h
-c000000004BBD2CE90000000000001731
-t1270689001
-s5937
-
-N/usr/include/sys/_types.h
-c000000004CC3DE680000000000001845
-t1287904872
-s6213
-
-N/usr/include/sys/select.h
-c000000004CC3DE6700000000000016A2
-t1287904871
-s5794
-
-N/usr/include/termios.h
-c000000004BBD2CE900000000000004D4
-t1270689001
-s1236
-
-N/usr/include/unistd.h
-c000000004BBD2CE9000000000000563E
-t1270689001
-s22078
-
-N/var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch
-t1299498260
-s39855856
-
-N/var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gwvzbwigltbdfedspvjuhvpfndgc/Carbon.h.gch
-t1307611623
-s39937776
-
-N/var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h.gch
-t1314945760
-s39954192
-
-N/var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gbmvtsyygezypndfzzueeqvbnqpd/Carbon.h.gch
-t2
-s0
-
-NopenFrameworks-Info.plist
-c000000004DF08ED00000000000000277
-t1307610832
-s631
-
-CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp
-r0
-
-CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp
-r0
-
-CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp
-r0
-
-CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp
-r0
-
-CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp
-r0
-
-CCheck dependencies
-r0
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies058b8743b310b441^49f3d343b310b441^---0#1#0#--18"Check dependencies
-
-CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s336638561.574058
-e336638562.961728
-r1
-xCompileC
-xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp5a0f9361b210b441^be33f662b210b441^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp0000000000000000^2502"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o src/Grid.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o
-
-CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s336638562.165555
-e336638563.540747
-r1
-xCompileC
-xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cppfa7a2a62b210b441^bd6d8a63b210b441^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp0000000000000000^2530"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o src/OrthoCamera.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o
-
-CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s336638562.963017
-e336638564.392209
-r1
-xCompileC
-xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cppdfa3f662b210b441^a8706464b210b441^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp0000000000000000^2506"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o src/Swarm.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o
-
-CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s336638560.032870
-e336638561.572774
-r1
-xCompileC
-xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp8a8e0860b210b441^0da59261b210b441^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp0000000000000000^2502"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o
-
-CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
-s336638560.032808
-e336638562.164262
-r1
-xCompileC
-xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp8c9d0860b210b441^df182a62b210b441^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp0000000000000000^2514"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o
-
-CLd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug normal i386
-s336638564.399761
-e336638567.910166
-r1
-xLd
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug
-xnormal
-xi386
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"Link /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebugd9766664b210b441^2e00e967b210b441^---0#0#0#--4408"Ld bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug normal i386    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux64 -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010 -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010 -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux64 -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010 -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -filelist /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/advanced3dExampleDebug.LinkFileList -mmacosx-version-min=10.6 -dead_strip ../../../libs/poco/lib/osx/PocoFoundation.a ../../../libs/poco/lib/osx/PocoNet.a ../../../libs/poco/lib/osx/PocoXML.a ../../../libs/poco/lib/osx/PocoUtil.a ../../../libs/tess2/lib/osx/tess2.a ../../../libs/glew/lib/osx/glew.a ../../../libs/assimp/lib/osx/assimp.a ../../../libs/cairo/lib/osx/libcairo.a ../../../libs/fmodex/lib/osx/libfmodex.dylib ../../../libs/rtAudio/lib/osx/rtAudio.a -framework GLUT /Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug
-
-CPBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
-s321191090.754059
-e321191090.870185
-r1
-xPBXCp
-x../../../libs/glut/lib/osx/GLUT.framework
-xbin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.frameworke318c1b2fc24b341^65e2deb2fc24b341^---0#0#0#-19%DVTDocumentLocation2@161"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework000020962705f041^553"PBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx/GLUT.framework /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Frameworks
-
-CPBXCp openFrameworks-Info.plist bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
-s321191090.872396
-e321191090.883009
-r1
-xPBXCp
-xopenFrameworks-Info.plist
-xbin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Copy bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist5e63dfb2fc24b341^3411e2b2fc24b341^---0#0#0#-19%DVTDocumentLocation2@171"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist000020962705f041^530"PBXCp openFrameworks-Info.plist bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Resources
-
-CPhaseScriptExecution "Run Script" /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-s336638787.864703
-e336638787.916124
-r1
-xPhaseScriptExecution
-xRun Script
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'317ede43b310b441^978dea43b310b441^---0#0#0#--27384"PhaseScriptExecution "Run Script" build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER elliot    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv BUILD_ROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv CACHE_ROOT /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv CONFIGURATION_TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug    setenv CONTENTS_FOLDER_PATH advanced3dExampleDebug.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/advanced3dExample.dst    setenv DWARF_DSYM_FILE_NAME advanced3dExampleDebug.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv EMBEDDED_PROFILE_NAME embedded.provisionprofile    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH advanced3dExampleDebug.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH advanced3dExampleDebug.app/Contents/MacOS    setenv EXECUTABLE_NAME advanced3dExampleDebug    setenv EXECUTABLE_PATH advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug    setenv FILE_LIST /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH advanced3dExampleDebug.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin\"  \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME advanced3dExampleDebug.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING G4    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvmgcc42    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS NO    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO NO    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_UNINITIALIZED_AUTOS NO    setenv GCC_WARN_UNUSED_VALUE NO    setenv GCC_WARN_UNUSED_VARIABLE NO    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_CAIRO "\"../../../libs/cairo/include/cairo\""    setenv HEADER_FMODEX "\"../../../libs/fmodex/include\""    setenv HEADER_FREEIMAGE "\"../../../libs/FreeImage/include\""    setenv HEADER_FREETYPE "\"../../../libs/freetype/include\""    setenv HEADER_FREETYPE2 "\"../../../libs/freetype/include/freetype2\""    setenv HEADER_GLEW "\"../../../libs/glew/include\""    setenv HEADER_OF "\"../../../libs/openFrameworks/**\""    setenv HEADER_POCO "\"../../../libs/poco/include\""    setenv HEADER_RTAUDIO "\"../../../libs/rtaudio/include\""    setenv HEADER_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include\" \"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtaudio/include\""    setenv HEADER_TESS2 "\"../../../libs/tess2/include\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH advanced3dExampleDebug.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH advanced3dExampleDebug.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/advanced3dExample.dst/Users/elliot/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER elliot    setenv INSTALL_PATH /Users/elliot/Applications    setenv INSTALL_ROOT /tmp/advanced3dExample.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin\"  \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux64\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb\"        \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb\"                                           \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux64\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/android/armeabi-v7a\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/iphone\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/linux64\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/vs2010\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../addons/ofxOpenCv/libs/opencv/lib/win_cb\""    setenv LIB_ASSIMP "\"../../../libs/assimp/lib/osx/assimp.a\""    setenv LIB_CAIRO "\"../../../libs/cairo/lib/osx/libcairo.a\""    setenv LIB_FMODEX "\"../../../libs/fmodex/lib/osx/libfmodex.dylib\""    setenv LIB_FREEIMAGE "\"../../../libs/FreeImage/lib/osx/freeimage.a\""    setenv LIB_FREETYPE "\"../../../libs/freetype/lib/osx/freetype.a\""    setenv LIB_GLEW "\"../../../libs/glew/lib/osx/glew.a\""    setenv LIB_GLUT "\"../../../libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\""    setenv LIB_POCOFOUNDATION "\"../../../libs/poco/lib/osx/PocoFoundation.a\""    setenv LIB_POCONET "\"../../../libs/poco/lib/osx/PocoNet.a\""    setenv LIB_POCOUTIL "\"../../../libs/poco/lib/osx/PocoUtil.a\""    setenv LIB_POCOXML "\"../../../libs/poco/lib/osx/PocoXML.a\""    setenv LIB_RTAUDIO "\"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv LIB_TESS "\"../../../libs/tess2/lib/osx/tess2.a\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/advanced3dExampleDebug.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11A511    setenv MAC_OS_X_VERSION_ACTUAL 1070    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0700    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal    setenv OBJROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv OF_CORE_HEADERS "\"../../../libs/openFrameworks/**\" \"../../../libs/poco/include\" \"../../../libs/freetype/include\" \"../../../libs/freetype/include/freetype2\" \"../../../libs/fmodex/include\" \"../../../libs/glew/include\" \"../../../libs/FreeImage/include\" \"../../../libs/tess2/include\" \"../../../libs/cairo/include/cairo\" \"../../../libs/rtaudio/include\""    setenv OF_CORE_LIBS "\"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/assimp/lib/osx/assimp.a\" \"../../../libs/cairo/lib/osx/libcairo.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv OF_PATH ../../..    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread"    setenv OTHER_LDFLAGS "\"../../../libs/poco/lib/osx/PocoFoundation.a\" \"../../../libs/poco/lib/osx/PocoNet.a\" \"../../../libs/poco/lib/osx/PocoXML.a\" \"../../../libs/poco/lib/osx/PocoUtil.a\" \"../../../libs/tess2/lib/osx/tess2.a\" \"../../../libs/glew/lib/osx/glew.a\" \"../../../libs/assimp/lib/osx/assimp.a\" \"../../../libs/cairo/lib/osx/libcairo.a\" \"../../../libs/fmodex/lib/osx/libfmodex.dylib\" \"../../../libs/rtAudio/lib/osx/rtAudio.a\""    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH advanced3dExampleDebug.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c++    setenv PKGINFO_FILE_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/PkgInfo    setenv PKGINFO_PATH advanced3dExampleDebug.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PREFERRED_ARCH x86_64    setenv PLATFORM_PRODUCT_BUILD_VERSION 4B110    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH advanced3dExampleDebug.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH advanced3dExampleDebug.app/Contents/PrivateHeaders    setenv PRODUCT_NAME advanced3dExampleDebug    setenv PRODUCT_SETTINGS_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT advanced3dExample    setenv PROJECT_DERIVED_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/DerivedSources    setenv PROJECT_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv PROJECT_FILE_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/advanced3dExample.xcodeproj    setenv PROJECT_NAME advanced3dExample    setenv PROJECT_TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build    setenv PUBLIC_HEADERS_FOLDER_PATH advanced3dExampleDebug.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_DIR /Developer/SDKs/MacOSX10.6.sdk    setenv SDK_NAME macosx10.6    setenv SDK_PRODUCT_BUILD_VERSION 10J567    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH advanced3dExampleDebug.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH advanced3dExampleDebug.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv SRCROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME advanced3dExample    setenv TARGET_BUILD_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv TARGET_NAME advanced3dExample    setenv TARGET_TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_FILES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_ROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv TEST_AFTER_BUILD NO    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER elliot    setenv USER_APPS_DIR /Users/elliot/Applications    setenv USER_LIBRARY_DIR /Users/elliot/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH advanced3dExampleDebug.app/Contents/version.plist    setenv VERSION_INFO_BUILDER elliot    setenv VERSION_INFO_FILE advanced3dExampleDebug_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:advanced3dExampleDebug  PROJECT:advanced3dExample-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME advanced3dExampleDebug.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4B110    setenv XCODE_VERSION_ACTUAL 0410    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0410    setenv YACC /Developer/usr/bin/yacc    /bin/sh -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
-
-CProcessInfoPlistFile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist openFrameworks-Info.plist
-s336638556.200046
-e336638556.203406
-r1
-xProcessInfoPlistFile
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist
-xopenFrameworks-Info.plist
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Process openFrameworks-Info.plist7846335cb210b441^c6c1355cb210b441^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist0000000000000000^552"ProcessInfoPlistFile bin/advanced3dExampleDebug.app/Contents/Info.plist openFrameworks-Info.plist    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    builtin-infoPlistUtility openFrameworks-Info.plist -genpkginfo /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist
-
-CProcessPCH++ /Users/elliot/Library/Developer/Xcode/DerivedData/advanced3dExample-aprychzagnpzejbfusfuwolnrqna/Index/PrecompiledHeaders/Carbon-atsryoorkgsdllhfqfxgsuqgsdvx_ast/Carbon.h.pth /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /Users/elliot/Library/Developer/Xcode/DerivedData/advanced3dExample-aprychzagnpzejbfusfuwolnrqna/Index/PrecompiledHeaders/Carbon-dzdmiaarcrtojwhdvwtadavawolw_ast/Carbon.h.pth /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /Users/elliot/Library/Developer/Xcode/DerivedData/advanced3dExample-aprychzagnpzejbfusfuwolnrqna/Index/PrecompiledHeaders/Carbon-fkdvlrvtaffhblbjivwikhotxoyc_ast/Carbon.h.pth /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /Users/elliot/Library/Developer/Xcode/DerivedData/advanced3dExample-aprychzagnpzejbfusfuwolnrqna/Index/PrecompiledHeaders/Carbon-hifbwizctaevaphkegadpgaaabax_ast/Carbon.h.pth /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
-s321191056.504742
-e321191060.371314
-r1
-xProcessPCH++
-x/var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch
-x/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-occ1plus: warning: -Wuninitialized is not supported without -O
-oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.hd9d08190fc24b341^c70d5f94fc24b341^-157"cc1plus: warning: -Wuninitialized is not supported without -Oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done1(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191056#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation4@76"file://localhost/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2362"ProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch
-
-CProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gwvzbwigltbdfedspvjuhvpfndgc/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
-s329304420.865874
-e329304423.834453
-r1
-xProcessPCH++
-x/var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gwvzbwigltbdfedspvjuhvpfndgc/Carbon.h.gch
-x/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.hdfc3dd64c9a0b341^909fd567c9a0b341^-95"i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done-0#0#0#-19%DVTDocumentLocation2@76"file://localhost/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2354"ProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gwvzbwigltbdfedspvjuhvpfndgc/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gwvzbwigltbdfedspvjuhvpfndgc/Carbon.h.gch
-
-CProcessPCH++ /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
-s336638556.211995
-e336638560.025123
-r1
-xProcessPCH++
-x/var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h.gch
-x/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Precompile /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.ha65f365cb210b441^eb6e0660b210b441^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2473"ProcessPCH++ /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h.gch /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -isysroot /Developer/SDKs/MacOSX10.6.sdk -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.6 -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -c /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-albfefwyxayrgvbzhklgxadfvetg/Carbon.h.gch
-
-CProcessPCH++ /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gbmvtsyygezypndfzzueeqvbnqpd/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
-s336638542.824769
-e336638542.841812
-r0
-xProcessPCH++
-x/var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gbmvtsyygezypndfzzueeqvbnqpd/Carbon.h.gch
-x/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvmgcc42
-oi686-apple-darwin11-llvm-gcc-4.2: /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h: No such file or directory
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.he84bd34eb210b441^5d6fd74eb210b441^-64"Command /Developer/usr/bin/llvm-gcc-4.2 failed with exit code 11(21%IDEActivityLogMessage2@63"Command /Developer/usr/bin/llvm-gcc-4.2 failed with exit code 1-336638542#18446744073709551615#0#-2#--18"LLVM GCC 4.2 Error--0#0#0#-19%DVTDocumentLocation3@76"file://localhost/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000003d6d94f041^2346"ProcessPCH++ /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gbmvtsyygezypndfzzueeqvbnqpd/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -fasm-blocks -Wno-deprecated-declarations -Wno-invalid-offsetof -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/gl -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/poco/include -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/fmodex/include -I../../../libs/glew/include -I../../../libs/FreeImage/include -I../../../libs/tess2/include -I../../../libs/cairo/include/cairo -I../../../libs/rtaudio/include -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/vx/3dppd6fj23v5v17gjmg8djpm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-gbmvtsyygezypndfzzueeqvbnqpd/Carbon.h.gch
-
-CTouch /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
-s336638568.184689
-e336638568.213040
-r1
-xTouch
-x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
-lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Touch /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app93572f68b210b441^a9893668b210b441^---0#0#0#--257"Touch bin/advanced3dExampleDebug.app    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    /usr/bin/touch -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
-

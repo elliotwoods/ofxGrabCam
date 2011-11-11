@@ -153,14 +153,14 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	ofVec3f p = ofCamera::getPosition();
 	ofVec3f uy = ofCamera::getUpDir();
 	ofVec3f ux = ofCamera::getSideDir();
-	float ar = ofGetViewportWidth() / ofGetViewportHeight();
+	float ar = float(ofGetViewportWidth()) / float(ofGetViewportHeight());
 	
 	if (handDown) {
 		//pan
 		float d = (p - mouseW).length();
 		//ofCamera::getFov() doesn't exist!!
-		ofCamera::move(dx * -ux * d * tan(ar * 60.0f * PI / 180.0f));
-		ofCamera::move(dy * uy * d * tan(60.0f * PI / 180.0f) / 2.0f);
+		ofCamera::move(dx * -ux * d * ar);
+		ofCamera::move(dy * uy * d);
 	} else {
 		if (args.button==0 && !altDown) {
 			//orbit

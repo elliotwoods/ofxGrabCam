@@ -1,0 +1,1704 @@
+Tadvanced3dExample
+v3
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist openFrameworks-Info.plist
+cProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+cLd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug normal i386
+cPhaseScriptExecution "Run Script" /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+cPBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
+cPBXCp openFrameworks-Info.plist bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
+cTouch /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/limits.h
+c000000004D35656E0000000000000D03
+t1295345006
+s3331
+i"syslimits.h"
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004D35656E0000000000003197
+t1295345006
+s12695
+i<machine/ansi.h>
+i<sys/_types.h>
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stdint.h
+c000000004D356857000000000000190C
+t1295345751
+s6412
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/syslimits.h
+c000000004D3564790000000000000155
+t1295344761
+s341
+
+N/System/Library/Frameworks/AGL.framework/AGL
+c000000004CE74D380000000000043820
+t1290227000
+s276512
+
+N/System/Library/Frameworks/AppKit.framework/AppKit
+c000000004C623FBF0000000002B48610
+t1281507263
+s45385232
+
+N/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c000000004A12050E0000000000022140
+t1242694926
+s139584
+
+N/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
+c000000004AC6B3050000000000000477
+t1254535941
+s1143
+
+N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004C91794F00000000004D2720
+t1284602191
+s5056288
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000004D22B148000000000000A5F0
+t1294119240
+s42480
+
+N/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+c000000004B4834EA00000000000005FF
+t1263023338
+s1535
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000004CDB52F900000000002181A0
+t1289442041
+s2195872
+
+N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c000000004C971DAF0000000000781330
+t1284971951
+s7869232
+
+N/System/Library/Frameworks/CoreServices.framework/CoreServices
+c000000004C23F49F0000000000021710
+t1277424799
+s136976
+
+N/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
+c000000004B90FA5D0000000000000401
+t1267792477
+s1025
+
+N/System/Library/Frameworks/IOKit.framework/IOKit
+c000000004C8AD97D000000000017B260
+t1284168061
+s1552992
+
+N/System/Library/Frameworks/OpenGL.framework/Headers/gl.h
+c000000004B8E4E9E0000000000025B59
+t1267617438
+s154457
+
+N/System/Library/Frameworks/OpenGL.framework/Headers/glu.h
+c000000004B8E4E9E0000000000003F84
+t1267617438
+s16260
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000004CE74B410000000000043330
+t1290226497
+s275248
+
+N/System/Library/Frameworks/QuickTime.framework/Headers/QuickTime.h
+c000000004B4818320000000000000659
+t1263015986
+s1625
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c000000004CC8C1970000000000783950
+t1288225175
+s7878992
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx/freeimage.a
+c000000004D74C2B30000000000535E34
+t1299497651
+s5463604
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/include/fmod.h
+c000000004D74C2B50000000000028E68
+t1299497653
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/include/fmod_errors.h
+c000000004D74C2B50000000000003408
+t1299497653
+s13320
+i"fmod.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/lib/osx/libfmodex.dylib
+c000000004D74C2B500000000001DD8CC
+t1299497653
+s1956044
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freetype/lib/osx/freetype.a
+c000000004D74C2B700000000000AB9E8
+t1299497655
+s702952
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/include/GL/glew.h
+c000000004D74C2B700000000000C1916
+t1299497655
+s792854
+i<stddef.h>
+i<inttypes.h>
+i<stdint.h>
+i<inttypes.h>
+i<OpenGL/glu.h>
+i<GL/glu.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx/glew.a
+c000000004D74C2B7000000000009ECC8
+t1299497655
+s650440
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx/GLUT.framework
+c000000004D74C2B700000000000000CC
+t1299497655
+s204
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx/GLUT.framework/GLUT
+c000000004D74C2B70000000000092A98
+t1299497655
+s600728
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoFoundation.a
+c000000004D74C2BE000000000027E698
+t1299497662
+s2614936
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoNet.a
+c000000004D74C2BE00000000001854B0
+t1299497662
+s1594544
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoUtil.a
+c000000004D74C2BE0000000000090708
+t1299497662
+s591624
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoXML.a
+c000000004D74C2BE0000000000107FD0
+t1299497662
+s1081296
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/rtAudio/lib/osx/rtAudio.a
+c000000004D74C2CE00000000000BC8E8
+t1299497678
+s772328
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/advanced3dExampleDebug.LinkFileList
+c000000004D74C510000000000000034E
+t1299498256
+s846
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o
+t2
+s0
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+c000000004D74C5100000000000000113
+t1299498256
+s275
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist
+c000000004D74C2AC0000000000000277
+t1299497644
+s631
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp
+c000000004D74C2AC0000000000000940
+t1299497644
+s2368
+i"Grid.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h
+c000000004D74C2AC000000000000014D
+t1299497644
+s333
+i"ofMain.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp
+c000000004D74C2AC00000000000003D9
+t1299497644
+s985
+i"OrthoCamera.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h
+c000000004D74C2AC000000000000019C
+t1299497644
+s412
+i"ofMain.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp
+c000000004D74C2AC0000000000000E30
+t1299497644
+s3632
+i"Swarm.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h
+c000000004D74C2AC000000000000027A
+t1299497644
+s634
+i"ofMain.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp
+c000000004D74C2AC000000000000019E
+t1299497644
+s414
+i"ofMain.h"
+i"testApp.h"
+i"ofAppGlutWindow.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp
+c000000004D74C2AC00000000000024C9
+t1299497644
+s9417
+i"testApp.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h
+c000000004D74C2AC0000000000000780
+t1299497644
+s1920
+i"ofMain.h"
+i"Swarm.h"
+i"Grid.h"
+i"OrthoCamera.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod.h
+c000000004D74C2B50000000000028E68
+t1299497653
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_codec.h
+c000000004D74C2B5000000000000334A
+t1299497653
+s13130
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_dsp.h
+c000000004D74C2B5000000000000892F
+t1299497653
+s35119
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/fmodex/include/fmod_memoryinfo.h
+c000000004D74C2B50000000000003C95
+t1299497653
+s15509
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/glew/include/GL/glew.h
+c000000004D74C2B700000000000C1916
+t1299497655
+s792854
+i<stddef.h>
+i<inttypes.h>
+i<stdint.h>
+i<inttypes.h>
+i<OpenGL/glu.h>
+i<GL/glu.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/of3dUtils.h
+c000000004D74C2B700000000000000D7
+t1299497655
+s215
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofCamera.h
+c000000004D74C2B70000000000000832
+t1299497655
+s2098
+i"ofRectangle.h"
+i"ofAppRunner.h"
+i"ofNode.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofEasyCam.h
+c000000004D74C2B7000000000000053D
+t1299497655
+s1341
+i"ofCamera.h"
+i"ofEvents.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofLight.h
+c000000004D74C2B70000000000000565
+t1299497655
+s1381
+i"ofNode.h"
+i"ofColor.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofMesh.h
+c000000004D74C2B70000000000000079
+t1299497655
+s121
+i"ofPrimitive.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofNode.h
+c000000004D74C2B7000000000000143C
+t1299497655
+s5180
+i"ofVectorMath.h"
+i"of3dUtils.h"
+i"ofGraphics.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofPrimitive.h
+c000000004D74C2B700000000000013CD
+t1299497655
+s5069
+i"ofVec3f.h"
+i"ofVec2f.h"
+i"ofColor.h"
+i"ofUtils.h"
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/3d/ofVbo.h
+c000000004D74C2B700000000000008CC
+t1299497655
+s2252
+i"ofConstants.h"
+i"ofVec3f.h"
+i"ofColor.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofAppBaseWindow.h
+c000000004D74C2B7000000000000054A
+t1299497655
+s1354
+i"ofPoint.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofAppGlutWindow.h
+c000000004D74C2B70000000000000690
+t1299497655
+s1680
+i"ofConstants.h"
+i"ofAppBaseWindow.h"
+i"ofEvents.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofAppRunner.h
+c000000004D74C2B7000000000000059B
+t1299497655
+s1435
+i"ofConstants.h"
+i"ofPoint.h"
+i"ofRectangle.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/app/ofBaseApp.h
+c000000004D74C2B70000000000000416
+t1299497655
+s1046
+i"ofPoint.h"
+i"ofEvents.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/communication/ofArduino.h
+c000000004D74C2B70000000000003D17
+t1299497655
+s15639
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/communication/ofSerial.h
+c000000004D74C2B70000000000000D7F
+t1299497655
+s3455
+i"ofConstants.h"
+i"ofTypes.h"
+i<termios.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/events/ofEventUtils.h
+c000000004D74C2B70000000000000AFA
+t1299497655
+s2810
+i"ofConstants.h"
+i"Poco/FIFOEvent.h"
+i"Poco/Delegate.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/events/ofEvents.h
+c000000004D74C2B70000000000001926
+t1299497655
+s6438
+i"ofConstants.h"
+i"ofEventUtils.h"
+i"ofxEventUtils.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofFbo.h
+c000000004D74C2B70000000000000B79
+t1299497655
+s2937
+i"ofTexture.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofGraphics.h
+c000000004D74C2B70000000000001C52
+t1299497655
+s7250
+i"ofConstants.h"
+i"ofColor.h"
+i"ofPoint.h"
+i"ofMatrix4x4.h"
+i"ofRectangle.h"
+i"ofTypes.h"
+i"ofBaseTypes.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofImage.h
+c000000004D74C2B700000000000010A5
+t1299497655
+s4261
+i"ofFileUtils.h"
+i"ofTexture.h"
+i"ofPixels.h"
+i"ofBaseTypes.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPixelUtils.h
+c000000004D74C2B7000000000000020E
+t1299497655
+s526
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPixels.h
+c000000004D74C2B700000000000007AA
+t1299497655
+s1962
+i"ofConstants.h"
+i"ofUtils.h"
+i"ofColor.h"
+i"ofPixelUtils.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofPolyline.h
+c000000004D74C2B70000000000000BC1
+t1299497655
+s3009
+i"ofPoint.h"
+i"ofConstants.h"
+i<deque>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofShader.h
+c000000004D74C2B70000000000000F86
+t1299497655
+s3974
+i"ofConstants.h"
+i"ofBaseTypes.h"
+i"ofTexture.h"
+i<map>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofShape.h
+c000000004D74C2B70000000000001195
+t1299497655
+s4501
+i"ofConstants.h"
+i"ofPoint.h"
+i"ofColor.h"
+i"ofPolyline.h"
+i"ofBaseTypes.h"
+i"ofPrimitive.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofTexture.h
+c000000004D74C2B7000000000000110F
+t1299497655
+s4367
+i"ofPoint.h"
+i"ofRectangle.h"
+i"ofBaseTypes.h"
+i"Poco/SharedPtr.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/graphics/ofTrueTypeFont.h
+c000000004D74C2B70000000000000748
+t1299497655
+s1864
+i<vector>
+i"ofPoint.h"
+i"ofRectangle.h"
+i"ofConstants.h"
+i"ofShape.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofMath.h
+c000000004D74C2B70000000000000A73
+t1299497655
+s2675
+i"ofPoint.h"
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofMatrix3x3.h
+c000000004D74C2B70000000000000A4C
+t1299497655
+s2636
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofMatrix4x4.h
+c000000004D74C2B80000000000006D48
+t1299497656
+s27976
+i"ofVec3f.h"
+i"ofVec4f.h"
+i"ofQuaternion.h"
+i"ofConstants.h"
+i<cmath>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofQuaternion.h
+c000000004D74C2B800000000000033BD
+t1299497656
+s13245
+i"ofConstants.h"
+i"ofVec3f.h"
+i"ofVec4f.h"
+i<cmath>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVec2f.h
+c000000004D74C2B8000000000000407D
+t1299497656
+s16509
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVec3f.h
+c000000004D74C2B800000000000061A8
+t1299497656
+s25000
+i"ofVec2f.h"
+i"ofVec4f.h"
+i"ofConstants.h"
+i<cmath>
+i<iostream>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVec4f.h
+c000000004D74C2B80000000000002EC3
+t1299497656
+s11971
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/math/ofVectorMath.h
+c000000004D74C2B80000000000000099
+t1299497656
+s153
+i"ofVec2f.h"
+i"ofVec3f.h"
+i"ofVec4f.h"
+i"ofMatrix3x3.h"
+i"ofMatrix4x4.h"
+i"ofQuaternion.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/ofMain.h
+c000000004D74C2B80000000000000633
+t1299497656
+s1587
+i"ofConstants.h"
+i"ofDirectoryLister.h"
+i"ofFileUtils.h"
+i"ofSystemUtils.h"
+i"ofThread.h"
+i"ofURLFileLoader.h"
+i"ofUtils.h"
+i"ofBaseTypes.h"
+i"ofTypes.h"
+i"ofColor.h"
+i"ofPoint.h"
+i"ofRectangle.h"
+i"ofMath.h"
+i"ofVectorMath.h"
+i"ofSerial.h"
+i"ofArduino.h"
+i"ofTexture.h"
+i"ofTrueTypeFont.h"
+i"ofGraphics.h"
+i"ofImage.h"
+i"ofFbo.h"
+i"ofShader.h"
+i"ofPixels.h"
+i"ofBaseApp.h"
+i"ofAppRunner.h"
+i"ofSoundStream.h"
+i"ofSoundPlayer.h"
+i"ofSoundUnit.h"
+i"ofSoundEffect.h"
+i"ofVideoGrabber.h"
+i"ofVideoPlayer.h"
+i"ofEvents.h"
+i"ofVbo.h"
+i"of3dUtils.h"
+i"ofNode.h"
+i"ofCamera.h"
+i"ofMesh.h"
+i"ofEasyCam.h"
+i"ofLight.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofBaseSoundPlayer.h
+c000000004D74C2B80000000000000366
+t1299497656
+s870
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofFmodSoundPlayer.h
+c000000004D74C2B800000000000006D9
+t1299497656
+s1753
+i"ofConstants.h"
+i"ofBaseSoundPlayer.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundEffect.h
+c000000004D74C2B80000000000000946
+t1299497656
+s2374
+i"ofSoundUnit.h"
+i<vector>
+i<deque>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundPlayer.h
+c000000004D74C2B80000000000000837
+t1299497656
+s2103
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+i"ofBaseTypes.h"
+i"ofBaseSoundPlayer.h"
+i"ofQuicktimeSoundPlayer.h"
+i"ofFmodSoundPlayer.h"
+i"ofxOpenALSoundPlayer.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundStream.h
+c000000004D74C2B800000000000004C4
+t1299497656
+s1220
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/sound/ofSoundUnit.h
+c000000004D74C2B80000000000002542
+t1299497656
+s9538
+i"ofSoundStream.h"
+i"ofTypes.h"
+i"ofUtils.h"
+i<vector>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofBaseTypes.h
+c000000004D74C2B8000000000000238F
+t1299497656
+s9103
+i"ofPoint.h"
+i"ofRectangle.h"
+i"ofConstants.h"
+i"ofColor.h"
+i"ofPrimitive.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofColor.h
+c000000004D74C2B80000000000000AFD
+t1299497656
+s2813
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofPoint.h
+c000000004D74C2B8000000000000003C
+t1299497656
+s60
+i"ofVec3f.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofRectangle.h
+c000000004D74C2B80000000000000420
+t1299497656
+s1056
+i"ofPoint.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/types/ofTypes.h
+c000000004D74C2B8000000000000076F
+t1299497656
+s1903
+i"ofConstants.h"
+i"ofColor.h"
+i"Poco/Mutex.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofConstants.h
+c000000004D74C2B80000000000003028
+t1299497656
+s12328
+i<TargetConditionals.h>
+i<windows.h>
+i"GL\glew.h"
+i"GL\wglew.h"
+i"glu.h"
+i<unistd.h>
+i"glew.h"
+i<OpenGL/gl.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i<GL/glew.h>
+i<GL/gl.h>
+i<GL/glx.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<unistd.h>
+i<GLES/gl.h>
+i<GLES/glext.h>
+i"glu.h"
+i<cstdlib>
+i<cstdio>
+i<cstdarg>
+i<cmath>
+i<ctime>
+i<cstdlib>
+i<string>
+i<iostream>
+i<vector>
+i<cstring>
+i<sstream>
+i<iomanip>
+i<fstream>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofDirectoryLister.h
+c000000004D74C2B8000000000000022A
+t1299497656
+s554
+i"ofMain.h"
+i"Poco/File.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofFileUtils.h
+c000000004D74C2B80000000000000C41
+t1299497656
+s3137
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofLog.h
+c000000004D74C2B80000000000000298
+t1299497656
+s664
+i"ofConstants.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofSystemUtils.h
+c000000004D74C2B800000000000001A8
+t1299497656
+s424
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofThread.h
+c000000004D74C2B8000000000000050C
+t1299497656
+s1292
+i"ofConstants.h"
+i"ofTypes.h"
+i<process.h>
+i<pthread.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofURLFileLoader.h
+c000000004D74C2B80000000000000712
+t1299497656
+s1810
+i"ofThread.h"
+i"ofEvents.h"
+i"ofFileUtils.h"
+i<deque>
+i<queue>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/utils/ofUtils.h
+c000000004D74C2B80000000000001341
+t1299497656
+s4929
+i"ofConstants.h"
+i<bitset>
+i"ofLog.h"
+i<shellapi.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofDirectShowGrabber.h
+c000000004D74C2B80000000000000475
+t1299497656
+s1141
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofBaseTypes.h"
+i"ofPixels.h"
+i"videoInput.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofGstUtils.h
+c000000004D74C2B80000000000000FB8
+t1299497656
+s4024
+i"ofConstants.h"
+i<gst/gst.h>
+i<gst/app/gstappsink.h>
+i"ofConstants.h"
+i"ofBaseTypes.h"
+i"ofPixels.h"
+i"ofTypes.h"
+i"ofEvents.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofGstVideoGrabber.h
+c000000004D74C2B80000000000000542
+t1299497656
+s1346
+i"ofGstUtils.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofGstVideoPlayer.h
+c000000004D74C2B80000000000000574
+t1299497656
+s1396
+i"ofGstUtils.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofQtUtils.h
+c000000004D74C2B800000000000006B5
+t1299497656
+s1717
+i"ofConstants.h"
+i<QuickTime/QuickTime.h>
+i<CoreServices/CoreServices.h>
+i<ApplicationServices/ApplicationServices.h>
+i<QTML.h>
+i<FixMath.h>
+i<QuickTimeComponents.h>
+i<TextUtils.h>
+i<MediaHandlers.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofQuickTimeGrabber.h
+c000000004D74C2B80000000000000648
+t1299497656
+s1608
+i"ofConstants.h"
+i"ofQtUtils.h"
+i"ofTexture.h"
+i"ofBaseTypes.h"
+i"ofPixels.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofQuickTimePlayer.h
+c000000004D74C2B800000000000008B8
+t1299497656
+s2232
+i"ofConstants.h"
+i"ofBaseTypes.h"
+i"ofPixels.h"
+i"ofQtUtils.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofVideoGrabber.h
+c000000004D74C2B8000000000000099B
+t1299497656
+s2459
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofBaseTypes.h"
+i"ofPixels.h"
+i"ofiPhoneVideoGrabber.h"
+i"ofQuickTimeGrabber.h"
+i"ofDirectShowGrabber.h"
+i"ofGstVideoGrabber.h"
+i"ofxAndroidVideoGrabber.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofVideoPlayer.h
+c000000004D74C2B80000000000000A84
+t1299497656
+s2692
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofBaseTypes.h"
+i"ofGstVideoPlayer.h"
+i"ofQuickTimePlayer.h"
+i"ofiPhoneVideoPlayer.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofiPhoneVideoGrabber.h
+c000000004D74C2B8000000000000032E
+t1299497656
+s814
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworks/video/ofiPhoneVideoPlayer.h
+c000000004D74C2B800000000000005B0
+t1299497656
+s1456
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a
+c000000004D74C3850000000000AAFD90
+t1299497861
+s11206032
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AbstractDelegate.h
+c000000004D74C2B80000000000000B59
+t1299497656
+s2905
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AbstractEvent.h
+c000000004D74C2B80000000000002D7C
+t1299497656
+s11644
+i"Poco/Foundation.h"
+i"Poco/SingletonHolder.h"
+i"Poco/SharedPtr.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveMethod.h"
+i"Poco/Mutex.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveMethod.h
+c000000004D74C2B80000000000001C64
+t1299497656
+s7268
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveRunnable.h"
+i"Poco/ActiveStarter.h"
+i"Poco/AutoPtr.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveResult.h
+c000000004D74C2B80000000000002E66
+t1299497656
+s11878
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveRunnable.h
+c000000004D74C2B80000000000001785
+t1299497656
+s6021
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/Runnable.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i"Poco/Exception.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ActiveStarter.h
+c000000004D74C2B80000000000000927
+t1299497656
+s2343
+i"Poco/Foundation.h"
+i"Poco/ThreadPool.h"
+i"Poco/ActiveRunnable.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AtomicCounter.h
+c000000004D74C2B80000000000001D06
+t1299497656
+s7430
+i"Poco/Foundation.h"
+i"Poco/UnWindows.h"
+i<libkern/OSAtomic.h>
+i"Poco/Mutex.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/AutoPtr.h
+c000000004D74C2B80000000000001E0C
+t1299497656
+s7692
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Bugcheck.h
+c000000004D74C2B800000000000014A9
+t1299497656
+s5289
+i"Poco/Foundation.h"
+i<string>
+i<iostream>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/CompareFunctions.h
+c000000004D74C2B800000000000007EC
+t1299497656
+s2028
+i"Poco/Foundation.h"
+i<functional>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Config.h
+c000000004D74C2B80000000000000E22
+t1299497656
+s3618
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Delegate.h
+c000000004D74C2B80000000000001828
+t1299497656
+s6184
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/FunctionDelegate.h"
+i"Poco/Expire.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Event.h
+c000000004D74C2B80000000000000E21
+t1299497656
+s3617
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Event_WIN32.h"
+i"Poco/Event_POSIX.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Event_POSIX.h
+c000000004D74C2B80000000000000A91
+t1299497656
+s2705
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Event_WIN32.h
+c000000004D74C2B8000000000000093F
+t1299497656
+s2367
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Exception.h
+c000000004D74C2B8000000000000283D
+t1299497656
+s10301
+i"Poco/Foundation.h"
+i<stdexcept>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Expire.h
+c000000004D74C2B80000000000000D0D
+t1299497656
+s3341
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/Timestamp.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/FIFOEvent.h
+c000000004D74C2B80000000000000B15
+t1299497656
+s2837
+i"Poco/AbstractEvent.h"
+i"Poco/FIFOStrategy.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/CompareFunctions.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/FIFOStrategy.h
+c000000004D74C2B80000000000001116
+t1299497656
+s4374
+i"Poco/NotificationStrategy.h"
+i<map>
+i<list>
+i<memory>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File.h
+c000000004D74C2B80000000000001F91
+t1299497656
+s8081
+i"Poco/Foundation.h"
+i"Poco/Timestamp.h"
+i<vector>
+i"File_WINCE.h"
+i"Poco/File_WIN32U.h"
+i"Poco/File_WIN32.h"
+i"Poco/File_UNIX.h"
+i"Poco/File_VMS.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_UNIX.h
+c000000004D74C2B80000000000000BC1
+t1299497656
+s3009
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_VMS.h
+c000000004D74C2B80000000000000BBC
+t1299497656
+s3004
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_WIN32.h
+c000000004D74C2B80000000000000C0C
+t1299497656
+s3084
+i"Poco/Foundation.h"
+i"Poco/Timestamp.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_WIN32U.h
+c000000004D74C2B80000000000000C2B
+t1299497656
+s3115
+i"Poco/Foundation.h"
+i"Poco/Timestamp.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/File_WINCE.h
+c000000004D74C2B80000000000000C2C
+t1299497656
+s3116
+i"Poco/Foundation.h"
+i"Poco/Timestamp.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Foundation.h
+c000000004D74C2B800000000000010BE
+t1299497656
+s4286
+i"Poco/Config.h"
+i"Poco/Platform.h"
+i"Poco/Platform_WIN32.h"
+i"Poco/Platform_VMS.h"
+i"Poco/Platform_POSIX.h"
+i"Poco/Bugcheck.h"
+i"Poco/Types.h"
+i<string>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/FunctionDelegate.h
+c000000004D74C2B800000000000013C8
+t1299497656
+s5064
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex.h
+c000000004D74C2B80000000000001D9F
+t1299497656
+s7583
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/ScopedLock.h"
+i"Poco/Mutex_WINCE.h"
+i"Poco/Mutex_WIN32.h"
+i"Poco/Mutex_POSIX.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex_POSIX.h
+c000000004D74C2B80000000000000AC3
+t1299497656
+s2755
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex_WIN32.h
+c000000004D74C2B80000000000000A04
+t1299497656
+s2564
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Mutex_WINCE.h
+c000000004D74C2B80000000000000870
+t1299497656
+s2160
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/NotificationStrategy.h
+c000000004D74C2B80000000000000B48
+t1299497656
+s2888
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform.h
+c000000004D74C2B80000000000001AF7
+t1299497656
+s6903
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform_POSIX.h
+c000000004D74C2B80000000000000843
+t1299497656
+s2115
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform_VMS.h
+c000000004D74C2B80000000000000BAA
+t1299497656
+s2986
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Platform_WIN32.h
+c000000004D74C2B80000000000000DCF
+t1299497656
+s3535
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/RefCountedObject.h
+c000000004D74C2B80000000000000BB1
+t1299497656
+s2993
+i"Poco/Foundation.h"
+i"Poco/AtomicCounter.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Runnable.h
+c000000004D74C2B80000000000000861
+t1299497656
+s2145
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ScopedLock.h
+c000000004D74C2B80000000000000B7F
+t1299497656
+s2943
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/SharedPtr.h
+c000000004D74C2B80000000000002278
+t1299497656
+s8824
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/AtomicCounter.h"
+i<algorithm>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/SignalHandler.h
+c000000004D74C2B800000000000011EB
+t1299497656
+s4587
+i"Poco/Foundation.h"
+i<vector>
+i<setjmp.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/SingletonHolder.h
+c000000004D74C2B80000000000000A67
+t1299497656
+s2663
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread.h
+c000000004D74C2B80000000000001E10
+t1299497656
+s7696
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Thread_WINCE.h"
+i"Poco/Thread_WIN32.h"
+i"Poco/Thread_POSIX.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/ThreadPool.h
+c000000004D74C2B80000000000001C8A
+t1299497656
+s7306
+i"Poco/Foundation.h"
+i"Poco/Thread.h"
+i"Poco/Mutex.h"
+i<vector>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread_POSIX.h
+c000000004D74C2B800000000000013B7
+t1299497656
+s5047
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/SignalHandler.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i<pthread.h>
+i<limits.h>
+i<sys/select.h>
+i<errno.h>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread_WIN32.h
+c000000004D74C2B80000000000001301
+t1299497656
+s4865
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/UnWindows.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Thread_WINCE.h
+c000000004D74C2B80000000000001276
+t1299497656
+s4726
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/UnWindows.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Timestamp.h
+c000000004D74C2B80000000000001A41
+t1299497656
+s6721
+i"Poco/Foundation.h"
+i<ctime>
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/Types.h
+c000000004D74C2B80000000000001926
+t1299497656
+s6438
+i"Poco/Foundation.h"
+
+N/Users/elliot/dev/openFrameworks/openFrameworks/libs/poco/include/Poco/UnWindows.h
+c000000004D74C2B80000000000000FC3
+t1299497656
+s4035
+i<windows.h>
+
+N/usr/include/TargetConditionals.h
+c000000004A8D4DF700000000000031E9
+t1250774519
+s12777
+
+N/usr/include/errno.h
+c000000004C3762EC00000000000003EB
+t1278698220
+s1003
+
+N/usr/include/inttypes.h
+c000000004C3762EC00000000000027D1
+t1278698220
+s10193
+
+N/usr/include/libkern/OSAtomic.h
+c000000004C3762EC0000000000002519
+t1278698220
+s9497
+
+N/usr/include/pthread.h
+c000000004C3762EC00000000000038F0
+t1278698220
+s14576
+
+N/usr/include/setjmp.h
+c000000004C3762EC0000000000000438
+t1278698220
+s1080
+
+N/usr/include/string.h
+c000000004C3762EC0000000000001731
+t1278698220
+s5937
+
+N/usr/include/sys/_types.h
+c000000004B90BBAB0000000000001845
+t1267776427
+s6213
+
+N/usr/include/sys/select.h
+c000000004B90BBAA00000000000016A2
+t1267776426
+s5794
+
+N/usr/include/termios.h
+c000000004C3762EC00000000000004D4
+t1278698220
+s1236
+
+N/usr/include/unistd.h
+c000000004C3762EC000000000000563E
+t1278698220
+s22078
+
+N/var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch
+t2
+s0
+
+NopenFrameworks-Info.plist
+c000000004D74C2AC0000000000000277
+t1299497644
+s631
+
+CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp
+r0
+
+CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp
+r0
+
+CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp
+r0
+
+CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp
+r0
+
+CBuild AST from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7a187290fc24b341^82aa7d90fc24b341^-110"[WARN]Warning: The Copy Files build phase contains this target's Info.plist file 'openFrameworks-Info.plist'.1(21%IDEActivityLogMessage2@103"Warning: The Copy Files build phase contains this target's Info.plist file 'openFrameworks-Info.plist'.-321191056#18446744073709551615#0#-1#-----0#1#0#--18"Check dependencies
+
+CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s321191085.451886
+e321191088.011326
+r1
+xCompileC
+xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../../libs/openFrameworks/ofMain.h:61,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h:17,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp:10:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+oIn file included from ../../../libs/openFrameworks/ofMain.h:63,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h:17,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp:10:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cppebc673adfc24b341^4fe702b0fc24b341^-2115"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../../libs/openFrameworks/ofMain.h:61,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h:17,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp:10:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'In file included from ../../../libs/openFrameworks/ofMain.h:63,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h:17,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp:10:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done13(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191085#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191087#362#130#4(36%IDEActivityLogHeaderInclusionMessage4@114"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp-321191087#18446744073709551615#0#-0#-3@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@112"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h-321191087#18446744073709551615#0#-0#-3@106"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h0000000000000000^16#18446744073709551615#16#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191087#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191087#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@50"By 'void ofVideoGrabber::setAnchorPoint(int, int)'-321191087#492#118#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^66#18446744073709551615#66#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191087#610#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191087#732#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191087#825#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191087#951#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191087#1344#130#4(4@114"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp-321191087#18446744073709551615#0#-0#-3@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@112"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h-321191087#18446744073709551615#0#-0#-3@106"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.h0000000000000000^16#18446744073709551615#16#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191087#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191087#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@49"By 'void ofVideoPlayer::setAnchorPoint(int, int)'-321191087#1474#116#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^65#18446744073709551615#65#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191087#1590#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191087#1712#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191087#1803#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191087#1929#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation5@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp0000000000000000^2447"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o src/Grid.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Grid.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Grid.o
+
+CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s321191088.011485
+e321191089.302751
+r1
+xCompileC
+xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../../libs/openFrameworks/ofMain.h:61,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h:16,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp:10:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+oIn file included from ../../../libs/openFrameworks/ofMain.h:63,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h:16,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp:10:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp520d03b0fc24b341^3d804db1fc24b341^-2143"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../../libs/openFrameworks/ofMain.h:61,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h:16,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp:10:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'In file included from ../../../libs/openFrameworks/ofMain.h:63,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h:16,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp:10:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done13(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191088#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191089#376#130#4(36%IDEActivityLogHeaderInclusionMessage4@121"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp-321191089#18446744073709551615#0#-0#-3@115"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@119"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h-321191089#18446744073709551615#0#-0#-3@113"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h0000000000000000^15#18446744073709551615#15#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191089#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191089#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@50"By 'void ofVideoGrabber::setAnchorPoint(int, int)'-321191089#506#118#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^66#18446744073709551615#66#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191089#624#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191089#746#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191089#839#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191089#965#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191089#1372#130#4(4@121"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp-321191089#18446744073709551615#0#-0#-3@115"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@119"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h-321191089#18446744073709551615#0#-0#-3@113"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.h0000000000000000^15#18446744073709551615#15#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191089#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191089#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@49"By 'void ofVideoPlayer::setAnchorPoint(int, int)'-321191089#1502#116#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^65#18446744073709551615#65#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191089#1618#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191089#1740#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191089#1831#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191089#1957#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation5@115"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp0000000000000000^2475"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o src/OrthoCamera.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/OrthoCamera.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/OrthoCamera.o
+
+CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s321191085.450491
+e321191088.273804
+r1
+xCompileC
+xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../../libs/openFrameworks/ofMain.h:61,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h:10,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp:10:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+oIn file included from ../../../libs/openFrameworks/ofMain.h:63,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h:10,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp:10:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp2a7373adfc24b341^161846b0fc24b341^-2119"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../../libs/openFrameworks/ofMain.h:61,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h:10,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp:10:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'In file included from ../../../libs/openFrameworks/ofMain.h:63,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h:10,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp:10:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done13(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191085#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191087#364#130#4(36%IDEActivityLogHeaderInclusionMessage4@115"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp-321191087#18446744073709551615#0#-0#-3@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@113"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h-321191087#18446744073709551615#0#-0#-3@107"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191087#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191087#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@50"By 'void ofVideoGrabber::setAnchorPoint(int, int)'-321191087#494#118#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^66#18446744073709551615#66#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191087#612#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191087#734#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191087#827#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191087#953#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191087#1348#130#4(4@115"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp-321191087#18446744073709551615#0#-0#-3@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@113"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h-321191087#18446744073709551615#0#-0#-3@107"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.h0000000000000000^9#18446744073709551615#9#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191087#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191087#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@49"By 'void ofVideoPlayer::setAnchorPoint(int, int)'-321191087#1478#116#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^65#18446744073709551615#65#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191087#1594#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191087#1716#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191087#1807#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191087#1933#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation5@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp0000000000000000^2451"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o src/Swarm.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/Swarm.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/Swarm.o
+
+CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s321191060.371611
+e321191085.449970
+r1
+xCompileC
+xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../../libs/openFrameworks/ofMain.h:61,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp:1:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+oIn file included from ../../../libs/openFrameworks/ofMain.h:63,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp:1:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+oIn file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp:2:
+o../../../libs/openFrameworks/app/ofBaseApp.h:35: warning: 'virtual void ofBaseApp::mouseReleased()' was hidden
+o/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:44: warning:   by 'virtual void testApp::mouseReleased(int, int, int)'
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp49495f94fc24b341^543773adfc24b341^-2273"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../../libs/openFrameworks/ofMain.h:61,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp:1:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'In file included from ../../../libs/openFrameworks/ofMain.h:63,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp:1:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp:2:../../../libs/openFrameworks/app/ofBaseApp.h:35: warning: 'virtual void ofBaseApp::mouseReleased()' was hidden/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:44: warning:   by 'virtual void testApp::mouseReleased(int, int, int)'i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done15(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191060#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191077#244#130#3(36%IDEActivityLogHeaderInclusionMessage4@114"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp-321191077#18446744073709551615#0#-0#-3@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp0000000000000000^0#18446744073709551615#0#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191077#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191077#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@50"By 'void ofVideoGrabber::setAnchorPoint(int, int)'-321191077#374#118#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^66#18446744073709551615#66#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191077#492#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191077#614#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191077#707#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191077#833#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191077#1108#130#3(4@114"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp-321191077#18446744073709551615#0#-0#-3@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp0000000000000000^0#18446744073709551615#0#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191077#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191077#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@49"By 'void ofVideoPlayer::setAnchorPoint(int, int)'-321191077#1238#116#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^65#18446744073709551615#65#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191077#1354#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191077#1476#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191077#1567#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191077#1693#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@52"'virtual void ofBaseApp::mouseReleased()' was hidden-321191077#1902#111#2(4@114"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp-321191077#18446744073709551615#0#-0#-3@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp0000000000000000^1#18446744073709551615#1#18446744073709551615#18446744073709551615#0#---2@100"'virtual void ofBaseApp::mouseReleased()' was hidden in ../../../libs/openFrameworks/app/ofBaseApp.h-321191077#18446744073709551615#0#-0#-3@61"file://localhost/../../../libs/openFrameworks/app/ofBaseApp.h0000000000000000^34#18446744073709551615#34#18446744073709551615#18446744073709551615#0#---1#-3@61"file://localhost/../../../libs/openFrameworks/app/ofBaseApp.h0000000000000000^34#18446744073709551615#34#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@55"By 'virtual void testApp::mouseReleased(int, int, int)'-321191077#2013#165#-1#-3@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h0000000000000000^43#18446744073709551615#43#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation5@108"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp0000000000000000^2447"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o src/main.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/main.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/main.o
+
+CCompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42
+s321191060.371642
+e321191085.451793
+r1
+xCompileC
+xbuild/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oIn file included from ../../../libs/openFrameworks/ofMain.h:61,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:20,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp:1:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'
+oIn file included from ../../../libs/openFrameworks/ofMain.h:63,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:20,
+o                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp:1:
+o../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+o../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden
+o../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'
+oIn file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp:1:
+o../../../libs/openFrameworks/app/ofBaseApp.h:35: warning: 'virtual void ofBaseApp::mouseReleased()' was hidden
+o/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:44: warning:   by 'virtual void testApp::mouseReleased(int, int, int)'
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Compile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp16515f94fc24b341^6da973adfc24b341^-2522"cc1plus: warning: -Wuninitialized is not supported without -OIn file included from ../../../libs/openFrameworks/ofMain.h:61,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:20,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp:1:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:67: warning:   by 'void ofVideoGrabber::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoGrabber.h:62: warning:   by 'ofVideoGrabber::draw'In file included from ../../../libs/openFrameworks/ofMain.h:63,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:20,                 from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp:1:../../../libs/openFrameworks/types/ofBaseTypes.h:46: warning: 'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:66: warning:   by 'void ofVideoPlayer::setAnchorPoint(int, int)'../../../libs/openFrameworks/types/ofBaseTypes.h:34: warning: 'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'../../../libs/openFrameworks/types/ofBaseTypes.h:38: warning: 'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden../../../libs/openFrameworks/video/ofVideoPlayer.h:61: warning:   by 'ofVideoPlayer::draw'In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp:1:../../../libs/openFrameworks/app/ofBaseApp.h:35: warning: 'virtual void ofBaseApp::mouseReleased()' was hidden/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h:44: warning:   by 'virtual void testApp::mouseReleased(int, int, int)'i686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done15(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191060#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191077#367#130#4(36%IDEActivityLogHeaderInclusionMessage4@117"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp-321191077#18446744073709551615#0#-0#-3@111"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp0000000000000000^0#18446744073709551615#0#18446744073709551615#18446744073709551615#0#---4@115"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h-321191077#18446744073709551615#0#-0#-3@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h0000000000000000^19#18446744073709551615#19#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191077#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191077#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@50"By 'void ofVideoGrabber::setAnchorPoint(int, int)'-321191077#497#118#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^66#18446744073709551615#66#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191077#615#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191077#737#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191077#830#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@25"By 'ofVideoGrabber::draw'-321191077#956#93#-1#-3@68"file://localhost/../../../libs/openFrameworks/video/ofVideoGrabber.h0000000000000000^61#18446744073709551615#61#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@67"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden-321191077#1354#130#4(4@117"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp-321191077#18446744073709551615#0#-0#-3@111"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp0000000000000000^0#18446744073709551615#0#18446744073709551615#18446744073709551615#0#---4@115"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h-321191077#18446744073709551615#0#-0#-3@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h0000000000000000^19#18446744073709551615#19#18446744073709551615#18446744073709551615#0#---4@59"In file included from ../../../libs/openFrameworks/ofMain.h-321191077#18446744073709551615#0#-0#-3@54"file://localhost/../../../libs/openFrameworks/ofMain.h0000000000000000^62#18446744073709551615#62#18446744073709551615#18446744073709551615#0#---2@119"'virtual void ofBaseDraws::setAnchorPoint(float, float)' was hidden in ../../../libs/openFrameworks/types/ofBaseTypes.h-321191077#18446744073709551615#0#-0#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#---1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^45#18446744073709551615#45#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@49"By 'void ofVideoPlayer::setAnchorPoint(int, int)'-321191077#1484#116#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^65#18446744073709551615#65#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@59"'virtual void ofBaseDraws::draw(const ofPoint&)' was hidden-321191077#1600#122#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^33#18446744073709551615#33#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191077#1722#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@63"'virtual void ofBaseDraws::draw(const ofRectangle&)' was hidden-321191077#1813#126#-1#-3@65"file://localhost/../../../libs/openFrameworks/types/ofBaseTypes.h0000000000000000^37#18446744073709551615#37#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@24"By 'ofVideoPlayer::draw'-321191077#1939#91#-1#-3@67"file://localhost/../../../libs/openFrameworks/video/ofVideoPlayer.h0000000000000000^60#18446744073709551615#60#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@52"'virtual void ofBaseApp::mouseReleased()' was hidden-321191077#2151#111#2(4@117"In file included from /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp-321191077#18446744073709551615#0#-0#-3@111"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp0000000000000000^0#18446744073709551615#0#18446744073709551615#18446744073709551615#0#---2@100"'virtual void ofBaseApp::mouseReleased()' was hidden in ../../../libs/openFrameworks/app/ofBaseApp.h-321191077#18446744073709551615#0#-0#-3@61"file://localhost/../../../libs/openFrameworks/app/ofBaseApp.h0000000000000000^34#18446744073709551615#34#18446744073709551615#18446744073709551615#0#---1#-3@61"file://localhost/../../../libs/openFrameworks/app/ofBaseApp.h0000000000000000^34#18446744073709551615#34#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--2@55"By 'virtual void testApp::mouseReleased(int, int, int)'-321191077#2262#165#-1#-3@109"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.h0000000000000000^43#18446744073709551615#43#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation5@111"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp0000000000000000^2459"CompileC build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o src/testApp.cpp normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -include /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/src/testApp.cpp -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/testApp.o
+
+CLd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug normal i386
+s321191089.302939
+e321191090.643501
+r1
+xLd
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug
+xnormal
+xi386
+old: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/GLee/lib/osx'
+old: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib'
+old: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx'
+old: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib'
+old: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx'
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"Link /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebugb0ab4db1fc24b341^c2bfa4b2fc24b341^-793"ld: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/GLee/lib/osx'ld: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib'ld: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx'ld: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib'ld: warning: directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx'5(21%IDEActivityLogMessage2@141"Directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/GLee/lib/osx'-321191090#0#155#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@149"Directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib'-321191090#155#163#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@142"Directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx'-321191090#318#156#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@149"Directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib'-321191090#474#163#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--2@142"Directory not found for option '-L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx'-321191090#637#156#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#32"Apple Mach-O Linker (ld) Warning--0#0#0#--3992"Ld bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug normal i386    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    /Developer/usr/bin/llvm-g++-4.2 -arch i386 -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freeimage/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/GLee/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/rtAudio/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freetype/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx -L/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -filelist /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/advanced3dExampleDebug.LinkFileList -dead_strip /Users/elliot/dev/openFrameworks/openFrameworks/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/rtAudio/lib/osx/rtAudio.a -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework OpenGL -framework QuickTime -framework AppKit -framework Cocoa -framework IOKit -framework GLUT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoFoundation.a /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoNet.a /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoUtil.a /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx/PocoXML.a /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freetype/lib/osx/freetype.a -lfmodex /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx/freeimage.a /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx/glew.a -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug
+
+CPBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
+s321191090.754059
+e321191090.870185
+r1
+xPBXCp
+x../../../libs/glut/lib/osx/GLUT.framework
+xbin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.frameworke318c1b2fc24b341^65e2deb2fc24b341^---0#0#0#-19%DVTDocumentLocation2@161"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework000020962705f041^553"PBXCp ../../../libs/glut/lib/osx/GLUT.framework bin/advanced3dExampleDebug.app/Contents/Frameworks/GLUT.framework    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx/GLUT.framework /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Frameworks
+
+CPBXCp openFrameworks-Info.plist bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
+s321191090.872396
+e321191090.883009
+r1
+xPBXCp
+xopenFrameworks-Info.plist
+xbin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Copy bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist5e63dfb2fc24b341^3411e2b2fc24b341^---0#0#0#-19%DVTDocumentLocation2@171"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist000020962705f041^530"PBXCp openFrameworks-Info.plist bin/advanced3dExampleDebug.app/Contents/Resources/openFrameworks-Info.plist    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Resources
+
+CPhaseScriptExecution "Run Script" /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+s321191090.645111
+e321191090.752703
+r1
+xPhaseScriptExecution
+xRun Script
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'ca34a6b2fc24b341^c7f0c4b2fc24b341^---0#0#0#--24985"PhaseScriptExecution "Run Script" build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER elliot    setenv ALWAYS_SEARCH_USER_PATHS YES    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_64_BIT "x86_64 i386"    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_STANDARD_64_BIT x86_64    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv BUILD_ROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv CACHE_ROOT /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app    setenv CODE_SIGNING_ALLOWED YES    setenv COMBINE_HIDPI_IMAGES NO    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv CONFIGURATION_TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug    setenv CONTENTS_FOLDER_PATH advanced3dExampleDebug.app/Contents    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING YES    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/advanced3dExample.dst    setenv DWARF_DSYM_FILE_NAME advanced3dExampleDebug.app.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn .git *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH advanced3dExampleDebug.app/Contents/Executables    setenv EXECUTABLE_FOLDER_PATH advanced3dExampleDebug.app/Contents/MacOS    setenv EXECUTABLE_NAME advanced3dExampleDebug    setenv EXECUTABLE_PATH advanced3dExampleDebug.app/Contents/MacOS/advanced3dExampleDebug    setenv FILE_LIST /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH advanced3dExampleDebug.app/Contents/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin\"  \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx\""    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME advanced3dExampleDebug.app    setenv GCC3_VERSION 3.3    setenv GCC_AUTO_VECTORIZATION YES    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE YES    setenv GCC_ENABLE_SSE3_EXTENSIONS YES    setenv GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS YES    setenv GCC_GENERATE_DEBUGGING_SYMBOLS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN NO    setenv GCC_MODEL_TUNING G4    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h    setenv GCC_SYMBOLS_PRIVATE_EXTERN NO    setenv GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS NO    setenv GCC_TREAT_NONCONFORMANT_CODE_ERRORS_AS_WARNINGS YES    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvmgcc42    setenv GCC_WARN_64_TO_32_BIT_CONVERSION NO    setenv GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS YES    setenv GCC_WARN_ABOUT_GLOBAL_CONSTRUCTORS NO    setenv GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO YES    setenv GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS YES    setenv GCC_WARN_ABOUT_MISSING_NEWLINE NO    setenv GCC_WARN_ABOUT_MISSING_PROTOTYPES NO    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL NO    setenv GCC_WARN_CHECK_SWITCH_STATEMENTS NO    setenv GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS NO    setenv GCC_WARN_FOUR_CHARACTER_CONSTANTS NO    setenv GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS YES    setenv GCC_WARN_INHIBIT_ALL_WARNINGS NO    setenv GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED NO    setenv GCC_WARN_MISSING_PARENTHESES YES    setenv GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR YES    setenv GCC_WARN_NON_VIRTUAL_DESTRUCTOR YES    setenv GCC_WARN_PEDANTIC NO    setenv GCC_WARN_PROTOTYPE_CONVERSION YES    setenv GCC_WARN_SHADOW NO    setenv GCC_WARN_SIGN_COMPARE YES    setenv GCC_WARN_STRICT_SELECTOR_MATCH NO    setenv GCC_WARN_UNDECLARED_SELECTOR YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNKNOWN_PRAGMAS YES    setenv GCC_WARN_UNUSED_FUNCTION YES    setenv GCC_WARN_UNUSED_LABEL YES    setenv GCC_WARN_UNUSED_PARAMETER NO    setenv GCC_WARN_UNUSED_VALUE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include\" ../../../libs/glew/include ../../../libs/openFrameworks/** ../../../libs/freetype/include/ ../../../libs/freetype/include/freetype2 ../../../libs/poco/include ../../../addons/"    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE openFrameworks-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT same-as-input    setenv INFOPLIST_PATH advanced3dExampleDebug.app/Contents/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH advanced3dExampleDebug.app/Contents/Resources/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/advanced3dExample.dst/Users/elliot/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER elliot    setenv INSTALL_PATH /Users/elliot/Applications    setenv INSTALL_ROOT /tmp/advanced3dExample.dst    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEGACY_DEVELOPER_DIR /Developer/Library/Xcode/PrivatePlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin\"  \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freeimage/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/GLee/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/rtAudio/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx\"     \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freetype/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx\" \"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freeimage/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/fmodex/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/freetype/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/FreeImage/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/GLee/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/poco/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/rtAudio/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../../../glew/glew-1.5.7/lib\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/lib/osx\""    setenv LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9 "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glew/libs/osx\""    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal/i386/advanced3dExampleDebug.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 10J567    setenv MAC_OS_X_VERSION_ACTUAL 1066    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0606    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJECT_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Objects-normal    setenv OBJROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_CPLUSPLUSFLAGS "-D__MACOSX_CORE__ -lpthread"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH advanced3dExampleDebug.app/Contents/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS c++    setenv PKGINFO_FILE_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/PkgInfo    setenv PKGINFO_PATH advanced3dExampleDebug.app/Contents/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/MacOSX.platform    setenv PLATFORM_NAME macosx    setenv PLATFORM_PRODUCT_BUILD_VERSION 4A278b    setenv PLIST_FILE_OUTPUT_FORMAT same-as-input    setenv PLUGINS_FOLDER_PATH advanced3dExampleDebug.app/Contents/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH advanced3dExampleDebug.app/Contents/PrivateHeaders    setenv PRODUCT_NAME advanced3dExampleDebug    setenv PRODUCT_SETTINGS_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT advanced3dExample    setenv PROJECT_DERIVED_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/DerivedSources    setenv PROJECT_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv PROJECT_FILE_PATH /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/advanced3dExample.xcodeproj    setenv PROJECT_NAME advanced3dExample    setenv PROJECT_TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build    setenv PUBLIC_HEADERS_FOLDER_PATH advanced3dExampleDebug.app/Contents/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT     setenv SDK_PRODUCT_BUILD_VERSION 10J567    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHARED_DERIVED_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH advanced3dExampleDebug.app/Contents/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH advanced3dExampleDebug.app/Contents/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv SRCROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING UTF-16    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_PLATFORMS macosx    setenv SYMBOL_REPOSITORY_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/SymbolRepositories    setenv SYMROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETNAME advanced3dExample    setenv TARGET_BUILD_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin    setenv TARGET_NAME advanced3dExample    setenv TARGET_TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_FILES_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_FILE_DIR /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build    setenv TEMP_ROOT /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build    setenv TEST_AFTER_BUILD NO    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH advanced3dExampleDebug.app/Contents/Resources    setenv UNSTRIPPED_PRODUCT NO    setenv USER elliot    setenv USER_APPS_DIR /Users/elliot/Applications    setenv USER_LIBRARY_DIR /Users/elliot/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS "i386 x86_64"    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH advanced3dExampleDebug.app/Contents/version.plist    setenv VERSION_INFO_BUILDER elliot    setenv VERSION_INFO_FILE advanced3dExampleDebug_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:advanced3dExampleDebug  PROJECT:advanced3dExample-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME advanced3dExampleDebug.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4A278b    setenv XCODE_VERSION_ACTUAL 0400    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0400    setenv YACC /Developer/usr/bin/yacc    setenv ZERO_LINK NO    /bin/sh -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/Script-E4B6FFFD0C3F9AB9008CF71C.sh
+
+CProcessInfoPlistFile /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist openFrameworks-Info.plist
+s321191056.498058
+e321191056.503371
+r1
+xProcessInfoPlistFile
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist
+xopenFrameworks-Info.plist
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Process openFrameworks-Info.plist368f7f90fc24b341^d4f18090fc24b341^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/openFrameworks-Info.plist0000000000000000^552"ProcessInfoPlistFile bin/advanced3dExampleDebug.app/Contents/Info.plist openFrameworks-Info.plist    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    builtin-infoPlistUtility openFrameworks-Info.plist -genpkginfo /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app/Contents/Info.plist
+
+CProcessPCH++ /Users/elliot/Library/Developer/Xcode/DerivedData/advanced3dExample-aprychzagnpzejbfusfuwolnrqna/Index/PrecompiledHeaders/Carbon-fkdvlrvtaffhblbjivwikhotxoyc_ast/Carbon.h.pth /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42
+s321191056.504742
+e321191060.371314
+r1
+xProcessPCH++
+x/var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch
+x/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvmgcc42
+occ1plus: warning: -Wuninitialized is not supported without -O
+oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Precompile /System/Library/Frameworks/Carbon.framework/Headers/Carbon.hd9d08190fc24b341^c70d5f94fc24b341^-157"cc1plus: warning: -Wuninitialized is not supported without -Oi686-apple-darwin10-llvm-gcc-4.2: -lpthread: linker input file unused because linking not done1(21%IDEActivityLogMessage2@43"-Wuninitialized is not supported without -O-321191056#0#62#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#20"LLVM GCC 4.2 Warning--0#0#0#-19%DVTDocumentLocation4@76"file://localhost/System/Library/Frameworks/Carbon.framework/Headers/Carbon.h0000000000000000^2362"ProcessPCH++ /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h normal i386 c++ com.apple.compilers.llvmgcc42    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c++-header -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-field-initializers -fpermissive -Wreturn-type -Wnon-virtual-dtor -Woverloaded-virtual -Wparentheses -Wunused-function -Wunused-label -Wunused-variable -Wunused-value -Wuninitialized -Wunknown-pragmas -Wsign-compare -Wconversion -fasm-blocks -gdwarf-2 -msse3 -mssse3 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/advanced3dExampleDebug.hmap -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/include -I../../../libs/glew/include -I../../../libs/openFrameworks -I../../../libs/openFrameworks/3d -I../../../libs/openFrameworks/app -I../../../libs/openFrameworks/communication -I../../../libs/openFrameworks/events -I../../../libs/openFrameworks/graphics -I../../../libs/openFrameworks/math -I../../../libs/openFrameworks/sound -I../../../libs/openFrameworks/types -I../../../libs/openFrameworks/utils -I../../../libs/openFrameworks/video -I../../../libs/freetype/include -I../../../libs/freetype/include/freetype2 -I../../../libs/poco/include -I../../../addons -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources/i386 -I/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/build/advanced3dExample.build/Debug/advanced3dExample.build/DerivedSources -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin -F/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/../../../libs/glut/lib/osx -D__MACOSX_CORE__ -lpthread -c /System/Library/Frameworks/Carbon.framework/Headers/Carbon.h -o /var/folders/ro/roPPKONoF1qLMHjXFu4lhE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Carbon-ekncabxlwzynyecuheckmzbsoyaf/Carbon.h.gch
+
+CTouch /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
+s321191090.884687
+e321191090.894078
+r1
+xTouch
+x/Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Touch /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.appa087e2b2fc24b341^382ce5b2fc24b341^---0#0#0#--257"Touch bin/advanced3dExampleDebug.app    cd /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample    /usr/bin/touch -c /Users/elliot/dev/openFrameworks/openFrameworks/apps/examples/advanced3dExample/bin/advanced3dExampleDebug.app
+

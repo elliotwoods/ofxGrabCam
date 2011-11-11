@@ -60,6 +60,7 @@ protected:
 	//
 	bool	mouseDown;
 	bool	handDown;
+	bool	altDown;
 	bool	pickCursorFlag;
 	ofVec3f mouseP;
 	ofVec3f mouseW;

@@ -9,7 +9,7 @@
 #include "ofxGrabCam.h"
 
 //--------------------------
-ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), handDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
+ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
 	addListeners();
 }
 
@@ -161,7 +161,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 		ofCamera::move(dx * -ux * 2 * d * tan(60.0f) * ar);
 		ofCamera::move(dy * uy * 2 * d * tan(60.0f));
 	} else {
-		if (args.button==0) {	
+		if (args.button==0 && !altDown) {	
 			rotation.makeRotate(dx * 90 * ar, -uy, dy * 90, -ux, 0, ofVec3f(0,0,1));
 			
 			if (fixUpwards) {
@@ -186,6 +186,9 @@ void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
 	
 	if (args.key == 'h')
 		handDown = true;
+	
+	if (args.key == OF_KEY_ALT)
+		altDown = true;
 }
 
 
@@ -193,6 +196,9 @@ void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
 void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
 	if (args.key == 'h')
 		handDown = false;
+	
+	if (args.key == OF_KEY_ALT)
+		altDown = false;
 }
 
 

@@ -13,12 +13,15 @@ public:
 
 	void keyPressed  (int key);
 
+	ofxGrabCam camera;
+	
 	////
 	//scene
 	vector<ofVec3f> positions;
 	vector<ofColor> colours;
-
-	ofxGrabCam camera;
+	//
+	void drawGrid(float scale = 10.0f, float ticks = 5.0f, bool labels = false, bool x = true, bool y = true, bool z = true);
+	void drawGridPlane(float scale, float ticks = 5.0f, bool labels = false);
 	//
 	////
 };

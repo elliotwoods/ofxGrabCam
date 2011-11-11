@@ -6,15 +6,19 @@ Inspired by Google SketchUp (http://sketchup.google.com/)
 Name suggestions welcome!
 
 #Controls
-ofxGrabCam
-* Left click drag = rotate
-* Right click drag = zoom
-* hold 'h' whilst left click drag = pan
-* 'r' key = reset
+##ofxGrabCam
+Left click drag = rotate
 
-In the example project
-* 'c' = toggle draw cursor
-* 'u' = toggle fix up vector
+Right click drag = zoom
+
+hold 'h' whilst left click drag = pan
+
+'r' key = reset
+
+##Example project
+'c' = toggle draw cursor
+
+'u' = toggle fix up vector
 
 #Credits
 Elliot Woods

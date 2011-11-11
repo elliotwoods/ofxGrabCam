@@ -1,4 +1,7 @@
 #ofxGrabCam
+
+"this is basically the best thing ever." - kyle mcdonald
+
 Camera for browsing your scene. It 'picks' the xyz position under the cursor (using the depth buffer to get Z).
 Rotations and zoom are then performed with respect to that xyz position
 Inspired by Google SketchUp (http://sketchup.google.com/)

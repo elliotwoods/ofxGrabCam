@@ -10,7 +10,7 @@
 
 //--------------------------
 ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
-	addListeners();
+	init();
 }
 
 //--------------------------
@@ -151,17 +151,19 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 		return;
 	
 	ofVec3f p = ofCamera::getPosition();
-	ofVec3f uy = 2 * ofCamera::getUpDir();
-	ofVec3f ux = 2 * ofCamera::getSideDir();
+	ofVec3f uy = ofCamera::getUpDir();
+	ofVec3f ux = ofCamera::getSideDir();
 	float ar = ofGetViewportWidth() / ofGetViewportHeight();
 	
 	if (handDown) {
+		//pan
 		float d = (p - mouseW).length();
 		//ofCamera::getFov() doesn't exist!!
-		ofCamera::move(dx * -ux * 2 * d * tan(60.0f) * ar);
-		ofCamera::move(dy * uy * 2 * d * tan(60.0f));
+		ofCamera::move(dx * -ux * d * tan(ar * 60.0f * PI / 180.0f));
+		ofCamera::move(dy * uy * d * tan(60.0f * PI / 180.0f) / 2.0f);
 	} else {
-		if (args.button==0 && !altDown) {	
+		if (args.button==0 && !altDown) {
+			//orbit
 			rotation.makeRotate(dx * 90 * ar, -uy, dy * 90, -ux, 0, ofVec3f(0,0,1));
 			
 			if (fixUpwards) {
@@ -174,6 +176,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 			ofCamera::setPosition((p - mouseW) * rotation + mouseW);
 			ofCamera::rotate(rotation);
 		} else {
+			//dolly
 			ofCamera::move(2 * (mouseW - p) * dy);
 		}
 	}

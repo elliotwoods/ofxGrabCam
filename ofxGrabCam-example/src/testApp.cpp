@@ -16,11 +16,8 @@ void testApp::setup(){
 	ofBackground(100, 100, 100);
 	ofEnableSmoothing();
 	
-	// REMEMBER! you have to init the camera
-	// in order for it to register events.
-	// I'd prefer to put this in the constructor (i.e. automatic)
-	// but since it's non-standard practise it's likely to break later
-	camera.init();
+	// You might need to do this in the future if openFrameworks changes currently it's done automatically in the constructor, but this may be too early for openFrameworks (if the current situation changes)
+	// camera.init();
 }
 
 //--------------------------------------------------------------
@@ -50,18 +47,18 @@ void testApp::draw(){
 	
 	ofSetColor(0,0,0);
 	
-	int row = 10;
-	ofDrawBitmapString("ofxGrabCam", 10, row+=10);
-	ofDrawBitmapString("Drag with left mouse to orbit", 10, row+=10);
-	ofDrawBitmapString("Drag with right mouse to zoom", 10, row+=10);
-	ofDrawBitmapString("Hold 'h' and drag with left mouse to pan", 10, row+=10);
-	ofDrawBitmapString("Press 'r' to reset", 10, row+=10);
+	int row = 1;
+	ofDrawBitmapString("ofxGrabCam", 10, row++ * 15);
+	ofDrawBitmapString("Drag with left mouse to orbit", 10, row++ * 15);
+	ofDrawBitmapString("Drag with right mouse to zoom", 10, row++ * 15);
+	ofDrawBitmapString("Hold 'h' and drag with left mouse to pan", 10, row++ * 15);
+	ofDrawBitmapString("Press 'r' to reset", 10, row++ * 15);
 
-	row+=10;
+	row++;
 	
-	ofDrawBitmapString("This example", 10, row+=10);
-	ofDrawBitmapString("Press 'c' to toggleCursorDraw", 10, row+=10);
-	ofDrawBitmapString("Press 'u' to  toggleFixUpwards", 10, row+=10);
+	ofDrawBitmapString("This example", 10, row++ * 15);
+	ofDrawBitmapString("Press 'c' to toggleCursorDraw", 10, row++ * 15);
+	ofDrawBitmapString("Press 'u' to  toggleFixUpwards", 10, row++ * 15);
 }
 
 //--------------------------------------------------------------

@@ -30,6 +30,7 @@ void ofxGrabCam::init() {
 //--------------------------
 void ofxGrabCam::begin(ofRectangle viewport) {
 	glEnable(GL_DEPTH_TEST);	
+	viewportRect = viewport;
 	ofCamera::begin(viewport);
 }
 
@@ -112,9 +113,13 @@ void ofxGrabCam::mousePressed(ofMouseEventArgs &args) {
 	mouseP.x = args.x;
 	mouseP.y = args.y;
 	
-	if (!mouseDown)
-		pickCursorFlag = true;
-	mouseDown = true;
+	if (viewportRect.inside(args.x, args.y)) {
+		if (!mouseDown)
+			pickCursorFlag = true;
+		mouseDown = true;
+	} else {
+		mouseDown = false;
+	}
 }
 
 //--------------------------
@@ -157,6 +162,28 @@ void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
 void ofxGrabCam::findCursor() {
 	//read z value from depth buffer at mouse coords
 	glReadPixels(mouseP.x, ofGetViewportHeight()-1-mouseP.y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
+	
+	//if we get nothing, scatter until we get something
+	//we search in a spiral until we hit something
+	if (mouseP.z == 1.0f) {
+		float sx, sy; // search this spot in screen space
+		float r, theta; // search is in polar coords
+		for (int iteration=0; iteration < OFXGRABCAM_SEARCH_MAX_ITERATIONS; iteration++) {
+			r = OFXGRABCAM_SEARCH_WIDTH * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
+			theta = OFXGRABCAM_SEARCH_WINDINGS * 2 * PI * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
+			sx = ofGetWidth() * r * cos(theta) + mouseP.x;
+			sy = ofGetHeight() * r * sin(theta) + mouseP.y;
+			
+			glReadPixels(sx, ofGetViewportHeight()-1-sy, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
+			
+			if (mouseP.z != 1.0f)
+				break;
+		}
+	}
+	
+	if (mouseP.z == 1.0f)
+		return;
+											   
 	glGetDoublev(GL_PROJECTION_MATRIX, matP);
 	glGetDoublev(GL_MODELVIEW_MATRIX, matM);
 	glGetIntegerv(GL_VIEWPORT, viewport);

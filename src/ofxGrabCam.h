@@ -9,6 +9,11 @@
 
 #include "ofMain.h"
 
+//in normalised screen coords -0.5>0.5
+#define OFXGRABCAM_SEARCH_WIDTH 1.0f
+#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 100
+#define OFXGRABCAM_SEARCH_WINDINGS 10.0f
+
 class ofxGrabCam : public ofCamera {
 public:	
 	ofxGrabCam();
@@ -40,25 +45,32 @@ protected:
 	void	mouseDragged(ofMouseEventArgs & args);
 	void	keyPressed(ofKeyEventArgs & args);
 	//
-	////
-	
-	
-	////
-	//camera
-	void	findCursor();
-	
 	bool	initialised;
+	//
+	////
 	
+	
+	////
+	//cursor
+	void	findCursor();
+	//
 	bool	mouseDown;
 	bool	pickCursorFlag;
 	ofVec3f mouseP;
 	ofVec3f mouseW;
 	bool	drawCursor;
 	float	drawCursorSize;
+	//
+	////
 	
+	
+	////
+	//view
+	ofRectangle viewportRect;
+	//
 	GLint		viewport[4];
 	GLdouble	matM[16], matP[16];
-	
+	//
 	ofQuaternion rotation;
 	//
 	////

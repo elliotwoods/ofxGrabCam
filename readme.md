@@ -6,10 +6,12 @@ Inspired by Google SketchUp (http://sketchup.google.com/)
 #Controls
 Left click drag = rotate
 Right click drag = zoom
+hold 'h' whilst left click drag = pan
 'r' key = reset
 
 In the example project
 'c' = toggle draw cursor
+'u' = toggle fix up vector
 
 #Credits
 Elliot Woods

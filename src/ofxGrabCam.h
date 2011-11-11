@@ -31,6 +31,9 @@ public:
 	void	setCursorDraw(bool enabled, float size=0.1);
 	void	toggleCursorDraw();
 	
+	void	setFixUpwards(bool enabled);
+	void	toggleFixUpwards();
+	
 protected:
 	
 	////
@@ -44,6 +47,7 @@ protected:
 	void	mouseReleased(ofMouseEventArgs & args);
 	void	mouseDragged(ofMouseEventArgs & args);
 	void	keyPressed(ofKeyEventArgs & args);
+	void	keyReleased(ofKeyEventArgs & args);
 	//
 	bool	initialised;
 	//
@@ -55,6 +59,7 @@ protected:
 	void	findCursor();
 	//
 	bool	mouseDown;
+	bool	handDown;
 	bool	pickCursorFlag;
 	ofVec3f mouseP;
 	ofVec3f mouseW;
@@ -72,6 +77,8 @@ protected:
 	GLdouble	matM[16], matP[16];
 	//
 	ofQuaternion rotation;
+	//
+	bool		fixUpwards;
 	//
 	////
 };

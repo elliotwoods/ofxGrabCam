@@ -9,7 +9,7 @@
 #include "ofxGrabCam.h"
 
 //--------------------------
-ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1) {
+ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), handDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
 	addListeners();
 }
 
@@ -71,6 +71,16 @@ void ofxGrabCam::toggleCursorDraw() {
 }
 
 //--------------------------
+void ofxGrabCam::setFixUpwards(bool enabled) {
+	fixUpwards = enabled;
+}
+
+//--------------------------
+void ofxGrabCam::toggleFixUpwards() {
+	fixUpwards ^= true;
+}
+
+//--------------------------
 void ofxGrabCam::addListeners() {
 	ofAddListener(ofEvents.update, this, &ofxGrabCam::update);
     ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
@@ -78,6 +88,7 @@ void ofxGrabCam::addListeners() {
     ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
     ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
     ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
+    ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
 
 	initialised = true;
 }
@@ -93,6 +104,7 @@ void ofxGrabCam::removeListeners() {
     ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
     ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
     ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
+	ofRemoveListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
 	
 	initialised = false;
 }
@@ -129,12 +141,11 @@ void ofxGrabCam::mouseReleased(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
-	float dx = args.x - mouseP.x;
-	float dy = args.y - mouseP.y;
+	float dx = (args.x - mouseP.x) / ofGetViewportWidth();
+	float dy = (args.y - mouseP.y) / ofGetViewportHeight();
 	
 	mouseP.x = args.x;
 	mouseP.y = args.y;
-	
 	
 	if (mouseP.z == 1.0f)
 		return;
@@ -143,12 +154,27 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	ofVec3f uy = 2 * ofCamera::getUpDir();
 	ofVec3f ux = 2 * ofCamera::getSideDir();
 	
-	if (args.button==0) {		
-		rotation.makeRotate(dx/ofGetWidth() * 90, -uy, dy/ofGetHeight() * 90, -ux, 0, ofVec3f(0,0,1));
-		ofCamera::setPosition((p - mouseW) * rotation + mouseW);
-		ofCamera::rotate(rotation);
+	if (handDown) {
+		float d = (p - mouseW).length();
+		//ofCamera::getFov() doesn't exist!!
+		ofCamera::move(dx * -ux * 2 * d * tan(60.0f) * ofGetViewportWidth() / ofGetViewportHeight());
+		ofCamera::move(dy * uy * 2 * d * tan(60.0f));
 	} else {
-		ofCamera::move(2 * (mouseW - p) * dy / ofGetHeight());
+		if (args.button==0) {	
+			rotation.makeRotate(dx * 90, -uy, dy * 90, -ux, 0, ofVec3f(0,0,1));
+			
+			if (fixUpwards) {
+				ofQuaternion rotToUp;
+				ofVec3f sideDir = ofCamera::getSideDir() * rotation;
+				rotToUp.makeRotate(sideDir, sideDir * ofVec3f(1.0f, 0, 1.0f));
+				rotation *= rotToUp;
+			}
+			
+			ofCamera::setPosition((p - mouseW) * rotation + mouseW);
+			ofCamera::rotate(rotation);
+		} else {
+			ofCamera::move(2 * (mouseW - p) * dy);
+		}
 	}
 }
 
@@ -156,7 +182,18 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
 	if (args.key == 'r')
 		reset();
+	
+	if (args.key == 'h')
+		handDown = true;
 }
+
+
+//--------------------------
+void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
+	if (args.key == 'h')
+		handDown = false;
+}
+
 
 //--------------------------
 void ofxGrabCam::findCursor() {
@@ -173,6 +210,9 @@ void ofxGrabCam::findCursor() {
 			theta = OFXGRABCAM_SEARCH_WINDINGS * 2 * PI * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
 			sx = ofGetWidth() * r * cos(theta) + mouseP.x;
 			sy = ofGetHeight() * r * sin(theta) + mouseP.y;
+			
+			if (!viewportRect.inside(sx, sy))
+				continue;
 			
 			glReadPixels(sx, ofGetViewportHeight()-1-sy, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
 			

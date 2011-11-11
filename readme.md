@@ -5,6 +5,9 @@ Inspired by Google SketchUp (http://sketchup.google.com/)
 
 Name suggestions welcome!
 
+Elliot Woods
+http://www.kimchiandchips.com
+
 #Controls
 ##ofxGrabCam
 Left click drag = rotate
@@ -19,10 +22,6 @@ hold 'h' whilst left click drag = pan
 'c' = toggle draw cursor
 
 'u' = toggle fix up vector
-
-#Credits
-Elliot Woods
-http://www.kimchiandchips.com
 
 #License
 MIT License

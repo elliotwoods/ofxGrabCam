@@ -33,7 +33,7 @@ public:
 	
 	void	setFixUpwards(bool enabled);
 	void	toggleFixUpwards();
-	
+
 protected:
 	
 	////

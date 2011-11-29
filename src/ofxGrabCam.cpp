@@ -32,6 +32,10 @@ void ofxGrabCam::begin(ofRectangle viewport) {
 	glEnable(GL_DEPTH_TEST);	
 	viewportRect = viewport;
 	ofCamera::begin(viewport);
+	
+	glGetDoublev(GL_PROJECTION_MATRIX, this->matP);
+	glGetDoublev(GL_MODELVIEW_MATRIX, this->matM);
+	glGetIntegerv(GL_VIEWPORT, this->viewport);
 }
 
 //--------------------------
@@ -233,7 +237,7 @@ void ofxGrabCam::findCursor() {
 	
 	if (mouseP.z == 1.0f)
 		return;
-											   
+	
 	glGetDoublev(GL_PROJECTION_MATRIX, matP);
 	glGetDoublev(GL_MODELVIEW_MATRIX, matM);
 	glGetIntegerv(GL_VIEWPORT, viewport);

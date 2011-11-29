@@ -59,6 +59,10 @@ void testApp::draw(){
 	ofDrawBitmapString("This example", 10, row++ * 15);
 	ofDrawBitmapString("Press 'c' to toggleCursorDraw", 10, row++ * 15);
 	ofDrawBitmapString("Press 'u' to  toggleFixUpwards", 10, row++ * 15);
+	
+	//demonstrate resiliance to stray matrices
+	ofRotate(ofRandom(360), 0, 1, 0);
+	ofScale(ofRandom(30), ofRandom(30));
 }
 
 //--------------------------------------------------------------
@@ -69,6 +73,12 @@ void testApp::keyPressed(int key){
 	
 	if (key=='u')
 		camera.toggleFixUpwards();
+	
+	if (key=='s')
+		savedPose = camera.getGlobalTransformMatrix();
+	
+	if (key=='l')
+		camera.setTransformMatrix(savedPose);
 	
 }
 

@@ -24,4 +24,6 @@ public:
 	void drawGridPlane(float scale, float ticks = 5.0f, bool labels = false);
 	//
 	////
+	
+	ofMatrix4x4 savedPose;
 };

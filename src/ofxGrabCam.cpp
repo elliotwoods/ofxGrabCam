@@ -20,14 +20,6 @@ ofxGrabCam::~ofxGrabCam() {
 }
 
 //--------------------------
-void ofxGrabCam::init() {
-	ofCamera::setNearClip(0.5);
-	
-	addListeners();
-	reset();
-}
-
-//--------------------------
 void ofxGrabCam::begin(ofRectangle viewport) {
 	glEnable(GL_DEPTH_TEST);	
 	viewportRect = viewport;
@@ -82,6 +74,14 @@ void ofxGrabCam::setFixUpwards(bool enabled) {
 //--------------------------
 void ofxGrabCam::toggleFixUpwards() {
 	fixUpwards ^= true;
+}
+
+//--------------------------
+void ofxGrabCam::init() {
+	ofCamera::setNearClip(0.5);
+	
+	addListeners();
+	reset();
 }
 
 //--------------------------

@@ -19,8 +19,6 @@ public:
 	ofxGrabCam();
 	~ofxGrabCam();
 	
-	void	init();
-	
 	void	begin(ofRectangle viewport = ofGetCurrentViewport());
 	void	end(); ///< Overrides virtual end
 	void	reset();
@@ -35,6 +33,8 @@ public:
 	void	toggleFixUpwards();
 	
 protected:
+	
+	void	init();
 	
 	////
 	//events

@@ -44,7 +44,7 @@ void testApp::draw(){
 	camera.end();
 	//
 	////
-	
+
 	ofSetColor(0,0,0);
 	
 	int row = 1;

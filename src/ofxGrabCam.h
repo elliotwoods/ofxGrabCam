@@ -9,6 +9,9 @@
 
 #include "ofMain.h"
 
+#include "ofxDragNode.h"
+#include "ofxInteractiveNode.h"
+
 //in normalised screen coords -0.5>0.5
 #define OFXGRABCAM_SEARCH_WIDTH 1.0f
 #define OFXGRABCAM_SEARCH_MAX_ITERATIONS 100
@@ -34,6 +37,9 @@ public:
 	void	setFixUpwards(bool enabled);
 	void	toggleFixUpwards();
 
+	static void addInteractiveNode(ofxInteractiveNode& node);
+	static void removeInteractiveNode(ofxInteractiveNode& node);
+	
 protected:
 	
 	////
@@ -80,6 +86,14 @@ protected:
 	ofQuaternion rotation;
 	//
 	bool		fixUpwards;
+	//
+	////
+	
+	
+	////
+	//interaction
+	//
+	static vector<ofxInteractiveNode*> nodes;
 	//
 	////
 };

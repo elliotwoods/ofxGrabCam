@@ -4,7 +4,7 @@
 
 #include "ofxGrabCam.h"
 
-class testNode : public ofNode {
+class testNode : public ofxDragNode {
 public:
 	testNode();
 protected:

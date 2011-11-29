@@ -7,6 +7,8 @@
 //
 
 #include "ofxGrabCam.h"
+//--------------------------
+vector<ofxInteractiveNode*> ofxGrabCam::nodes = vector<ofxInteractiveNode*>();
 
 //--------------------------
 ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
@@ -78,6 +80,21 @@ void ofxGrabCam::setFixUpwards(bool enabled) {
 //--------------------------
 void ofxGrabCam::toggleFixUpwards() {
 	fixUpwards ^= true;
+}
+
+//--------------------------
+void ofxGrabCam::addInteractiveNode(ofxInteractiveNode &node) {
+	nodes.push_back(&node);
+}
+
+//--------------------------
+void ofxGrabCam::removeInteractiveNode(ofxInteractiveNode &node) {
+	vector<ofxInteractiveNode*>::iterator it;
+	for (it = nodes.begin(); it != nodes.end(); it++)
+		if (*it == &node)
+			nodes.erase(it);
+	
+	nodes.push_back(&node);
 }
 
 //--------------------------

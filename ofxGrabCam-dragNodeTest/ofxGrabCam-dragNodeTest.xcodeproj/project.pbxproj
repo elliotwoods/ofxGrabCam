@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BA98C20147D800400C28CD8 /* ofxInteractiveNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA98C1F147D800400C28CD8 /* ofxInteractiveNode.cpp */; };
+		8BA98C24147D820900C28CD8 /* ofxDragNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BA98C23147D820900C28CD8 /* ofxDragNode.cpp */; };
 		8BB05C94146C0DA400E65B31 /* ofxGrabCam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BB05C93146C0DA400E65B31 /* ofxGrabCam.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -58,6 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8BA98C1F147D800400C28CD8 /* ofxInteractiveNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxInteractiveNode.cpp; path = ../../src/ofxInteractiveNode.cpp; sourceTree = "<group>"; };
+		8BA98C22147D801400C28CD8 /* ofxInteractiveNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxInteractiveNode.h; path = ../../src/ofxInteractiveNode.h; sourceTree = "<group>"; };
+		8BA98C23147D820900C28CD8 /* ofxDragNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxDragNode.cpp; path = ../../src/ofxDragNode.cpp; sourceTree = "<group>"; };
+		8BA98C25147D821A00C28CD8 /* ofxDragNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxDragNode.h; path = ../../src/ofxDragNode.h; sourceTree = "<group>"; };
 		8BB05C93146C0DA400E65B31 /* ofxGrabCam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxGrabCam.cpp; path = ../../../../addons/ofxGrabCam/src/ofxGrabCam.cpp; sourceTree = "<group>"; };
 		8BB05C95146C113600E65B31 /* ofxGrabCam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxGrabCam.h; path = ../../../../addons/ofxGrabCam/src/ofxGrabCam.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -113,6 +119,10 @@
 			children = (
 				8BB05C93146C0DA400E65B31 /* ofxGrabCam.cpp */,
 				8BB05C95146C113600E65B31 /* ofxGrabCam.h */,
+				8BA98C1F147D800400C28CD8 /* ofxInteractiveNode.cpp */,
+				8BA98C22147D801400C28CD8 /* ofxInteractiveNode.h */,
+				8BA98C23147D820900C28CD8 /* ofxDragNode.cpp */,
+				8BA98C25147D821A00C28CD8 /* ofxDragNode.h */,
 			);
 			name = ofxGrabCam;
 			sourceTree = "<group>";
@@ -228,7 +238,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofxGrabCam-example" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofxGrabCam-dragNodeTest" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -288,6 +298,8 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				8BB05C94146C0DA400E65B31 /* ofxGrabCam.cpp in Sources */,
+				8BA98C20147D800400C28CD8 /* ofxInteractiveNode.cpp in Sources */,
+				8BA98C24147D820900C28CD8 /* ofxDragNode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +580,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofxGrabCam-example" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "ofxGrabCam-dragNodeTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,

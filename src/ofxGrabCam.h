@@ -1,10 +1,10 @@
 #pragma once
 //
 //  ofxGrabCam.h
-//  ofxSketchupCamera
+//  ofxGrabCam
 //
 //  Created by Elliot Woods on 10/11/2011.
-//  Copyright (c) 2011 Kimchi and Chips. All rights reserved.
+//	http://www.kimchiandchips.com
 //
 
 #include "ofMain.h"
@@ -16,7 +16,7 @@
 
 class ofxGrabCam : public ofCamera {
 public:	
-	ofxGrabCam();
+	ofxGrabCam(bool useMouseListeners=true);
 	~ofxGrabCam();
 	
 	void	begin(ofRectangle viewport = ofGetCurrentViewport());
@@ -32,14 +32,13 @@ public:
 	void	setFixUpwards(bool enabled);
 	void	toggleFixUpwards();
 	
-protected:
+	void	addListeners();
+	void	removeListeners();
 	
-	void	init();
+protected:
 	
 	////
 	//events
-	void	addListeners();
-	void	removeListeners();
 	//
 	void	update(ofEventArgs & args);
 	void    mouseMoved(ofMouseEventArgs & args);

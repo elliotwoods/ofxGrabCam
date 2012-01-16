@@ -1,16 +1,19 @@
 //
 //  ofxGrabCam.cpp
-//  ofxSketchupCamera
+//  ofxGrabCam
 //
 //  Created by Elliot Woods on 10/11/2011.
-//  Copyright (c) 2011 Kimchi and Chips. All rights reserved.
+//	http://www.kimchiandchips.com
 //
 
 #include "ofxGrabCam.h"
 
 //--------------------------
-ofxGrabCam::ofxGrabCam() : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
-	init();
+ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
+
+	ofCamera::setNearClip(0.1);
+	addListeners();
+	reset();
 }
 
 //--------------------------
@@ -48,6 +51,23 @@ void ofxGrabCam::end() {
 	
 	ofCamera::end();
 	glDisable(GL_DEPTH_TEST);
+	
+	if (drawCursor) {
+		ofPushStyle();
+		ofFill();
+		ofSetColor(50, 10, 10);
+		ofRect(mouseP.x + 20, mouseP.y + 20, 80, 40);
+		
+		stringstream ss;
+		ss << "x: " << ofToString(mouseW.x, 2) << endl;
+		ss << "y: " << ofToString(mouseW.y, 2) << endl;
+		ss << "z: " << ofToString(mouseW.z, 2) << endl;
+		
+		ofSetColor(255, 255, 255);
+		ofDrawBitmapString(ss.str(), mouseP.x + 30, mouseP.y + 30);
+		
+		ofPopStyle();
+	}
 }
 
 //--------------------------
@@ -74,14 +94,6 @@ void ofxGrabCam::setFixUpwards(bool enabled) {
 //--------------------------
 void ofxGrabCam::toggleFixUpwards() {
 	fixUpwards ^= true;
-}
-
-//--------------------------
-void ofxGrabCam::init() {
-	ofCamera::setNearClip(0.5);
-	
-	addListeners();
-	reset();
 }
 
 //--------------------------
@@ -152,7 +164,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	mouseP.y = args.y;
 	
 	if (mouseP.z == 1.0f)
-		return;
+		mouseP.z = 0.5f;
 	
 	ofVec3f p = ofCamera::getPosition();
 	ofVec3f uy = ofCamera::getUpDir();
@@ -168,7 +180,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	} else {
 		if (args.button==0 && !altDown) {
 			//orbit
-			rotation.makeRotate(dx * 90 * ar, -uy, dy * 90, -ux, 0, ofVec3f(0,0,1));
+			rotation.makeRotate(dx * 180 * ar, -uy, dy * 180, -ux, 0, ofVec3f(0,0,1));
 			
 			if (fixUpwards) {
 				ofQuaternion rotToUp;

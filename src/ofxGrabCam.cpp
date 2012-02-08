@@ -27,6 +27,7 @@ void ofxGrabCam::begin(ofRectangle viewport) {
 	glEnable(GL_DEPTH_TEST);	
 	viewportRect = viewport;
 	ofCamera::begin(viewport);
+	ofPushMatrix();
 	
 	glGetDoublev(GL_PROJECTION_MATRIX, this->matP);
 	glGetDoublev(GL_MODELVIEW_MATRIX, this->matM);
@@ -35,6 +36,10 @@ void ofxGrabCam::begin(ofRectangle viewport) {
 
 //--------------------------
 void ofxGrabCam::end() {
+	
+	//optimistically, we presume there's no stray push/pops
+	ofPopMatrix();
+	
 	if (pickCursorFlag || !mouseDown) {
 		findCursor();
 		pickCursorFlag = false;
@@ -52,7 +57,7 @@ void ofxGrabCam::end() {
 	ofCamera::end();
 	glDisable(GL_DEPTH_TEST);
 	
-	if (drawCursor) {
+	if (drawCursor && viewportRect.inside(mouseP)) {
 		ofPushStyle();
 		ofFill();
 		ofSetColor(50, 10, 10);
@@ -138,6 +143,9 @@ void ofxGrabCam::mouseMoved(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::mousePressed(ofMouseEventArgs &args) {
+	if (!viewportRect.inside(args.x, args.y))
+		return;
+	
 	mouseP.x = args.x;
 	mouseP.y = args.y;
 	
@@ -157,6 +165,9 @@ void ofxGrabCam::mouseReleased(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
+	if (!this->mouseDown)
+		return;
+	
 	float dx = (args.x - mouseP.x) / ofGetViewportWidth();
 	float dy = (args.y - mouseP.y) / ofGetViewportHeight();
 	
@@ -224,7 +235,7 @@ void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
 //--------------------------
 void ofxGrabCam::findCursor() {
 	//read z value from depth buffer at mouse coords
-	glReadPixels(mouseP.x, ofGetViewportHeight()-1-mouseP.y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
+	glReadPixels(mouseP.x, ofGetHeight()-1-mouseP.y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
 	
 	//if we get nothing, scatter until we get something
 	//we search in a spiral until we hit something
@@ -250,13 +261,9 @@ void ofxGrabCam::findCursor() {
 	if (mouseP.z == 1.0f)
 		return;
 	
-	glGetDoublev(GL_PROJECTION_MATRIX, matP);
-	glGetDoublev(GL_MODELVIEW_MATRIX, matM);
-	glGetIntegerv(GL_VIEWPORT, viewport);
-	
 	GLdouble c[3];
 	
-	gluUnProject(mouseP.x, ofGetViewportHeight()-1-mouseP.y, mouseP.z, matM, matP, viewport, c, c+1, c+2);
+	gluUnProject(mouseP.x, ofGetHeight()-1-mouseP.y, mouseP.z, matM, matP, viewport, c, c+1, c+2);
 	
 	mouseW.x = c[0];
 	mouseW.y = c[1];

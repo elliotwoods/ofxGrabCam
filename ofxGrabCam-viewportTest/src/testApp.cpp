@@ -18,6 +18,9 @@ void testApp::setup(){
 	
 	// You might need to do this in the future if openFrameworks changes currently it's done automatically in the constructor, but this may be too early for openFrameworks (if the current situation changes)
 	// camera.init();
+	
+	randomiseViewport();
+	useViewport = false;
 }
 
 //--------------------------------------------------------------
@@ -33,18 +36,31 @@ void testApp::draw(){
 	
 	////
 	//draw scene
-	camera.begin();
+	if (useViewport)
+		camera.begin(viewport);
+	else
+		camera.begin();
 	ofSetColor(255,100,100);
-	drawGrid(5.0f, 10.0f);
+	ofDrawGrid(10.0f, 5.0f, true);
 	for (; p != positions.end(); p++, c++)
 	{
 		ofSetColor(*c);
 		ofSphere(p->x, p->y, p->z, 1);
 	}
+	//demonstrate resiliance to stray matrices
+	ofRotate(ofRandom(360), 0, 1, 0);
 	camera.end();
 	//
 	////
 
+	if (useViewport) {
+		ofPushStyle();
+		ofSetColor(255,255,255);
+		ofNoFill();
+		ofRect(viewport);
+		ofPopStyle();
+	}
+	
 	ofSetColor(0,0,0);
 	
 	int row = 1;
@@ -59,8 +75,8 @@ void testApp::draw(){
 	ofDrawBitmapString("This example", 10, row++ * 15);
 	ofDrawBitmapString("Press 'c' to toggleCursorDraw", 10, row++ * 15);
 	ofDrawBitmapString("Press 'u' to  toggleFixUpwards", 10, row++ * 15);
-	ofDrawBitmapString("Press 's' to save camera pose to savedPose", 10, row++ * 15);
-	ofDrawBitmapString("Press 'l' to load camera pose from savedPose", 10, row++ * 15);
+	ofDrawBitmapString("Press [SPACE] to randomise viewport", 10, row++ * 15);
+	ofDrawBitmapString("Press [v] to toggle viewport " + (useViewport ? string("[x]") : string("[ ]")), 10, row++ * 15);
 	
 	//demonstrate resiliance to stray matrices
 	ofRotate(ofRandom(360), 0, 1, 0);
@@ -69,6 +85,12 @@ void testApp::draw(){
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
+	
+	if (key==' ')
+		randomiseViewport();
+	
+	if (key=='v')
+		useViewport ^= true;
 	
 	if (key=='c')
 		camera.toggleCursorDraw();
@@ -83,84 +105,11 @@ void testApp::keyPressed(int key){
 		camera.setTransformMatrix(savedPose);
 	
 }
-
 //--------------------------------------------------------------
-void testApp::drawGrid(float scale, float ticks, bool labels, bool x, bool y, bool z) {
-	
-	ofColor c = ofGetStyle().color;
-	
-	ofPushStyle();
-	
-	if (x) {
-		c.setHue(0.0f);
-		ofSetColor(c);
-		drawGridPlane(scale, ticks, labels);
-	}
-	if (y) {
-		c.setHue(255.0f / 3.0f);
-		ofSetColor(c);
-		ofPushMatrix();
-		ofRotate(90, 0, 0, 1);
-		drawGridPlane(scale, ticks, labels);
-		ofPopMatrix();
-	}
-	if (z) {
-		c.setHue(255.0f * 2.0f / 3.0f);
-		ofSetColor(c);
-		ofPushMatrix();
-		ofRotate(90, 0, 1, 0);
-		drawGridPlane(scale, ticks, labels);
-		ofPopMatrix();
-	}
-	
-	ofPopStyle();
+void testApp::randomiseViewport() {
+	viewport.x = ofRandom(0,ofGetWidth()/2);
+	viewport.y = ofRandom(0,ofGetHeight()/2);
+	viewport.width = ofRandom(256, ofGetWidth() - viewport.x);
+	viewport.height = ofRandom(256, ofGetHeight() - viewport.y);
 }
-
-
-//--------------------------------------------------------------
-void testApp::drawGridPlane(float scale, float ticks, bool labels) {
-
-	float minor = scale / ticks;
-	float major =  minor * 2.0f;
-	
-	ofPushStyle();
-	for (int iDimension=0; iDimension<2; iDimension++)
-	{
-		for (float yz=-scale; yz<=scale; yz+= minor)
-		{
-			//major major
-			if (fabs(yz) == scale || yz == 0)
-				ofSetLineWidth(4);
-			
-			//major
-			else if (yz / major == floor(yz / major) )
-				ofSetLineWidth(2);
-			
-			//minor
-			else
-				ofSetLineWidth(1);
-			if (iDimension==0)
-				ofLine(0, yz, -scale, 0, yz, scale);
-			else
-				ofLine(0, -scale, yz, 0, scale, yz);
-		}
-	}
-	ofPopStyle();
-	
-	if (labels) {
-		//draw numbers on axes
-		ofPushStyle();
-		ofSetColor(255, 255, 255);
-		
-		ofSetDrawBitmapMode(OF_BITMAPMODE_MODEL_BILLBOARD);
-		for (float yz = -scale; yz<=scale; yz+=minor)
-		{
-			ofDrawBitmapString(ofToString(yz, 0), 0, yz, 0);
-			ofDrawBitmapString(ofToString(yz, 0), 0, 0, yz);		
-		}
-		ofPopStyle();
-	}
-
-}
-
 

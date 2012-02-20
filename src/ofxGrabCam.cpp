@@ -10,7 +10,6 @@
 
 //--------------------------
 ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
-
 	ofCamera::setNearClip(0.1);
 	addListeners();
 	reset();
@@ -42,6 +41,8 @@ void ofxGrabCam::end() {
 	
 	if (pickCursorFlag || !mouseDown) {
 		findCursor();
+		if (doElementSelection)
+			selectElement();
 		pickCursorFlag = false;
 	}
 	
@@ -78,6 +79,8 @@ void ofxGrabCam::end() {
 //--------------------------
 void ofxGrabCam::reset() {
 	ofCamera::resetTransform();
+	this->activeListener = 0;
+	this->doElementSelection = false;
 }
 
 //--------------------------
@@ -104,12 +107,12 @@ void ofxGrabCam::toggleFixUpwards() {
 //--------------------------
 void ofxGrabCam::addListeners() {
 	ofAddListener(ofEvents.update, this, &ofxGrabCam::update);
-    ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofAddListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-    ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
-    ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
+	ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofAddListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
+	ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
+	ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
 
 	initialised = true;
 }
@@ -120,14 +123,26 @@ void ofxGrabCam::removeListeners() {
 		return;
 	
 	ofRemoveListener(ofEvents.update, this, &ofxGrabCam::update);
-    ofRemoveListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofRemoveListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-    ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
+	ofRemoveListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofRemoveListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
+	ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
 	ofRemoveListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
 	
 	initialised = false;
+}
+
+//--------------------------
+void ofxGrabCam::addInteractiveElement(of3dMouseEventArgsListener& element) {
+	listeners.insert(&element);
+}
+
+
+//--------------------------
+void ofxGrabCam::removeInteractiveElement(of3dMouseEventArgsListener& element) {
+	set<of3dMouseEventArgsListener*>::iterator it = listeners.find(&element);
+	listeners.erase(it);
 }
 
 //--------------------------
@@ -156,11 +171,18 @@ void ofxGrabCam::mousePressed(ofMouseEventArgs &args) {
 	} else {
 		mouseDown = false;
 	}
+
+	if (mouseDown) {
+		doElementSelection = true;
+		doElementSelectionButton = args.button;
+	}
 }
 
 //--------------------------
 void ofxGrabCam::mouseReleased(ofMouseEventArgs &args) {
+	sendMouseReleased();
 	mouseDown = false;
+	this->activeListener = 0;
 }
 
 //--------------------------
@@ -177,6 +199,11 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	if (mouseP.z == 1.0f)
 		mouseP.z = 0.5f;
 	
+	if (activeListener != 0) {
+		sendMouseDragged();
+		return;
+	}
+
 	ofVec3f p = ofCamera::getPosition();
 	ofVec3f uy = ofCamera::getUpDir();
 	ofVec3f ux = ofCamera::getSideDir();
@@ -260,12 +287,57 @@ void ofxGrabCam::findCursor() {
 	
 	if (mouseP.z == 1.0f)
 		return;
-	
+	calcCursor();
+}
+
+//--------------------------
+void ofxGrabCam::calcCursor() {
 	GLdouble c[3];
-	
 	gluUnProject(mouseP.x, ofGetHeight()-1-mouseP.y, mouseP.z, matM, matP, viewport, c, c+1, c+2);
-	
 	mouseW.x = c[0];
 	mouseW.y = c[1];
 	mouseW.z = c[2];
+}
+
+//--------------------------
+void ofxGrabCam::selectElement() {
+	set<of3dMouseEventArgsListener*>::iterator it;
+	for (it = listeners.begin(); it != listeners.end(); it++) {
+		if ((**it).isInside(this->mouseW)) {
+			this->activeListener = *it;
+			this->activeListener->mousePressed(of3dMouseEventArgs(doElementSelectionButton, this->mouseW, 0, this->mouseP, 0));
+			this->oldMouseWorld = this->mouseW;
+			this->oldMouseScreen = this->mouseP;
+			this->startMousePZ = this->mouseP.z;
+			break;
+		}
+	}
+	doElementSelection = false;
+}
+
+//--------------------------
+void ofxGrabCam::sendMouseDragged() {
+	if (activeListener==0) {
+		ofLogError() << "ofxGrabCam::sendMouseDragged() : no element is attached so have nothing to send args to";
+		return;
+	}
+
+	this->mouseP.z = this->startMousePZ;
+	calcCursor();
+
+	activeListener->mouseDragged(of3dMouseEventArgs(doElementSelectionButton, this->mouseW, this->mouseW - this->oldMouseWorld, this->mouseP, ofVec2f(this->mouseP) - oldMouseScreen));
+	oldMouseWorld = this->mouseW;
+	oldMouseScreen = this->mouseP;
+}
+
+//--------------------------
+void ofxGrabCam::sendMouseReleased() {
+	if (activeListener==0) {
+		ofLogError() << "ofxGrabCam::sendMouseReleased() : no element is attached so have nothing to send args to";
+		return;
+	}
+
+	this->mouseP.z = this->startMousePZ;
+	calcCursor();
+	activeListener->mouseReleased(of3dMouseEventArgs(doElementSelectionButton, this->mouseW, this->oldMouseWorld - this->mouseW, this->mouseP, ofVec2f(this->mouseP) - oldMouseScreen));
 }

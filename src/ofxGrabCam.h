@@ -6,8 +6,10 @@
 //  Created by Elliot Woods on 10/11/2011.
 //	http://www.kimchiandchips.com
 //
-
 #include "ofMain.h"
+#include <set>
+
+#include "of3dMouseEventArgs.h"
 
 //in normalised screen coords -0.5>0.5
 #define OFXGRABCAM_SEARCH_WIDTH 1.0f
@@ -34,7 +36,9 @@ public:
 	
 	void	addListeners();
 	void	removeListeners();
-	
+
+	void	addInteractiveElement(of3dMouseEventArgsListener& element);
+	void	removeInteractiveElement(of3dMouseEventArgsListener& element);
 protected:
 	
 	////
@@ -56,6 +60,7 @@ protected:
 	////
 	//cursor
 	void	findCursor();
+	void	calcCursor();
 	//
 	bool	mouseDown;
 	bool	handDown;
@@ -79,6 +84,21 @@ protected:
 	ofQuaternion rotation;
 	//
 	bool		fixUpwards;
+	//
+	////
+
+	////
+	//interactive
+	void selectElement();
+	void sendMouseDragged();
+	void sendMouseReleased();
+	set<of3dMouseEventArgsListener*> listeners;
+	of3dMouseEventArgsListener* activeListener;
+	bool doElementSelection;
+	int doElementSelectionButton;
+	float startMousePZ;
+	ofVec3f oldMouseWorld;
+	ofVec2f oldMouseScreen;
 	//
 	////
 };

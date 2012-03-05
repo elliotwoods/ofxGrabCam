@@ -29,6 +29,9 @@ public:
 	void	setCursorDraw(bool enabled, float size=0.1);
 	void	toggleCursorDraw();
 	
+	void	setMouseActions(bool enabled);
+	void	toggleMouseActions();
+	
 	void	setFixUpwards(bool enabled);
 	void	toggleFixUpwards();
 	
@@ -49,6 +52,7 @@ protected:
 	void	keyReleased(ofKeyEventArgs & args);
 	//
 	bool	initialised;
+	bool	mouseActions;
 	//
 	////
 	

@@ -11,6 +11,9 @@
 //--------------------------
 ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
 
+	this->initialised = false;
+	this->mouseActions = true;
+	
 	ofCamera::setNearClip(0.1);
 	addListeners();
 	reset();
@@ -40,7 +43,7 @@ void ofxGrabCam::end() {
 	//optimistically, we presume there's no stray push/pops
 	ofPopMatrix();
 	
-	if (pickCursorFlag || !mouseDown) {
+	if (pickCursorFlag || !mouseDown || !mouseActions) {
 		findCursor();
 		pickCursorFlag = false;
 	}
@@ -92,6 +95,16 @@ void ofxGrabCam::toggleCursorDraw() {
 }
 
 //--------------------------
+void ofxGrabCam::setMouseActions(bool enabled) {
+	this->mouseActions = enabled;
+}
+
+//--------------------------
+void ofxGrabCam::toggleMouseActions() {
+	this->mouseActions ^= true;
+}
+
+//--------------------------
 void ofxGrabCam::setFixUpwards(bool enabled) {
 	fixUpwards = enabled;
 }
@@ -103,31 +116,31 @@ void ofxGrabCam::toggleFixUpwards() {
 
 //--------------------------
 void ofxGrabCam::addListeners() {
-	ofAddListener(ofEvents.update, this, &ofxGrabCam::update);
-    ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofAddListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-    ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
-    ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
+	ofAddListener(ofEvents().update, this, &ofxGrabCam::update);
+    ofAddListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
+    ofAddListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
+    ofAddListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+    ofAddListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+    ofAddListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
+    ofAddListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
 
-	initialised = true;
+	this->initialised = true;
 }
 
 //--------------------------
 void ofxGrabCam::removeListeners() {
-	if (!initialised)
+	if (!this->initialised)
 		return;
 	
-	ofRemoveListener(ofEvents.update, this, &ofxGrabCam::update);
-    ofRemoveListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofRemoveListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-    ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
-	ofRemoveListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
+	ofRemoveListener(ofEvents().update, this, &ofxGrabCam::update);
+    ofRemoveListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
+    ofRemoveListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
+    ofRemoveListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+    ofRemoveListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+    ofRemoveListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
+	ofRemoveListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
 	
-	initialised = false;
+	this->initialised = false;
 }
 
 //--------------------------
@@ -165,14 +178,17 @@ void ofxGrabCam::mouseReleased(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
-	if (!this->mouseDown)
-		return;
-	
+
 	float dx = (args.x - mouseP.x) / ofGetViewportWidth();
 	float dy = (args.y - mouseP.y) / ofGetViewportHeight();
-	
 	mouseP.x = args.x;
 	mouseP.y = args.y;
+	
+	if (!mouseActions)
+		return;
+
+	if (!this->mouseDown)
+		return;
 	
 	if (mouseP.z == 1.0f)
 		mouseP.z = 0.5f;

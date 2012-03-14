@@ -104,12 +104,12 @@ void ofxGrabCam::toggleFixUpwards() {
 //--------------------------
 void ofxGrabCam::addListeners() {
 	ofAddListener(ofEvents.update, this, &ofxGrabCam::update);
-    ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofAddListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-    ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
-    ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
+	ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofAddListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
+	ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
+	ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
 
 	initialised = true;
 }
@@ -120,11 +120,11 @@ void ofxGrabCam::removeListeners() {
 		return;
 	
 	ofRemoveListener(ofEvents.update, this, &ofxGrabCam::update);
-    ofRemoveListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofRemoveListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-    ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
+	ofRemoveListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofRemoveListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
+	ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
 	ofRemoveListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
 	
 	initialised = false;
@@ -233,6 +233,10 @@ void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
 
 
 //--------------------------
+//in normalised screen coords -0.5>0.5
+#define OFXGRABCAM_SEARCH_WIDTH 0.1f
+#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 100
+#define OFXGRABCAM_SEARCH_WINDINGS 10.0f
 void ofxGrabCam::findCursor() {
 	//read z value from depth buffer at mouse coords
 	glReadPixels(mouseP.x, ofGetHeight()-1-mouseP.y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);

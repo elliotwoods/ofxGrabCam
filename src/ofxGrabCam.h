@@ -9,11 +9,6 @@
 
 #include "ofMain.h"
 
-//in normalised screen coords -0.5>0.5
-#define OFXGRABCAM_SEARCH_WIDTH 1.0f
-#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 100
-#define OFXGRABCAM_SEARCH_WINDINGS 10.0f
-
 class ofxGrabCam : public ofCamera {
 public:	
 	ofxGrabCam(bool useMouseListeners=true);

@@ -256,9 +256,9 @@ void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
 
 //--------------------------
 //in normalised screen coords -0.5>0.5
-#define OFXGRABCAM_SEARCH_WIDTH 0.1f
-#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 100
-#define OFXGRABCAM_SEARCH_WINDINGS 10.0f
+#define OFXGRABCAM_SEARCH_WIDTH 0.3f
+#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 300
+#define OFXGRABCAM_SEARCH_WINDINGS 3.0f
 void ofxGrabCam::findCursor() {
 	//read z value from depth buffer at mouse coords
 	glReadPixels(mouseP.x, ofGetHeight()-1-mouseP.y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);

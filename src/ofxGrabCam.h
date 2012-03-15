@@ -55,6 +55,8 @@ protected:
 	bool	mouseDown;
 	bool	handDown;
 	bool	altDown;
+	bool	resetDown;
+	float	resetDownBegin;
 	bool	pickCursorFlag;
 	ofVec3f mouseP;
 	ofVec3f mouseW;

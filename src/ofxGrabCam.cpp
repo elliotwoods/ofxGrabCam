@@ -9,7 +9,15 @@
 #include "ofxGrabCam.h"
 
 //--------------------------
-ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
+ofxGrabCam::ofxGrabCam(bool useMouseListeners) {
+	this->mouseDown = false;
+	this->altDown = false;
+	this->handDown = false;
+	this->resetDown = false;
+	this->pickCursorFlag = false;
+	this->drawCursor = false;
+	this->drawCursorSize = 0.1f;
+	this->fixUpwards = true;
 
 	ofCamera::setNearClip(0.1);
 	addListeners();
@@ -211,8 +219,17 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
-	if (args.key == 'r')
-		reset();
+	if (args.key == 'r') {
+		if (!resetDown) {
+			resetDownBegin = ofGetElapsedTimef();
+			resetDown = true;
+		} else {
+			if (ofGetElapsedTimef() - resetDownBegin > 0.5f) {
+				reset();
+				resetDown = false;
+			}
+		}
+	}
 	
 	if (args.key == 'h')
 		handDown = true;
@@ -226,6 +243,9 @@ void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
 void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
 	if (args.key == 'h')
 		handDown = false;
+
+	if (args.key == 'r')
+		resetDown = false;
 	
 	if (args.key == OF_KEY_ALT)
 		altDown = false;

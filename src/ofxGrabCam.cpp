@@ -86,6 +86,8 @@ void ofxGrabCam::end() {
 //--------------------------
 void ofxGrabCam::reset() {
 	ofCamera::resetTransform();
+	ofCamera::setPosition(2.0f, 1.0f, 2.0f);
+	ofCamera::lookAt( ofVec3f(0.0f, 0.0f, 0.0f) );
 }
 
 //--------------------------

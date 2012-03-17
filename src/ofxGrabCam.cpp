@@ -317,10 +317,8 @@ void ofxGrabCam::selectElement() {
 
 //--------------------------
 void ofxGrabCam::sendMouseDragged() {
-	if (activeListener==0) {
-		ofLogError() << "ofxGrabCam::sendMouseDragged() : no element is attached so have nothing to send args to";
+	if (activeListener==0)
 		return;
-	}
 
 	this->mouseP.z = this->startMousePZ;
 	calcCursor();
@@ -332,10 +330,8 @@ void ofxGrabCam::sendMouseDragged() {
 
 //--------------------------
 void ofxGrabCam::sendMouseReleased() {
-	if (activeListener==0) {
-		ofLogError() << "ofxGrabCam::sendMouseReleased() : no element is attached so have nothing to send args to";
+	if (activeListener==0)
 		return;
-	}
 
 	this->mouseP.z = this->startMousePZ;
 	calcCursor();

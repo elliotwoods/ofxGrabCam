@@ -113,13 +113,13 @@ void ofxGrabCam::toggleFixUpwards() {
 
 //--------------------------
 void ofxGrabCam::addListeners() {
-	ofAddListener(ofEvents.update, this, &ofxGrabCam::update);
-	ofAddListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-	ofAddListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-	ofAddListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-	ofAddListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-	ofAddListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
-	ofAddListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
+	ofAddListener(ofEvents().update, this, &ofxGrabCam::update);
+	ofAddListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofAddListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
+	ofAddListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofAddListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofAddListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
+	ofAddListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
 
 	initialised = true;
 }
@@ -129,13 +129,13 @@ void ofxGrabCam::removeListeners() {
 	if (!initialised)
 		return;
 	
-	ofRemoveListener(ofEvents.update, this, &ofxGrabCam::update);
-	ofRemoveListener(ofEvents.mouseMoved, this, &ofxGrabCam::mouseMoved);
-	ofRemoveListener(ofEvents.mousePressed, this, &ofxGrabCam::mousePressed);
-	ofRemoveListener(ofEvents.mouseReleased, this, &ofxGrabCam::mouseReleased);
-	ofRemoveListener(ofEvents.mouseDragged, this, &ofxGrabCam::mouseDragged);
-	ofRemoveListener(ofEvents.keyPressed, this, &ofxGrabCam::keyPressed);
-	ofRemoveListener(ofEvents.keyReleased, this, &ofxGrabCam::keyReleased);
+	ofRemoveListener(ofEvents().update, this, &ofxGrabCam::update);
+	ofRemoveListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofRemoveListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
+	ofRemoveListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofRemoveListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofRemoveListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
+	ofRemoveListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
 	
 	initialised = false;
 }

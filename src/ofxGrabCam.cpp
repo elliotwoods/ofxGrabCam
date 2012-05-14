@@ -13,6 +13,7 @@ ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(fa
 
 	this->initialised = false;
 	this->mouseActions = true;
+	this->trackballRadius = 0.5f;
 	
 	ofCamera::setNearClip(0.1);
 	addListeners();
@@ -115,6 +116,16 @@ void ofxGrabCam::toggleFixUpwards() {
 }
 
 //--------------------------
+void ofxGrabCam::setTrackballRadius(float trackballRadius) {
+	this->trackballRadius = trackballRadius;
+}
+
+//--------------------------
+float ofxGrabCam::getTrackballRadius() const {
+	return this->trackballRadius;
+}
+
+//--------------------------
 void ofxGrabCam::addListeners() {
 	ofAddListener(ofEvents().update, this, &ofxGrabCam::update);
     ofAddListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
@@ -207,7 +218,11 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	} else {
 		if (args.button==0 && !altDown) {
 			//orbit
-			rotation.makeRotate(dx * 180 * ar, -uy, dy * 180, -ux, 0, ofVec3f(0,0,1));
+			ofVec3f arcEnd(dx, -dy, -trackballRadius);
+			arcEnd = arcEnd;
+			arcEnd.normalize();
+			ofQuaternion orientation = this->getGlobalOrientation();
+			rotation.makeRotate(orientation * ofVec3f(0.0f, 0.0f, -1.0f), orientation * arcEnd);
 			
 			if (fixUpwards) {
 				ofQuaternion rotToUp;
@@ -216,8 +231,8 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 				rotation *= rotToUp;
 			}
 			
+			this->setOrientation(this->getGlobalOrientation() * rotation);
 			ofCamera::setPosition((p - mouseW) * rotation + mouseW);
-			ofCamera::rotate(rotation);
 		} else {
 			//dolly
 			ofCamera::move(2 * (mouseW - p) * dy);

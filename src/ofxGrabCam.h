@@ -35,6 +35,9 @@ public:
 	void	setFixUpwards(bool enabled);
 	void	toggleFixUpwards();
 	
+	void	setTrackballRadius(float trackballRadius);
+	float	getTrackballRadius() const;
+	
 	void	addListeners();
 	void	removeListeners();
 	
@@ -83,6 +86,7 @@ protected:
 	ofQuaternion rotation;
 	//
 	bool		fixUpwards;
+	float		trackballRadius;
 	//
 	////
 };

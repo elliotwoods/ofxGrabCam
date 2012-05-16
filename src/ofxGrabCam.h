@@ -13,6 +13,7 @@
 #define OFXGRABCAM_SEARCH_WIDTH 1.0f
 #define OFXGRABCAM_SEARCH_MAX_ITERATIONS 100
 #define OFXGRABCAM_SEARCH_WINDINGS 10.0f
+#define OFXGRABCAM_RESET_HOLD 500 //ms
 
 class ofxGrabCam : public ofCamera {
 public:	
@@ -75,6 +76,11 @@ protected:
 	//
 	////
 	
+	
+	////
+	//interactions
+	int		resetDown;
+	////
 	
 	////
 	//view

@@ -14,6 +14,7 @@ ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(fa
 	this->initialised = false;
 	this->mouseActions = true;
 	this->trackballRadius = 0.5f;
+	this->resetDown = 0;
 	
 	ofCamera::setNearClip(0.1);
 	addListeners();
@@ -242,8 +243,12 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
-	if (args.key == 'r')
-		reset();
+	if (args.key == 'r') {
+		if (resetDown == 0)
+			resetDown = ofGetElapsedTimeMillis();
+		else if (ofGetElapsedTimeMillis() - resetDown > OFXGRABCAM_RESET_HOLD)
+			this->reset();
+	}
 	
 	if (args.key == 'h')
 		handDown = true;
@@ -257,6 +262,9 @@ void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
 void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
 	if (args.key == 'h')
 		handDown = false;
+	
+	if (args.key == 'r')
+		resetDown = 0;
 	
 	if (args.key == OF_KEY_ALT)
 		altDown = false;

@@ -9,13 +9,16 @@
 #include "ofxGrabCam.h"
 
 //--------------------------
-ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
+ofxGrabCam::ofxGrabCam(bool useMouseListeners) {
+	this->mouseDown = false;
+	this->altDown = false;
+	this->handDown = false;
+	this->resetDown = false;
+	this->pickCursorFlag = false;
+	this->drawCursor = false;
+	this->drawCursorSize = 0.1f;
+	this->fixUpwards = true;
 
-	this->initialised = false;
-	this->mouseActions = true;
-	this->trackballRadius = 0.5f;
-	this->resetDown = 0;
-	
 	ofCamera::setNearClip(0.1);
 	addListeners();
 	reset();
@@ -83,6 +86,8 @@ void ofxGrabCam::end() {
 //--------------------------
 void ofxGrabCam::reset() {
 	ofCamera::resetTransform();
+	ofCamera::setPosition(2.0f, 1.0f, 2.0f);
+	ofCamera::lookAt( ofVec3f(0.0f, 0.0f, 0.0f) );
 }
 
 //--------------------------

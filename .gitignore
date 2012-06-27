@@ -10,10 +10,4 @@ obj/
 bin/
 build/
 !data/
-
-*.vcxproj.user
-*.suo
-*.sdf
-ipch/
-Debug/
-Release/
+xcuserdata/

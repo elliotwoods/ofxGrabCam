@@ -15,6 +15,7 @@ ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(fa
 	this->mouseActions = true;
 	this->trackballRadius = 0.5f;
 	this->resetDown = 0;
+	this->mouseWForced = false;
 	
 	ofCamera::setNearClip(0.1);
 	addListeners();
@@ -45,7 +46,7 @@ void ofxGrabCam::end() {
 	//optimistically, we presume there's no stray push/pops
 	ofPopMatrix();
 	
-	if (pickCursorFlag || !mouseDown || !mouseActions) {
+	if ((pickCursorFlag || !mouseDown || !mouseActions) && !mouseWForced) {
 		findCursor();
 		pickCursorFlag = false;
 	}
@@ -83,6 +84,17 @@ void ofxGrabCam::end() {
 //--------------------------
 void ofxGrabCam::reset() {
 	ofCamera::resetTransform();
+}
+
+//--------------------------
+void ofxGrabCam::setCursorWorld(const ofVec3f& world) {
+	this->mouseW = world;
+	this->mouseWForced = true;
+}
+
+//--------------------------
+void ofxGrabCam::clearCursorWorld() {
+	this->mouseWForced = false;
 }
 
 //--------------------------
@@ -157,7 +169,7 @@ void ofxGrabCam::removeListeners() {
 
 //--------------------------
 void ofxGrabCam::update(ofEventArgs &args) {
-	
+
 }
 
 //--------------------------

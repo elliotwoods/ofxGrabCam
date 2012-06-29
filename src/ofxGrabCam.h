@@ -27,6 +27,9 @@ public:
 	const ofVec3f& getCursorWorld() { return mouseW; }
 	const ofVec3f& getCursorProjected() { return mouseP; }
 	
+	void	setCursorWorld(const ofVec3f &);
+	void	clearCursorWorld();
+	
 	void	setCursorDraw(bool enabled, float size=0.1);
 	void	toggleCursorDraw();
 	
@@ -71,6 +74,7 @@ protected:
 	bool	pickCursorFlag;
 	ofVec3f mouseP;
 	ofVec3f mouseW;
+	bool	mouseWForced;
 	bool	drawCursor;
 	float	drawCursorSize;
 	//

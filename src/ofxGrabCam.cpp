@@ -30,7 +30,7 @@ ofxGrabCam::~ofxGrabCam() {
 
 //--------------------------
 void ofxGrabCam::begin(ofRectangle viewport) {
-	glEnable(GL_DEPTH_TEST);	
+	glEnable(GL_DEPTH_TEST);
 	viewportRect = viewport;
 	ofCamera::begin(viewport);
 	ofPushMatrix();

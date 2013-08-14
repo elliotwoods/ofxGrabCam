@@ -1,5 +1,7 @@
 #ofxGrabCam
 
+<img src="https://raw.github.com/elliotwoods/ofxGrabCam/master/ofxaddons_thumbnail.png" />
+
 Camera for browsing your scene. It 'picks' the xyz position under the cursor (using the depth buffer to get Z).
 Rotations and zoom are then performed with respect to that xyz position.
 Rotations are performed using a trackball model.

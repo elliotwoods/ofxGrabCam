@@ -290,6 +290,7 @@ void ofxGrabCam::findCursor() {
 	
 	//if we get nothing, scatter until we get something
 	//we search in a spiral until we hit something
+	//for some reason this has become really slow, so i'm setting a very low max iterations
 	if (mouseP.z == 1.0f) {
 		float sx, sy; // search this spot in screen space
 		float r, theta; // search is in polar coords

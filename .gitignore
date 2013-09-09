@@ -11,3 +11,5 @@ bin/
 build/
 !data/
 xcuserdata/
+
+._*

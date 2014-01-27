@@ -11,8 +11,8 @@
 
 //in normalised screen coords -0.5>0.5
 #define OFXGRABCAM_SEARCH_WIDTH 1.0f
-#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 10
-#define OFXGRABCAM_SEARCH_WINDINGS 10.0f
+#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 200
+#define OFXGRABCAM_SEARCH_WINDINGS 5.0f
 #define OFXGRABCAM_RESET_HOLD 500 //ms
 #define HAS_OFXGRABCAM
 
@@ -88,6 +88,7 @@ protected:
 	int		resetDown;
 	////
 	
+
 	////
 	//view
 	ofRectangle viewportRect;

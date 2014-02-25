@@ -83,7 +83,7 @@ void ofxGrabCam::end() {
 
 //--------------------------
 void ofxGrabCam::reset() {
-	this->setPosition(1.0f, 1.0f, 1.0f);
+	this->setPosition(1.0f, 1.0f, -1.0f);
 	this->lookAt(ofVec3f());
 }
 

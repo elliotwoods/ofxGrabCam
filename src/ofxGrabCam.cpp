@@ -298,8 +298,8 @@ void ofxGrabCam::findCursor() {
 		for (int iteration=0; iteration < OFXGRABCAM_SEARCH_MAX_ITERATIONS; iteration++) {
 			r = OFXGRABCAM_SEARCH_WIDTH * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
 			theta = OFXGRABCAM_SEARCH_WINDINGS * 2 * PI * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
-			sx = ofGetWidth() * r * cos(theta) + mouseP.x;
-			sy = ofGetHeight() * r * sin(theta) + mouseP.y;
+			sx = ofGetViewportWidth() * r * cos(theta) + mouseP.x;
+			sy = ofGetViewportHeight() * r * sin(theta) + mouseP.y;
 			
 			if (!viewportRect.inside(sx, sy))
 				continue;

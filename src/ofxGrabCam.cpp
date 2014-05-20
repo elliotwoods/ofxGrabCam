@@ -46,7 +46,7 @@ void ofxGrabCam::end() {
 	//optimistically, we presume there's no stray push/pops
 	ofPopMatrix();
 	
-	if ((pickCursorFlag || !mouseDown || !mouseActions) && !mouseWForced) {
+	if ((pickCursorFlag || drawCursor) && !mouseWForced && !mouseDown) {
 		findCursor();
 		pickCursorFlag = false;
 	}
@@ -181,15 +181,16 @@ void ofxGrabCam::mouseMoved(ofMouseEventArgs &args) {
 
 //--------------------------
 void ofxGrabCam::mousePressed(ofMouseEventArgs &args) {
-	if (!viewportRect.inside(args.x, args.y))
+	if (!viewportRect.inside(args.x, args.y) || !mouseActions)
 		return;
 	
 	mouseP.x = args.x;
 	mouseP.y = args.y;
 	
 	if (viewportRect.inside(args.x, args.y)) {
-		if (!mouseDown)
+		if (!mouseDown) {
 			pickCursorFlag = true;
+		}
 		mouseDown = true;
 	} else {
 		mouseDown = false;

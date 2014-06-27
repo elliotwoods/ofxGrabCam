@@ -25,7 +25,7 @@ ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(fa
 //--------------------------
 ofxGrabCam::~ofxGrabCam() {
 	//removing events actually seems to upset something
-	//removeListeners();
+	removeListeners();
 }
 
 //--------------------------

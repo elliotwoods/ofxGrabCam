@@ -47,8 +47,6 @@ public:
 	void	addListeners();
 	void	removeListeners();
 	
-protected:
-	
 	////
 	//events
 	//
@@ -60,12 +58,13 @@ protected:
 	void	keyPressed(ofKeyEventArgs & args);
 	void	keyReleased(ofKeyEventArgs & args);
 	//
-	bool	initialised;
-	bool	mouseActions;
-	//
 	////
 	
+protected:
 	
+	bool	initialised;
+	bool	mouseActions;
+
 	////
 	//cursor
 	void	findCursor();

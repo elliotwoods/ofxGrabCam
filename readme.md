@@ -31,3 +31,4 @@ http://en.wikipedia.org/wiki/MIT_License
 
 #Testimonials
 "this is basically the best thing ever." - kyle mcdonald
+"this is absolute crap" - golan levin

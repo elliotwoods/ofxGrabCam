@@ -195,6 +195,8 @@ void ofxGrabCam::mousePressed(ofMouseEventArgs &args) {
 	} else {
 		mouseDown = false;
 	}
+
+	this->findCursor(); // little hacky, should check that we haven't done this already this frame
 }
 
 //--------------------------
@@ -236,17 +238,17 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 			ofVec3f arcEnd(dx, -dy, -trackballRadius);
 			arcEnd = arcEnd;
 			arcEnd.normalize();
-			ofQuaternion orientation = this->getGlobalOrientation();
+			ofQuaternion orientation = this->getOrientationQuat();
 			rotation.makeRotate(orientation * ofVec3f(0.0f, 0.0f, -1.0f), orientation * arcEnd);
 			
 			if (fixUpwards) {
 				ofQuaternion rotToUp;
 				ofVec3f sideDir = ofCamera::getSideDir() * rotation;
-				rotToUp.makeRotate(sideDir, sideDir * ofVec3f(1.0f, 0, 1.0f));
+				rotToUp.makeRotate(sideDir, sideDir * ofVec3f(1.0, 0.0f, 1.0f));
 				rotation *= rotToUp;
 			}
 			
-			this->setOrientation(this->getGlobalOrientation() * rotation);
+			this->setOrientation(this->getOrientationQuat() * rotation);
 			ofCamera::setPosition((p - mouseW) * rotation + mouseW);
 		} else {
 			//dolly

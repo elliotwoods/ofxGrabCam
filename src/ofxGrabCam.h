@@ -25,9 +25,9 @@ public:
 	void	end(); ///< Overrides virtual end
 	void	reset();
 	
-	void updateCursorWorld() { this->findCursor(); } ///< Force an update of the world cursor
-	const ofVec3f& getCursorWorld() { return mouseW; }
-	const ofVec3f& getCursorProjected() { return mouseP; }
+	void	updateCursorWorld() { this->findCursor(); } ///< Force an update of the world cursor
+	const	ofVec3f& getCursorWorld() { return mouseW; }
+	const	ofVec3f& getCursorProjected() { return mouseP; }
 	
 	void	setCursorWorld(const ofVec3f &);
 	void	clearCursorWorld();

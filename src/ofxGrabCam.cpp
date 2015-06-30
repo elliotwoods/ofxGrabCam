@@ -67,7 +67,7 @@ void ofxGrabCam::end() {
 		ofPushStyle();
 		ofFill();
 		ofSetColor(50, 10, 10);
-		ofRect(mouseP.x + 20, mouseP.y + 20, 80, 40);
+		ofDrawRectangle(mouseP.x + 20, mouseP.y + 20, 80, 40);
 		
 		stringstream ss;
 		ss << "x: " << ofToString(mouseW.x, 2) << endl;
@@ -207,8 +207,8 @@ void ofxGrabCam::mouseReleased(ofMouseEventArgs &args) {
 //--------------------------
 void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 
-	float dx = (args.x - mouseP.x) / ofGetViewportWidth();
-	float dy = (args.y - mouseP.y) / ofGetViewportHeight();
+	float dx = (args.x - mouseP.x) / viewportRect.getWidth();
+	float dy = (args.y - mouseP.y) / viewportRect.getHeight();
 	mouseP.x = args.x;
 	mouseP.y = args.y;
 	
@@ -224,7 +224,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
 	ofVec3f p = ofCamera::getPosition();
 	ofVec3f uy = ofCamera::getUpDir();
 	ofVec3f ux = ofCamera::getSideDir();
-	float ar = float(ofGetViewportWidth()) / float(ofGetViewportHeight());
+	float ar = float(viewportRect.getWidth()) / float(viewportRect.getHeight());
 	
 	if (handDown) {
 		//pan
@@ -301,27 +301,23 @@ void ofxGrabCam::findCursor() {
 		for (int iteration=0; iteration < OFXGRABCAM_SEARCH_MAX_ITERATIONS; iteration++) {
 			r = OFXGRABCAM_SEARCH_WIDTH * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
 			theta = OFXGRABCAM_SEARCH_WINDINGS * 2 * PI * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
-			sx = ofGetViewportWidth() * r * cos(theta) + mouseP.x;
-			sy = ofGetViewportHeight() * r * sin(theta) + mouseP.y;
+			sx = this->viewportRect.getWidth() * r * cos(theta) + mouseP.x;
+			sy = this->viewportRect.getHeight() * r * sin(theta) + mouseP.y;
 			
 			if (!viewportRect.inside(sx, sy))
 				continue;
 			
-			glReadPixels(sx, ofGetViewportHeight()-1-sy, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
+			glReadPixels(sx, this->viewportRect.getHeight() - 1 - sy, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
 			
 			if (mouseP.z != 1.0f)
 				break;
 		}
 	}
 	
+	//we're looking at the far plane
 	if (mouseP.z == 1.0f)
 		return;
 	
-	GLdouble c[3];
-	
-	gluUnProject(mouseP.x, ofGetHeight()-1-mouseP.y, mouseP.z, matM, matP, viewport, c, c+1, c+2);
-	
-	mouseW.x = c[0];
-	mouseW.y = c[1];
-	mouseW.z = c[2];
+	//find mouse coordinate
+	this->mouseW = this->screenToWorld(mouseP);
 }

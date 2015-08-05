@@ -429,8 +429,6 @@ void ofxGrabCam::findCursor() {
 		}
 	}
 
-	cout << z << ", ";
-	
 	//check we're still looking at the near/far plane before updating the mouse distance
 	if (z != nearPlaneZ && z != farPlaneZ) {
 		this->tracking.mouse.projected.z = ((float)z / (float)USHRT_MAX) * 2.0f - 1.0f;

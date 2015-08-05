@@ -10,20 +10,17 @@ public:
 	void setup();
 	void update();
 	void draw();
+	void drawScene();
 
 	void keyPressed  (int key);
 
 	ofxGrabCam camera;
 	
-	////
-	//scene
-	vector<ofVec3f> positions;
-	vector<ofColor> colours;
-	//
-	void drawGrid(float scale = 10.0f, float ticks = 5.0f, bool labels = false, bool x = true, bool y = true, bool z = true);
-	void drawGridPlane(float scale, float ticks = 5.0f, bool labels = false);
-	//
-	////
+	struct Sphere {
+		ofVec3f position;
+		ofColor color;
+	};
+	vector<Sphere> spheres;
 	
 	ofMatrix4x4 savedPose;
 };

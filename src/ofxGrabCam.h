@@ -10,42 +10,43 @@
 #include "ofMain.h"
 
 //in normalised screen coords -0.5>0.5
-#define OFXGRABCAM_SEARCH_WIDTH 1.0f
-#define OFXGRABCAM_SEARCH_MAX_ITERATIONS 200
-#define OFXGRABCAM_SEARCH_WINDINGS 5.0f
-#define OFXGRABCAM_RESET_HOLD 500 //ms
+#define OFXGRABCAM_SEARCH_WIDTH_PX 32
+#define OFXGRABCAM_RESET_HOLD_MS 500
 #define HAS_OFXGRABCAM
 
 class ofxGrabCam : public ofCamera {
 public:	
-	ofxGrabCam(bool useMouseListeners=true);
+	ofxGrabCam();
 	~ofxGrabCam();
 	
 	void	begin(ofRectangle viewport = ofGetCurrentViewport());
 	void	end(); ///< Overrides virtual end
 	void	reset();
 	
-	void	updateCursorWorld() { this->findCursor(); } ///< Force an update of the world cursor
-	const	ofVec3f& getCursorWorld() { return mouseW; }
-	const	ofVec3f& getCursorProjected() { return mouseP; }
+	void			updateCursorWorld();
+	const ofVec3f&	getCursorWorld() const;
+	const ofVec3f&	getCursorProjected() const;
 	
-	void	setCursorWorld(const ofVec3f &);
-	void	clearCursorWorld();
+	void	setCursorDrawEnabled(bool);
+	bool	getCursorDrawEnabled() const;
+	void	toggleCursorDrawEnabled();
+
+	void	setCursorDrawSize(float);
+	float	getCursorDrawSize() const;
 	
-	void	setCursorDraw(bool enabled, float size=0.1);
-	void	toggleCursorDraw();
+	void	setMouseActionsEnabled(bool);
+	bool	getMouseActionsEnabled() const;
+	void	toggleMouseActionsEnabled();
 	
-	void	setMouseActions(bool enabled);
-	void	toggleMouseActions();
+	void	setFixUpDirectionEnabled(bool);
+	bool	getFixUpDirectionEnabled() const;
+	void	toggleFixUpDirectionEnabled();
 	
-	void	setFixUpwards(bool enabled);
-	void	toggleFixUpwards();
-	
-	void	setTrackballRadius(float trackballRadius);
+	void	setTrackballRadius(float);
 	float	getTrackballRadius() const;
 	
-	void	addListeners();
-	void	removeListeners();
+	void	setListenersEnabled(bool);
+	bool	getListenersEnabled() const;
 	
 	////
 	//events
@@ -61,44 +62,64 @@ public:
 	////
 	
 protected:
-	
-	bool	initialised;
-	bool	mouseActions;
+	void addListeners();
+	void removeListeners();
 
-	////
-	//cursor
-	void	findCursor();
-	//
-	bool	mouseDown;
-	bool	handDown;
-	bool	altDown;
-	bool	pickCursorFlag;
-	ofVec3f mouseP;
-	ofVec3f mouseW;
-	bool	mouseWForced;
-	bool	drawCursor;
-	float	drawCursorSize;
-	//
-	////
-	
-	
-	////
-	//interactions
-	int		resetDown;
-	////
-	
+	void updateMouseCoords(const ofMouseEventArgs &, bool updateMouseOverViewport);
+	void findCursor();
 
-	////
-	//view
-	ofRectangle viewportRect;
-	//
-	GLint		viewport[4];
-	GLdouble	matM[16], matP[16];
-	//
-	ofQuaternion rotation;
-	//
-	bool		fixUpwards;
-	float		trackballRadius;
-	//
-	////
+	struct {
+		bool listenersAttached; // we manage this. only ever set by update or destructor
+
+		struct {
+			bool down;
+			int button;
+		} mouseDown;
+
+		struct {
+			bool h;
+			bool r;
+			uint64_t resetHoldStartTime;
+		} keysDown;
+	} inputState;
+
+	struct {	
+		ofQuaternion rotation;
+		bool findMouseThisFrame;
+
+		struct {
+			ofVec3f projected; // within viewport pixels
+			ofVec3f world;
+			bool overViewport;
+		} mouse;
+	} tracking;
+
+	struct {
+		ofRectangle viewport;
+		ofShortPixels sampleNeighbourhood;
+
+		struct {
+			GLint viewport[4];
+			ofMatrix4x4 modelMatrix;
+			ofMatrix4x4 projectionMatrix;
+		} opengl;
+	} view;
+
+	struct {
+		bool listenersEnabled;
+		bool mouseActionsEnabled;
+		bool fixUpDirection;
+		float trackballRadius;
+
+		struct {
+			bool enabled;
+			float size;
+		} cursorDraw;
+
+		struct {
+			ofVec3f position;
+			ofQuaternion rotation;
+		} defaultView;
+	} userSettings;
+
 };

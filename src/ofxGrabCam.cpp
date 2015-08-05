@@ -9,315 +9,433 @@
 #include "ofxGrabCam.h"
 
 //--------------------------
-ofxGrabCam::ofxGrabCam(bool useMouseListeners) : initialised(true), mouseDown(false), handDown(false), altDown(false), pickCursorFlag(false), drawCursor(false), drawCursorSize(0.1), fixUpwards(true) {
+ofxGrabCam::ofxGrabCam() {
+	this->inputState.listenersAttached = false;
+	this->inputState.mouseDown.down = false;
+	this->inputState.mouseDown.button = 0;
+	this->inputState.keysDown.h = false;
+	this->inputState.keysDown.r = false;
+	this->inputState.keysDown.resetHoldStartTime = 0;
 
-	this->initialised = false;
-	this->mouseActions = true;
-	this->trackballRadius = 0.5f;
-	this->resetDown = 0;
-	this->mouseWForced = false;
-	
-	ofCamera::setNearClip(0.1);
-	addListeners();
-	reset();
+	this->tracking.findMouseThisFrame = false;
+	tracking.mouse.overViewport = true;
+
+	for (int i = 0; i < 4; i++) {
+		this->view.opengl.viewport[i] = 0;
+	}
+
+	this->userSettings.listenersEnabled = true;
+	this->userSettings.mouseActionsEnabled = true;
+	this->userSettings.fixUpDirection = false;
+	this->userSettings.trackballRadius = 0.5f;
+	this->userSettings.cursorDraw.enabled = false;
+	this->userSettings.cursorDraw.size = 0.1f;
+
+	//reset camera orientation and zoom
+	this->reset();
 }
 
 //--------------------------
 ofxGrabCam::~ofxGrabCam() {
 	//removing events actually seems to upset something
-	removeListeners();
+	this->removeListeners();
 }
 
 //--------------------------
 void ofxGrabCam::begin(ofRectangle viewport) {
+	//check listeners are in order
+	if (this->inputState.listenersAttached) {
+		if (!this->userSettings.listenersEnabled) {
+			this->removeListeners();
+		}
+	}
+	else {
+		if (this->userSettings.listenersEnabled) {
+			this->addListeners();
+		}
+	}
+
 	glEnable(GL_DEPTH_TEST);
-	viewportRect = viewport;
+	this->view.viewport = viewport;
 	ofCamera::begin(viewport);
-	ofPushMatrix();
 	
-	glGetDoublev(GL_PROJECTION_MATRIX, this->matP);
-	glGetDoublev(GL_MODELVIEW_MATRIX, this->matM);
-	glGetIntegerv(GL_VIEWPORT, this->viewport);
+	glGetFloatv(GL_PROJECTION_MATRIX, this->view.opengl.projectionMatrix.getPtr());
+	glGetFloatv(GL_MODELVIEW_MATRIX, this->view.opengl.modelMatrix.getPtr());
+	glGetIntegerv(GL_VIEWPORT, this->view.opengl.viewport);
+
+	ofPushMatrix();
 }
 
 //--------------------------
 void ofxGrabCam::end() {
-	
-	//optimistically, we presume there's no stray push/pops
+	// optimistically, we presume there's no stray push/pops inbetween
 	ofPopMatrix();
-	
-	if ((pickCursorFlag || drawCursor) && !mouseWForced && !mouseDown) {
+
+	if (this->tracking.findMouseThisFrame) {
 		findCursor();
-		pickCursorFlag = false;
+		this->tracking.findMouseThisFrame = false; //lower the flag
 	}
 	
+	//--
+	// Draw the 3D cursor
+	//--
+	//
 	// this has to happen after all drawing + findCursor()
 	// but before camera.end()
-	if (drawCursor) {
+	if (this->userSettings.cursorDraw.enabled) {
 		ofPushStyle();
 		ofSetColor(0, 0, 0);
-		ofSphere(mouseW.x, mouseW.y, mouseW.z, drawCursorSize);
+		ofSphere(this->tracking.mouse.world, this->userSettings.cursorDraw.size);
 		ofPopStyle();
 	}
-	
+	//
+	//--
+
 	ofCamera::end();
 	glDisable(GL_DEPTH_TEST);
 	
-	if (drawCursor && viewportRect.inside(mouseP)) {
+	//--
+	// Draw the 2D cursor info box
+	//--
+	//
+	if (this->userSettings.cursorDraw.enabled) {
 		ofPushStyle();
-		ofFill();
-		ofSetColor(50, 10, 10);
-		ofDrawRectangle(mouseP.x + 20, mouseP.y + 20, 80, 40);
-		
-		stringstream ss;
-		ss << "x: " << ofToString(mouseW.x, 2) << endl;
-		ss << "y: " << ofToString(mouseW.y, 2) << endl;
-		ss << "z: " << ofToString(mouseW.z, 2) << endl;
-		
-		ofSetColor(255, 255, 255);
-		ofDrawBitmapString(ss.str(), mouseP.x + 30, mouseP.y + 30);
-		
+		{
+			ofPushMatrix();
+			{
+				ofTranslate(this->tracking.mouse.projected.x, this->tracking.mouse.projected.y);
+				ofFill();
+				ofSetColor(50, 10, 10);
+				ofDrawRectangle(20, 20, 80, 40);
+
+				stringstream ss;
+				ss << "x: " << ofToString(this->tracking.mouse.world.x, 2) << endl;
+				ss << "y: " << ofToString(this->tracking.mouse.world.y, 2) << endl;
+				ss << "z: " << ofToString(this->tracking.mouse.world.z, 2) << endl;
+
+				ofSetColor(255, 255, 255);
+				ofDrawBitmapString(ss.str(), 30, 30);
+			}
+			ofPopMatrix();
+		}
 		ofPopStyle();
 	}
+	//
+	//--
 }
 
 //--------------------------
 void ofxGrabCam::reset() {
+	ofCamera::setNearClip(0.1);
+	ofCamera::setFarClip(1000.0f);
 	this->setPosition(1.0f, 1.0f, -1.0f);
 	this->lookAt(ofVec3f());
 }
 
 //--------------------------
-void ofxGrabCam::setCursorWorld(const ofVec3f& world) {
-	this->mouseW = world;
-	this->mouseWForced = true;
+void ofxGrabCam::updateCursorWorld() {
+	this->findCursor();
 }
 
 //--------------------------
-void ofxGrabCam::clearCursorWorld() {
-	this->mouseWForced = false;
+const ofVec3f & ofxGrabCam::getCursorWorld() const {
+	return this->tracking.mouse.world;
 }
 
 //--------------------------
-void ofxGrabCam::setCursorDraw(bool enabled, float size) {
-	this->drawCursor = enabled;
-	this->drawCursorSize = size;
+const ofVec3f & ofxGrabCam::getCursorProjected() const {
+	return this->tracking.mouse.projected;
 }
 
 //--------------------------
-void ofxGrabCam::toggleCursorDraw() {
-	this->drawCursor ^= true;
+void ofxGrabCam::setCursorDrawEnabled(bool enabled) {
+	this->userSettings.cursorDraw.enabled = enabled;
 }
 
 //--------------------------
-void ofxGrabCam::setMouseActions(bool enabled) {
-	this->mouseActions = enabled;
+bool ofxGrabCam::getCursorDrawEnabled() const {
+	return this->userSettings.cursorDraw.enabled;
 }
 
 //--------------------------
-void ofxGrabCam::toggleMouseActions() {
-	this->mouseActions ^= true;
+void ofxGrabCam::toggleCursorDrawEnabled() {
+	this->userSettings.cursorDraw.enabled ^= true;
 }
 
 //--------------------------
-void ofxGrabCam::setFixUpwards(bool enabled) {
-	fixUpwards = enabled;
+void ofxGrabCam::setCursorDrawSize(float cursorDrawSize) {
+	this->userSettings.cursorDraw.size = cursorDrawSize;
 }
 
 //--------------------------
-void ofxGrabCam::toggleFixUpwards() {
-	fixUpwards ^= true;
+float ofxGrabCam::getCursorDrawSize() const {
+	return this->userSettings.cursorDraw.size;
+}
+
+//--------------------------
+void ofxGrabCam::setMouseActionsEnabled(bool enabled) {
+	this->userSettings.mouseActionsEnabled = enabled;
+}
+
+//--------------------------
+bool ofxGrabCam::getMouseActionsEnabled() const {
+	return this->userSettings.mouseActionsEnabled;
+}
+
+//--------------------------
+void ofxGrabCam::toggleMouseActionsEnabled() {
+	this->userSettings.mouseActionsEnabled ^= true;
+}
+
+//--------------------------
+void ofxGrabCam::setFixUpDirectionEnabled(bool enabled) {
+	this->userSettings.fixUpDirection = enabled;
+}
+
+//--------------------------
+bool ofxGrabCam::getFixUpDirectionEnabled() const{
+	return this->userSettings.fixUpDirection;
+}
+
+//--------------------------
+void ofxGrabCam::toggleFixUpDirectionEnabled() {
+	this->userSettings.fixUpDirection ^= true;
 }
 
 //--------------------------
 void ofxGrabCam::setTrackballRadius(float trackballRadius) {
-	this->trackballRadius = trackballRadius;
+	this->userSettings.trackballRadius = trackballRadius;
 }
 
 //--------------------------
 float ofxGrabCam::getTrackballRadius() const {
-	return this->trackballRadius;
+	return this->userSettings.trackballRadius;
 }
 
 //--------------------------
-void ofxGrabCam::addListeners() {
-	ofAddListener(ofEvents().update, this, &ofxGrabCam::update);
-    ofAddListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofAddListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
-    ofAddListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofAddListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofAddListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
-    ofAddListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
-
-	this->initialised = true;
+void ofxGrabCam::setListenersEnabled(bool listenersEnabled) {
+	this->userSettings.listenersEnabled = listenersEnabled;
 }
 
 //--------------------------
-void ofxGrabCam::removeListeners() {
-	if (!this->initialised)
-		return;
-	
-	ofRemoveListener(ofEvents().update, this, &ofxGrabCam::update);
-    ofRemoveListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
-    ofRemoveListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
-    ofRemoveListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
-    ofRemoveListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
-    ofRemoveListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
-	ofRemoveListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
-	
-	this->initialised = false;
+bool ofxGrabCam::getListenersEnabled() const {
+	return this->userSettings.listenersEnabled;
 }
 
 //--------------------------
 void ofxGrabCam::update(ofEventArgs &args) {
-
+	if (this->userSettings.cursorDraw.enabled && this->tracking.mouse.overViewport && !this->inputState.mouseDown.down) {
+		//if the cursor is being drawn then always update the cursor world position (e.g. scene might be moving)
+		this->tracking.findMouseThisFrame = true;
+	}
 }
 
 //--------------------------
-void ofxGrabCam::mouseMoved(ofMouseEventArgs &args) {
-	mouseP.x = args.x;
-	mouseP.y = args.y;
-}
-
-//--------------------------
-void ofxGrabCam::mousePressed(ofMouseEventArgs &args) {
-	if (!viewportRect.inside(args.x, args.y) || !mouseActions)
+void ofxGrabCam::mouseMoved(ofMouseEventArgs & args) {
+	if (!this->userSettings.mouseActionsEnabled) {
 		return;
-	
-	mouseP.x = args.x;
-	mouseP.y = args.y;
-	
-	if (viewportRect.inside(args.x, args.y)) {
-		if (!mouseDown) {
-			pickCursorFlag = true;
-		}
-		mouseDown = true;
-	} else {
-		mouseDown = false;
 	}
 
-	this->findCursor(); // little hacky, should check that we haven't done this already this frame
+	this->updateMouseCoords(args, true);
 }
 
 //--------------------------
-void ofxGrabCam::mouseReleased(ofMouseEventArgs &args) {
-	mouseDown = false;
+void ofxGrabCam::mousePressed(ofMouseEventArgs & args) {
+	if (!this->userSettings.mouseActionsEnabled) {
+		return;
+	}
+
+	//if a mouse button is already down, then ignore the new button
+	if (this->inputState.mouseDown.down) {
+		return;
+	}
+
+	this->updateMouseCoords(args, true);
+	
+	//if mouse goes down in our viewport then let's take it
+	if (this->tracking.mouse.overViewport) {
+		this->tracking.findMouseThisFrame = true;
+
+		this->inputState.mouseDown.down = true;
+		this->inputState.mouseDown.button = args.button;
+	}
 }
 
 //--------------------------
-void ofxGrabCam::mouseDragged(ofMouseEventArgs &args) {
-
-	float dx = (args.x - mouseP.x) / viewportRect.getWidth();
-	float dy = (args.y - mouseP.y) / viewportRect.getHeight();
-	mouseP.x = args.x;
-	mouseP.y = args.y;
-	
-	if (!mouseActions)
+void ofxGrabCam::mouseReleased(ofMouseEventArgs & args) {
+	if (!this->userSettings.mouseActionsEnabled) {
 		return;
+	}
+	
+	//clear the mouse down flag if it matches the button which we're considering
+	if (this->inputState.mouseDown.button == args.button) {
+		this->inputState.mouseDown.down = false;
+	}
+}
 
-	if (!this->mouseDown)
+//--------------------------
+void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
+	if (!this->userSettings.mouseActionsEnabled) {
 		return;
+	}
 	
-	if (mouseP.z == 1.0f)
-		mouseP.z = 0.5f;
+	if (!this->inputState.mouseDown.down) {
+		//we didn't go down inside the viewport, so ignore the drag
+		return;
+	}
+
+	//calculate mouse movement this frame
+	float dx = (args.x - this->tracking.mouse.projected.x) / this->view.viewport.getWidth();
+	float dy = (args.y - this->tracking.mouse.projected.y) / this->view.viewport.getHeight();
+
+	this->updateMouseCoords(args, false);
 	
-	ofVec3f p = ofCamera::getPosition();
-	ofVec3f uy = ofCamera::getUpDir();
-	ofVec3f ux = ofCamera::getSideDir();
-	float ar = float(viewportRect.getWidth()) / float(viewportRect.getHeight());
+	const auto cameraPosition = ofCamera::getPosition();
+	const auto cameraUpDirection = ofCamera::getUpDir();
+	const auto cameraSideDirection= ofCamera::getSideDir();
+	float aspectRatio = float(this->view.viewport.getWidth()) / float(this->view.viewport.getHeight());
 	
-	if (handDown) {
+	const auto cameraToMouse = this->tracking.mouse.world - cameraPosition;
+
+	if (this->inputState.keysDown.h) {
 		//pan
-		float d = (p - mouseW).length();
-		//ofCamera::getFov() doesn't exist!!
-		ofCamera::move(dx * -ux * d * ar);
-		ofCamera::move(dy * uy * d);
+		float distanceToMouse = cameraToMouse.length();
+		//ofCamera::getFov() doesn't exist!! (well it does now actually!)
+		ofCamera::move(dx * -cameraSideDirection * distanceToMouse * aspectRatio);
+		ofCamera::move(dy * cameraUpDirection * distanceToMouse);
 	} else {
-		if (args.button==0 && !altDown) {
+		if (this->inputState.mouseDown.button == 0) {
 			//orbit
-			ofVec3f arcEnd(dx, -dy, -trackballRadius);
-			arcEnd = arcEnd;
-			arcEnd.normalize();
-			ofQuaternion orientation = this->getOrientationQuat();
-			rotation.makeRotate(orientation * ofVec3f(0.0f, 0.0f, -1.0f), orientation * arcEnd);
+			auto arcEnd = ofVec3f(dx, -dy, -this->userSettings.trackballRadius).getNormalized();
+			ofQuaternion rotateCamera;
+			auto cameraOrientation = this->getOrientationQuat();
+			rotateCamera.makeRotate(cameraOrientation * ofVec3f(0.0f, 0.0f, -1.0f), cameraOrientation * arcEnd);
 			
-			if (fixUpwards) {
+			if (this->userSettings.fixUpDirection) {
 				ofQuaternion rotToUp;
-				ofVec3f sideDir = ofCamera::getSideDir() * rotation;
+				ofVec3f sideDir = ofCamera::getSideDir() * rotateCamera;
 				rotToUp.makeRotate(sideDir, sideDir * ofVec3f(1.0, 0.0f, 1.0f));
-				rotation *= rotToUp;
+				rotateCamera *= rotToUp;
 			}
 			
-			this->setOrientation(this->getOrientationQuat() * rotation);
-			ofCamera::setPosition((p - mouseW) * rotation + mouseW);
+			this->setOrientation(cameraOrientation * rotateCamera);
+			ofCamera::setPosition((-cameraToMouse) * rotateCamera + this->tracking.mouse.world);
 		} else {
 			//dolly
-			ofCamera::move(2 * (mouseW - p) * dy);
+			ofCamera::move(2 * cameraToMouse * dy);
 		}
 	}
 }
 
 //--------------------------
-void ofxGrabCam::keyPressed(ofKeyEventArgs &args) {
+void ofxGrabCam::keyPressed(ofKeyEventArgs & args) {
 	if (args.key == 'r') {
-		if (resetDown == 0)
-			resetDown = ofGetElapsedTimeMillis();
-		else if (ofGetElapsedTimeMillis() - resetDown > OFXGRABCAM_RESET_HOLD)
+		if (this->inputState.keysDown.resetHoldStartTime == 0) {
+			this->inputState.keysDown.resetHoldStartTime = ofGetElapsedTimeMillis();
+		}
+		else if (ofGetElapsedTimeMillis() - this->inputState.keysDown.resetHoldStartTime > OFXGRABCAM_RESET_HOLD_MS) {
 			this->reset();
+		}
 	}
-	
-	if (args.key == 'h')
-		handDown = true;
-	
-	if (args.key == OF_KEY_ALT)
-		altDown = true;
+
+	if (args.key == 'h') {
+		this->inputState.keysDown.h = true;
+	}
 }
 
 
 //--------------------------
-void ofxGrabCam::keyReleased(ofKeyEventArgs &args) {
-	if (args.key == 'h')
-		handDown = false;
+void ofxGrabCam::keyReleased(ofKeyEventArgs & args) {
+	if (args.key == 'h') {
+		this->inputState.keysDown.h = false;
+	}
 	
-	if (args.key == 'r')
-		resetDown = 0;
-	
-	if (args.key == OF_KEY_ALT)
-		altDown = false;
+	if (args.key == 'r') {
+		this->inputState.keysDown.r = false;
+	}
 }
 
+//--------------------------
+void ofxGrabCam::addListeners() {
+	this->removeListeners();
+
+	ofAddListener(ofEvents().update, this, &ofxGrabCam::update);
+	ofAddListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
+	ofAddListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
+	ofAddListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofAddListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofAddListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
+	ofAddListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
+
+	this->inputState.listenersAttached = true;
+}
+
+//--------------------------
+void ofxGrabCam::removeListeners() {
+	if (this->inputState.listenersAttached) {
+		ofRemoveListener(ofEvents().update, this, &ofxGrabCam::update);
+		ofRemoveListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
+		ofRemoveListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
+		ofRemoveListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+		ofRemoveListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+		ofRemoveListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
+		ofRemoveListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
+
+		this->inputState.listenersAttached = false;
+	}
+}
+
+//--------------------------
+void ofxGrabCam::updateMouseCoords(const ofMouseEventArgs & args, bool updateMouseOverViewport) {
+	this->tracking.mouse.projected.x = args.x - this->view.viewport.x;
+	this->tracking.mouse.projected.y = args.y - this->view.viewport.y;
+
+	if (updateMouseOverViewport) {
+		this->tracking.mouse.overViewport = this->view.viewport.inside(args.x, args.y);
+	}
+}
 
 //--------------------------
 void ofxGrabCam::findCursor() {
-	//read z value from depth buffer at mouse coords
-	glReadPixels(mouseP.x, ofGetHeight()-1-mouseP.y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
-	
-	//if we get nothing, scatter until we get something
-	//we search in a spiral until we hit something
-	//for some reason this has become really slow, so i'm setting a very low max iterations
-	if (mouseP.z == 1.0f) {
-		float sx, sy; // search this spot in screen space
-		float r, theta; // search is in polar coords
-		for (int iteration=0; iteration < OFXGRABCAM_SEARCH_MAX_ITERATIONS; iteration++) {
-			r = OFXGRABCAM_SEARCH_WIDTH * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
-			theta = OFXGRABCAM_SEARCH_WINDINGS * 2 * PI * float(iteration) / float(OFXGRABCAM_SEARCH_MAX_ITERATIONS);
-			sx = this->viewportRect.getWidth() * r * cos(theta) + mouseP.x;
-			sy = this->viewportRect.getHeight() * r * sin(theta) + mouseP.y;
-			
-			if (!viewportRect.inside(sx, sy))
-				continue;
-			
-			glReadPixels(sx, this->viewportRect.getHeight() - 1 - sy, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &mouseP.z);
-			
-			if (mouseP.z != 1.0f)
-				break;
+	GLint mouseScreenX = this->tracking.mouse.projected.x;
+	GLint mouseScreenY = this->view.viewport.height - 1 - this->tracking.mouse.projected.y;
+	unsigned short z;
+
+	const auto nearPlaneZ = (unsigned short) 32768;
+	const auto farPlaneZ = (unsigned short) 65535;
+
+	// read the position under the cursor
+	glReadPixels(mouseScreenX, mouseScreenY, 1, 1, GL_DEPTH_COMPONENT, GL_UNSIGNED_SHORT, &z);
+
+	// if nothing found, sample a neighbourhood
+	if (z == nearPlaneZ|| z == farPlaneZ) {
+		auto sampleRect = ofRectangle(-OFXGRABCAM_SEARCH_WIDTH_PX / 2, -OFXGRABCAM_SEARCH_WIDTH_PX / 2, OFXGRABCAM_SEARCH_WIDTH_PX, OFXGRABCAM_SEARCH_WIDTH_PX);
+		sampleRect.x += mouseScreenX;
+		sampleRect.y += mouseScreenY;
+		auto cropRect = ofRectangle(0, 0, this->view.viewport.width, this->view.viewport.height);
+		sampleRect = sampleRect.getIntersection(cropRect);
+
+		if (sampleRect.width > 0 && sampleRect.height > 0) {
+			if (this->view.sampleNeighbourhood.getWidth() != sampleRect.getWidth() || this->view.sampleNeighbourhood.getHeight() != sampleRect.getHeight()) {
+				this->view.sampleNeighbourhood.allocate(sampleRect.getWidth(), sampleRect.getHeight(), OF_IMAGE_GRAYSCALE);
+			}
+			glReadPixels(sampleRect.x, sampleRect.y, sampleRect.width, sampleRect.height, GL_DEPTH_COMPONENT, GL_UNSIGNED_SHORT, this->view.sampleNeighbourhood.getData());
+			for (auto & pixel : this->view.sampleNeighbourhood) {
+				if (pixel != nearPlaneZ && pixel != farPlaneZ) {
+					z = pixel;
+					break;
+				}
+			}
 		}
 	}
+
+	cout << z << ", ";
 	
-	//we're looking at the far plane
-	if (mouseP.z == 1.0f)
-		return;
+	//check we're still looking at the near/far plane before updating the mouse distance
+	if (z != nearPlaneZ && z != farPlaneZ) {
+		this->tracking.mouse.projected.z = ((float)z / (float)USHRT_MAX) * 2.0f - 1.0f;
+	}
 	
 	//find mouse coordinate
-	this->mouseW = this->screenToWorld(mouseP);
+	this->tracking.mouse.world = this->screenToWorld(this->tracking.mouse.projected);
 }

@@ -13,5 +13,5 @@ int main( ){
 
 	ofCreateWindow(windowSettings);
 
-	ofRunApp( new testApp());
+	ofRunApp(new testApp());
 }

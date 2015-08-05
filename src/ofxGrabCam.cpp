@@ -8,6 +8,8 @@
 
 #include "ofxGrabCam.h"
 
+#include "of3dGraphics.h"
+
 //--------------------------
 ofxGrabCam::ofxGrabCam() {
 	this->inputState.listenersAttached = false;
@@ -85,7 +87,7 @@ void ofxGrabCam::end() {
 	if (this->userSettings.cursorDraw.enabled) {
 		ofPushStyle();
 		ofSetColor(0, 0, 0);
-		ofSphere(this->tracking.mouse.world, this->userSettings.cursorDraw.size);
+		ofDrawSphere(this->tracking.mouse.world, this->userSettings.cursorDraw.size);
 		ofPopStyle();
 	}
 	//
@@ -300,9 +302,10 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 	if (this->inputState.keysDown.h) {
 		//pan
 		float distanceToMouse = cameraToMouse.length();
-		//ofCamera::getFov() doesn't exist!! (well it does now actually!)
-		ofCamera::move(dx * -cameraSideDirection * distanceToMouse * aspectRatio);
-		ofCamera::move(dy * cameraUpDirection * distanceToMouse);
+		auto halfFov = (ofCamera::getFov() / 2.0) * DEG_TO_RAD;
+		float grad = tan(halfFov) * 2.0f;
+		ofCamera::move(dx * -cameraSideDirection * distanceToMouse * aspectRatio * grad);
+		ofCamera::move(dy * cameraUpDirection * distanceToMouse * grad);
 	} else {
 		if (this->inputState.mouseDown.button == 0) {
 			//orbit

@@ -7,9 +7,10 @@
 //	http://www.kimchiandchips.com
 //
 
-#include "ofMain.h"
+#include "ofRectangle.h"
+#include "ofPixels.h"
+#include "ofCamera.h"
 
-//in normalised screen coords -0.5>0.5
 #define OFXGRABCAM_SEARCH_WIDTH_PX 32
 #define OFXGRABCAM_RESET_HOLD_MS 500
 #define HAS_OFXGRABCAM

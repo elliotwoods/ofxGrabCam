@@ -36,7 +36,7 @@ http://en.wikipedia.org/wiki/MIT_License
 
 * We use glReadPixels to read back the depth buffer around the mouse cursor to find the XYZ position
 * Reading back the depth buffer happens only when required (e.g. mouse down/dragged, or when you enable the 3D cursor)
-* Reading back all the time may reduce your frame rate, so make sure to disable the cursor if you want a higher frame rate.
+* Reading back all the time may reduce your frame rate, so make sure to leave the cursor disabled (default) if you want a higher frame rate.
 
 #Testimonials
 

@@ -11,9 +11,8 @@
 #include "ofPixels.h"
 #include "ofCamera.h"
 
-#define OFXGRABCAM_SEARCH_WIDTH_PX 32
+#define OFXGRABCAM_SEARCH_WIDTH_PX 16
 #define OFXGRABCAM_RESET_HOLD_MS 500
-#define HAS_OFXGRABCAM
 
 class ofxGrabCam : public ofCamera {
 public:	
@@ -25,8 +24,8 @@ public:
 	void	reset();
 	
 	void			updateCursorWorld();
-	const ofVec3f&	getCursorWorld() const;
-	const ofVec3f&	getCursorProjected() const;
+	const ofVec3f &	getCursorWorld() const;
+	ofVec3f			getCursorProjected() const; // note we use this in findCursor
 	
 	void	setCursorDrawEnabled(bool);
 	bool	getCursorDrawEnabled() const;
@@ -61,12 +60,19 @@ public:
 	void	keyReleased(ofKeyEventArgs & args);
 	//
 	////
-	
+
+	const ofShortPixels & getSampleNeighbourhood() const; // for debugging depth reading
 protected:
+	struct MouseInViewport {
+		ofVec2f position; /// in viewport space
+		bool withinViewport;
+	};
+
 	void addListeners();
 	void removeListeners();
 
-	void updateMouseCoords(const ofMouseEventArgs &, bool updateMouseOverViewport);
+	MouseInViewport getMouseInViewport(const ofMouseEventArgs &);
+
 	void findCursor();
 
 	struct {
@@ -89,9 +95,9 @@ protected:
 		bool findMouseThisFrame;
 
 		struct {
-			ofVec3f projected; // within viewport pixels
+			MouseInViewport viewport; // within viewport pixels
 			ofVec3f world;
-			bool overViewport;
+			float projectedDepth;
 		} mouse;
 	} tracking;
 
@@ -122,5 +128,4 @@ protected:
 			ofQuaternion rotation;
 		} defaultView;
 	} userSettings;
-
 };

@@ -73,6 +73,25 @@ void testApp::draw(){
 	ofPopStyle();
 	//
 	//--
+
+
+
+	//--
+	// draw debug preview
+	//--
+	//
+	// NOTE : this will not be updated if either:
+	//	a) the cursor is outside the screen
+	//	b) the cursor is directly over something (in which case we don't sample the neighbourhood)
+	//
+	const auto & depthPixelsAroundCursor = this->camera.getSampleNeighbourhood();
+	if (depthPixelsAroundCursor.isAllocated()) {
+		ofShortImage preview = depthPixelsAroundCursor;
+		preview.update();
+		preview.draw(30, 200, 100, 100);
+	}
+	//
+	//--
 }
 
 //--------------------------------------------------------------

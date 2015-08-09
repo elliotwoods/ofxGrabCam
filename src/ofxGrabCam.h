@@ -11,9 +11,6 @@
 #include "ofPixels.h"
 #include "ofCamera.h"
 
-#define OFXGRABCAM_SEARCH_WIDTH_PX 16
-#define OFXGRABCAM_RESET_HOLD_MS 500
-
 class ofxGrabCam : public ofCamera {
 public:	
 	ofxGrabCam();

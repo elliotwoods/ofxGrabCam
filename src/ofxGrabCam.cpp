@@ -42,7 +42,7 @@ ofxGrabCam::ofxGrabCam() {
 
 //--------------------------
 ofxGrabCam::~ofxGrabCam() {
-	//removing events actually seems to upset something
+	//note that older versions of oF (before october 2015) sometimes have crashes when removing listeners 
 	this->removeListeners();
 }
 
@@ -390,7 +390,6 @@ void ofxGrabCam::keyPressed(ofKeyEventArgs & args) {
 		this->inputState.keysDown.h = true;
 	}
 }
-
 
 //--------------------------
 void ofxGrabCam::keyReleased(ofKeyEventArgs & args) {

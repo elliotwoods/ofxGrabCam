@@ -14,7 +14,7 @@
 class ofxGrabCam : public ofCamera {
 public:	
 	ofxGrabCam();
-	~ofxGrabCam();
+	virtual ~ofxGrabCam();
 	
 	void	begin(ofRectangle viewport = ofGetCurrentViewport());
 	void	end(); ///< Overrides virtual end

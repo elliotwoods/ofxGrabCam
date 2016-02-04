@@ -34,7 +34,7 @@ ofxGrabCam::ofxGrabCam() {
 	this->userSettings.fixUpDirection = false;
 	this->userSettings.trackballRadius = 0.2f;
 	this->userSettings.cursorDraw.enabled = false;
-	this->userSettings.cursorDraw.size = 0.1f;
+	this->userSettings.cursorDraw.size = 0.02f;
 
 	//reset camera orientation and zoom
 	this->reset();
@@ -88,9 +88,37 @@ void ofxGrabCam::end() {
 	// this has to happen after all drawing + findCursor()
 	// but before camera.end()
 	if (this->userSettings.cursorDraw.enabled) {
+		
+		//cursorDraw.size is in normalized screen coords
+		const auto cursorDistanceZ = (this->tracking.mouse.world * this->view.opengl.modelMatrix).z;
+		const auto viewHeightAtCursor = tan(this->getFov() / 2.0f * DEG_TO_RAD) * cursorDistanceZ * 2.0f;
+		auto size = this->userSettings.cursorDraw.size * viewHeightAtCursor;
+		
+		const auto pxToWorldAtCursor = viewHeightAtCursor / this->view.viewport.getHeight();
+		
 		ofPushStyle();
-		ofSetColor(0, 0, 0);
-		ofDrawSphere(this->tracking.mouse.world, this->userSettings.cursorDraw.size);
+		ofPushMatrix();
+		{
+			ofTranslate(this->tracking.mouse.world);
+
+			//draw line inner
+			ofSetColor(255);
+			ofSetLineWidth(1.0f);
+			ofDrawLine(-size, 0, 0, size, 0, 0);
+			ofDrawLine(0, -size, 0, 0, size, 0);
+			ofDrawLine(0, 0, -size, 0, 0, size);
+			
+			//draw line outer
+			glPolygonOffset(1.0f, -1.0f);
+			glEnable(GL_POLYGON_OFFSET_LINE);
+			ofSetColor(0);
+			ofSetLineWidth(4.0f);
+			size += pxToWorldAtCursor * 4.0f;
+			ofDrawLine(-size, 0, 0, size, 0, 0);
+			ofDrawLine(0, -size, 0, 0, size, 0);
+			ofDrawLine(0, 0, -size, 0, 0, size);
+		}
+		ofPopMatrix();
 		ofPopStyle();
 	}
 	//

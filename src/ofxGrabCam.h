@@ -104,8 +104,6 @@ protected:
 
 		struct {
 			GLint viewport[4];
-			ofMatrix4x4 modelMatrix;
-			ofMatrix4x4 projectionMatrix;
 		} opengl;
 	} view;
 

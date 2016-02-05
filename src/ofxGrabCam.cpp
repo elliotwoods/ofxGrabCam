@@ -64,8 +64,6 @@ void ofxGrabCam::begin(ofRectangle viewport) {
 	this->view.viewport = viewport;
 	ofCamera::begin(viewport);
 	
-	glGetFloatv(GL_PROJECTION_MATRIX, this->view.opengl.projectionMatrix.getPtr());
-	glGetFloatv(GL_MODELVIEW_MATRIX, this->view.opengl.modelMatrix.getPtr());
 	glGetIntegerv(GL_VIEWPORT, this->view.opengl.viewport);
 
 	ofPushMatrix();
@@ -88,10 +86,9 @@ void ofxGrabCam::end() {
 	// this has to happen after all drawing + findCursor()
 	// but before camera.end()
 	if (this->userSettings.cursorDraw.enabled) {
-		
 		//cursorDraw.size is in normalized screen coords
-		const auto cursorDistanceZ = (this->tracking.mouse.world * this->view.opengl.modelMatrix).z;
-		const auto viewHeightAtCursor = tan(this->getFov() / 2.0f * DEG_TO_RAD) * cursorDistanceZ * 2.0f;
+		const auto viewToCursor = this->tracking.mouse.world * this->getModelViewMatrix();
+		const auto viewHeightAtCursor = tan(this->getFov() / 2.0f * DEG_TO_RAD) * viewToCursor.z * 2.0f;
 		auto size = this->userSettings.cursorDraw.size * viewHeightAtCursor;
 		
 		const auto pxToWorldAtCursor = viewHeightAtCursor / this->view.viewport.getHeight();

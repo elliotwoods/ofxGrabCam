@@ -35,6 +35,8 @@ ofxGrabCam::ofxGrabCam() {
 	this->userSettings.trackballRadius = 0.2f;
 	this->userSettings.cursorDraw.enabled = false;
 	this->userSettings.cursorDraw.size = 0.02f;
+	this->userSettings.scrollZoom.enabled = false;
+	this->userSettings.scrollZoom.speed = -0.01f;
 
 	//reset camera orientation and zoom
 	this->reset();
@@ -205,6 +207,31 @@ float ofxGrabCam::getCursorDrawSize() const {
 }
 
 //--------------------------
+void ofxGrabCam::setScrollZoomEnabled(bool enabled) {
+	this->userSettings.scrollZoom.enabled = enabled;
+}
+
+//--------------------------
+bool ofxGrabCam::getScrollZoomEnabled() const {
+	return this->userSettings.scrollZoom.enabled;
+}
+
+//--------------------------
+void ofxGrabCam::toggleScrollZoomEnabled() {
+    this->userSettings.scrollZoom.enabled ^= true;
+}
+
+//--------------------------
+void ofxGrabCam::setScrollZoomSpeed(float scrollZoomSpeed) {
+    this->userSettings.scrollZoom.speed = scrollZoomSpeed;
+}
+
+//--------------------------
+float ofxGrabCam::getScrollZoomSpeed() const {
+    return this->userSettings.scrollZoom.speed;
+}
+
+//--------------------------
 void ofxGrabCam::setMouseActionsEnabled(bool enabled) {
 	this->userSettings.mouseActionsEnabled = enabled;
 }
@@ -305,6 +332,27 @@ void ofxGrabCam::mouseReleased(ofMouseEventArgs & args) {
 	if (this->inputState.mouseDown.button == args.button) {
 		this->inputState.mouseDown.down = false;
 	}
+}
+
+//--------------------------
+void ofxGrabCam::mouseScrolled(ofMouseEventArgs & args) {
+	if (!this->userSettings.mouseActionsEnabled) {
+		return;
+	}
+
+	if (!this->userSettings.scrollZoom.enabled) {
+		return;
+	}
+
+	//calculate relative position from cursor point and scale it
+	static ofVec3f cursorPosition, relPosition;
+        
+	cursorPosition = this->getCursorWorld();
+	relPosition = this->getPosition() - cursorPosition;
+        
+	relPosition *= 1.0f + args.scrollY * this->userSettings.scrollZoom.speed;
+        
+	this->setPosition(cursorPosition + relPosition);
 }
 
 //--------------------------
@@ -439,6 +487,7 @@ void ofxGrabCam::addListeners() {
 	ofAddListener(ofEvents().mouseMoved, this, &ofxGrabCam::mouseMoved);
 	ofAddListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
 	ofAddListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
+	ofAddListener(ofEvents().mouseScrolled, this, &ofxGrabCam::mouseScrolled);
 	ofAddListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
 	ofAddListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
 	ofAddListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);

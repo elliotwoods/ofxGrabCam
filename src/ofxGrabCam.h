@@ -30,6 +30,13 @@ public:
 
 	void	setCursorDrawSize(float);
 	float	getCursorDrawSize() const;
+
+    void    setScrollZoomEnabled(bool);
+    bool    getScrollZoomEnabled() const;
+    void    toggleScrollZoomEnabled();
+    
+    void    setScrollZoomSpeed(float);
+    float   getScrollZoomSpeed() const;
 	
 	void	setMouseActionsEnabled(bool);
 	bool	getMouseActionsEnabled() const;
@@ -52,6 +59,7 @@ public:
 	void    mouseMoved(ofMouseEventArgs & args);
 	void	mousePressed(ofMouseEventArgs & args);
 	void	mouseReleased(ofMouseEventArgs & args);
+	void	mouseScrolled(ofMouseEventArgs & args);
 	void	mouseDragged(ofMouseEventArgs & args);
 	void	keyPressed(ofKeyEventArgs & args);
 	void	keyReleased(ofKeyEventArgs & args);
@@ -117,6 +125,12 @@ protected:
 			bool enabled;
 			float size;
 		} cursorDraw;
+
+		struct {
+			bool enabled;
+			float speed;
+		} scrollZoom;
+
 
 		struct {
 			ofVec3f position;

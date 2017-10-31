@@ -29,6 +29,7 @@ void ofApp::draw() {
     //do your 3d drawing
   }
   camera.end();
+}
 ```
 
 

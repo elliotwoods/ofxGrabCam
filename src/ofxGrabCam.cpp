@@ -139,9 +139,9 @@ void ofxGrabCam::end() {
 				ofDrawRectangle(20, 20, 80, 40);
 
 				stringstream ss;
-				ss << "x: " << ofToString(this->tracking.mouse.world.x, 2) << endl;
-				ss << "y: " << ofToString(this->tracking.mouse.world.y, 2) << endl;
-				ss << "z: " << ofToString(this->tracking.mouse.world.z, 2) << endl;
+				ss << "x: " << ofToString(this->tracking.mouse.world.x, 3) << endl;
+				ss << "y: " << ofToString(this->tracking.mouse.world.y, 3) << endl;
+				ss << "z: " << ofToString(this->tracking.mouse.world.z, 3) << endl;
 
 				ofSetColor(255, 255, 255);
 				ofDrawBitmapString(ss.str(), 30, 30);
@@ -513,5 +513,6 @@ void ofxGrabCam::findCursor() {
 	
 	//find mouse coordinates
 	auto mouseProjected = this->getCursorProjected();
-	this->tracking.mouse.world = this->screenToWorld(mouseProjected);
+	mouseProjected += this->view.viewport.getTopLeft();
+	this->tracking.mouse.world = this->screenToWorld(mouseProjected, this->view.viewport);
 }

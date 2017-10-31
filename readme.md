@@ -13,6 +13,26 @@ Inspired by Google SketchUp (http://sketchup.google.com/)
 Elliot Woods
 http://www.kimchiandchips.com
 
+# Usage
+
+```c++
+//in your app .h
+ofxGrabCam camera
+```
+
+```c++
+//in your .cpp
+
+void ofApp::draw() {
+  camera.begin();
+  {
+    //do your 3d drawing
+  }
+  camera.end();
+```
+
+
+
 # Controls
 ## ofxGrabCam (general)
 Left click drag = rotate

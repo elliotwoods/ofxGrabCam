@@ -138,10 +138,10 @@ void ofxGrabCam::end() {
 				ofSetColor(50, 10, 10);
 				ofDrawRectangle(20, 20, 80, 40);
 
-				stringstream ss;
-				ss << "x: " << ofToString(this->tracking.mouse.world.x, 3) << endl;
-				ss << "y: " << ofToString(this->tracking.mouse.world.y, 3) << endl;
-				ss << "z: " << ofToString(this->tracking.mouse.world.z, 3) << endl;
+				std::stringstream ss;
+                ss << "x: " << ofToString(this->tracking.mouse.world.x, 3) << std::endl;
+				ss << "y: " << ofToString(this->tracking.mouse.world.y, 3) << std::endl;
+				ss << "z: " << ofToString(this->tracking.mouse.world.z, 3) << std::endl;
 
 				ofSetColor(255, 255, 255);
 				ofDrawBitmapString(ss.str(), 30, 30);
@@ -362,19 +362,21 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 	switch (action) {
 	case Action::Orbit:
 	{
-		auto arcEnd = ofVec3f(mouseMovement.x, -mouseMovement.y, -this->userSettings.trackballRadius * this->view.viewport.getWidth()).getNormalized();
+        auto arcEnd = glm::vec3(mouseMovement.x, -mouseMovement.y, -this->userSettings.trackballRadius * this->view.viewport.getWidth());
+        arcEnd = glm::normalize(arcEnd);
+        
 		ofQuaternion rotateCamera;
 		auto cameraOrientation = this->getOrientationQuat();
-		rotateCamera.makeRotate(cameraOrientation * ofVec3f(0.0f, 0.0f, -1.0f), cameraOrientation * arcEnd);
+        rotateCamera.makeRotate(cameraOrientation * glm::vec3(0.0f, 0.0f, -1.0f), cameraOrientation * arcEnd);
 
 		if (this->userSettings.fixUpDirection) {
 			ofQuaternion rotToUp;
-			ofVec3f sideDir = ofCamera::getSideDir() * rotateCamera;
+			ofVec3f sideDir = ofVec3f(ofCamera::getSideDir()) * rotateCamera;
 			rotToUp.makeRotate(sideDir, sideDir * ofVec3f(1.0, 0.0f, 1.0f));
 			rotateCamera *= rotToUp;
 		}
 
-		this->setOrientation(cameraOrientation * rotateCamera);
+		this->setOrientation(ofQuaternion(cameraOrientation) * rotateCamera);
 		ofCamera::setPosition((-cameraToMouse) * rotateCamera + this->tracking.mouse.world);
 		break;
 	}

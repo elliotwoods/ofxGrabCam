@@ -499,7 +499,7 @@ void ofxGrabCam::removeListeners() {
 //--------------------------
 ofxGrabCam::MouseInViewport ofxGrabCam::getMouseInViewport(const ofMouseEventArgs & args) {
 	MouseInViewport mouseInViewport = {
-		ofVec2f(args.x - this->view.viewport.x, args.y - this->view.viewport.y),
+		glm::vec2(args.x - this->view.viewport.x, args.y - this->view.viewport.y),
 		this->view.viewport.inside(args.x, args.y)
 	};
 	return mouseInViewport;

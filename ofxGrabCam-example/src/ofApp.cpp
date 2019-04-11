@@ -1,16 +1,20 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){
+void ofApp::setup(){
 	for (int i=0; i<300; i++)
 	{
-		auto position = ofVec3f(ofRandom(-10, 10),
+		auto position = glm::vec3(
 			ofRandom(-10, 10),
-			ofRandom(-10, 10));
+			ofRandom(-10, 10),
+			ofRandom(-10, 10)
+		);
 		
-		auto color = ofColor(ofRandom(100) + 100,
+		auto color = ofColor(
 			ofRandom(100) + 100,
-			ofRandom(100) + 100);
+			ofRandom(100) + 100,
+			ofRandom(100) + 100
+		);
 
 		this->spheres.push_back({
 			position,
@@ -26,12 +30,12 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update(){
 
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
 
 	//--
 	//draw 3d bits
@@ -95,7 +99,7 @@ void testApp::draw(){
 }
 
 //--------------------------------------------------------------
-void testApp::drawScene() {
+void ofApp::drawScene() {
 	ofSetColor(255, 100, 100);
 	ofDrawGrid(1.0f, 10.0f, true);
 	for (auto & sphere : this->spheres)
@@ -110,7 +114,7 @@ void testApp::drawScene() {
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key) {
+void ofApp::keyPressed(int key) {
 
 	if (key == 'c') {
 		camera.toggleCursorDrawEnabled();

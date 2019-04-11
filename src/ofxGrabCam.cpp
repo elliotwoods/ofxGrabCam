@@ -12,6 +12,8 @@
 #define OFXGRABCAM_SEARCH_WIDTH_PX 8
 #define OFXGRABCAM_RESET_HOLD_MS 500
 
+using namespace std;
+
 //--------------------------
 ofxGrabCam::ofxGrabCam() {
 	this->inputState.listenersAttached = false;
@@ -87,7 +89,9 @@ void ofxGrabCam::end() {
 	// but before camera.end()
 	if (this->userSettings.cursorDraw.enabled) {
 		//cursorDraw.size is in normalized screen coords
-		const auto viewToCursor = this->tracking.mouse.world * this->getModelViewMatrix();
+		auto viewToCursor = this->getModelViewMatrix() * glm::vec4(this->tracking.mouse.world, 1);
+		viewToCursor /= viewToCursor.w;
+
 		const auto viewHeightAtCursor = tan(this->getFov() / 2.0f * DEG_TO_RAD) * viewToCursor.z * 2.0f;
 		auto size = this->userSettings.cursorDraw.size * viewHeightAtCursor;
 		
@@ -159,7 +163,7 @@ void ofxGrabCam::reset() {
 	ofCamera::setNearClip(0.1);
 	ofCamera::setFarClip(1000.0f);
 	this->setPosition(1.0f, 1.0f, -1.0f);
-	this->lookAt(ofVec3f());
+	this->lookAt(glm::vec3());
 }
 
 //--------------------------
@@ -168,15 +172,17 @@ void ofxGrabCam::updateCursorWorld() {
 }
 
 //--------------------------
-const ofVec3f & ofxGrabCam::getCursorWorld() const {
+const glm::vec3 & ofxGrabCam::getCursorWorld() const {
 	return this->tracking.mouse.world;
 }
 
 //--------------------------
-ofVec3f ofxGrabCam::getCursorProjected() const {
-	return ofVec3f(this->tracking.mouse.viewport.position.x,
+glm::vec3 ofxGrabCam::getCursorProjected() const {
+	return glm::vec3(
+		this->tracking.mouse.viewport.position.x,
 		this->tracking.mouse.viewport.position.y,
-		this->tracking.mouse.projectedDepth);
+		this->tracking.mouse.projectedDepth
+	);
 }
 
 //--------------------------
@@ -307,6 +313,16 @@ void ofxGrabCam::mouseReleased(ofMouseEventArgs & args) {
 	}
 }
 
+//from https://stackoverflow.com/questions/34366655/glm-make-rotation-matrix-from-vec3
+glm::mat4 makeRotation(glm::vec3 source, glm::vec3 target) {
+	auto v = glm::cross(source, target);
+	auto angle = acos(
+		glm::dot(source, target) / 
+		(glm::length(source) * glm::length(target))
+	);
+	return glm::rotate(angle, v);
+}
+
 //--------------------------
 void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 	if (!this->userSettings.mouseActionsEnabled) {
@@ -362,20 +378,39 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 	switch (action) {
 	case Action::Orbit:
 	{
-		auto arcEnd = ofVec3f(mouseMovement.x, -mouseMovement.y, -this->userSettings.trackballRadius * this->view.viewport.getWidth()).getNormalized();
-		ofQuaternion rotateCamera;
+		auto arcEnd = glm::vec3(mouseMovement.x, -mouseMovement.y, -this->userSettings.trackballRadius * this->view.viewport.getWidth());
+		arcEnd /= arcEnd.length();
+		
 		auto cameraOrientation = this->getOrientationQuat();
-		rotateCamera.makeRotate(cameraOrientation * ofVec3f(0.0f, 0.0f, -1.0f), cameraOrientation * arcEnd);
 
-		if (this->userSettings.fixUpDirection) {
-			ofQuaternion rotToUp;
-			ofVec3f sideDir = ofCamera::getSideDir() * rotateCamera;
-			rotToUp.makeRotate(sideDir, sideDir * ofVec3f(1.0, 0.0f, 1.0f));
-			rotateCamera *= rotToUp;
+		glm::mat4 rotateCamera;
+		{
+			auto target = cameraOrientation * arcEnd;
+			auto source = cameraOrientation * glm::vec3(0, 0, -1);
+			rotateCamera = makeRotation(source, target);
 		}
 
-		this->setOrientation(cameraOrientation * rotateCamera);
-		ofCamera::setPosition((-cameraToMouse) * rotateCamera + this->tracking.mouse.world);
+		if (this->userSettings.fixUpDirection) {
+			auto sideDir = rotateCamera * glm::vec4(ofCamera::getSideDir(), 1.0f);
+			sideDir /= 1.0f;
+
+			auto rotateToUp = makeRotation(sideDir, sideDir * glm::vec4(1.0, 0.0f, 1.0f, 1.0));
+			if (glm::any(isnan(rotateToUp * glm::vec4(0, 0, 0, 1)))) {
+				// this happens at extreme up/down angles now that we've moved to glm
+				// just ignore these cases for now
+			}
+			else {
+				rotateCamera = rotateToUp * rotateCamera;
+			}
+		}
+
+		this->setOrientation((glm::quat) rotateCamera * cameraOrientation);
+
+		{
+			auto newPosition4 = rotateCamera * glm::vec4(-cameraToMouse, 1.0);
+			newPosition4 /= newPosition4.w;
+			ofCamera::setPosition((glm::vec3) newPosition4 + this->tracking.mouse.world);
+		}
 		break;
 	}
 	case Action::Pan:

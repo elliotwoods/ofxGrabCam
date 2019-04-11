@@ -10,6 +10,8 @@
 #include "ofRectangle.h"
 #include "ofPixels.h"
 #include "ofCamera.h"
+#include "ofGraphics.h"
+#include "ofVectorMath.h"
 
 class ofxGrabCam : public ofCamera {
 public:	
@@ -20,9 +22,9 @@ public:
 	void	end(); ///< Overrides virtual end
 	void	reset();
 	
-	void			updateCursorWorld();
-	const ofVec3f &	getCursorWorld() const;
-	ofVec3f			getCursorProjected() const; // note we use this in findCursor
+	void				updateCursorWorld();
+	const glm::vec3 &	getCursorWorld() const;
+	glm::vec3			getCursorProjected() const; // note we use this in findCursor
 	
 	void	setCursorDrawEnabled(bool);
 	bool	getCursorDrawEnabled() const;
@@ -61,7 +63,7 @@ public:
 	const ofShortPixels & getSampleNeighbourhood() const; // for debugging depth reading
 protected:
 	struct MouseInViewport {
-		ofVec2f position; /// in viewport space
+		glm::vec2 position; /// in viewport space
 		bool withinViewport;
 	};
 
@@ -88,12 +90,12 @@ protected:
 	} inputState;
 
 	struct {	
-		ofQuaternion rotation;
+		glm::quat rotation;
 		bool findMouseThisFrame;
 
 		struct {
 			MouseInViewport viewport; // within viewport pixels
-			ofVec3f world;
+			glm::vec3 world;
 			float projectedDepth;
 		} mouse;
 	} tracking;
@@ -119,8 +121,8 @@ protected:
 		} cursorDraw;
 
 		struct {
-			ofVec3f position;
-			ofQuaternion rotation;
+			glm::vec3 position;
+			glm::quat rotation;
 		} defaultView;
 	} userSettings;
 };

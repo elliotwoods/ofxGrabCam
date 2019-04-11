@@ -4,7 +4,7 @@
 
 #include "ofxGrabCam.h"
 
-class testApp : public ofBaseApp{
+class ofApp : public ofBaseApp{
 
 public:
 	void setup();
@@ -17,10 +17,10 @@ public:
 	ofxGrabCam camera;
 	
 	struct Sphere {
-		ofVec3f position;
+		glm::vec3 position;
 		ofColor color;
 	};
 	vector<Sphere> spheres;
 	
-	ofMatrix4x4 savedPose;
+	glm::mat4x4 savedPose;
 };

@@ -415,7 +415,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 	}
 	case Action::Pan:
 	{
-		float distanceToMouse = cameraToMouse.length();
+		float distanceToMouse = glm::length(cameraToMouse);
 		auto halfFov = (ofCamera::getFov() / 2.0) * DEG_TO_RAD;
 		float grad = tan(halfFov) * 2.0f;
 		ofCamera::move(mouseMovement.x / this->view.viewport.getWidth()  *-cameraSideDirection * distanceToMouse * aspectRatio * grad);

@@ -379,7 +379,7 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 	case Action::Orbit:
 	{
 		auto arcEnd = glm::vec3(mouseMovement.x, -mouseMovement.y, -this->userSettings.trackballRadius * this->view.viewport.getWidth());
-		arcEnd /= arcEnd.length();
+		arcEnd /= glm::length(arcEnd);
 		
 		auto cameraOrientation = this->getOrientationQuat();
 

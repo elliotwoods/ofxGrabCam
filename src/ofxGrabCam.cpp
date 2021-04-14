@@ -522,6 +522,12 @@ void ofxGrabCam::findCursor() {
 	auto cropRect = ofRectangle(0, 0, this->view.viewport.width, this->view.viewport.height);
 	sampleRect = sampleRect.getIntersection(cropRect);
 
+	//make sure width and height are power 2
+	{
+		sampleRect.width = 1 << (int) floor(log2(sampleRect.width));
+		sampleRect.height = 1 << (int)floor(log2(sampleRect.height));
+	}
+
 	//this should always be true since findCursor is only called whilst cursor is inside viewport
 	if (sampleRect.width > 0 && sampleRect.height > 0) {
 		//check if we need to reallocate our local buffer for depth pixels
@@ -530,7 +536,13 @@ void ofxGrabCam::findCursor() {
 		}
 
 		//sample depth pixels in the neighbourhood of the mouse
-		glReadPixels(sampleRect.x, sampleRect.y, sampleRect.width, sampleRect.height, GL_DEPTH_COMPONENT, GL_UNSIGNED_SHORT, this->view.sampleNeighbourhood.getData());
+		glReadPixels(sampleRect.x
+			, sampleRect.y
+			, sampleRect.width
+			, sampleRect.height
+			, GL_DEPTH_COMPONENT
+			, GL_UNSIGNED_SHORT
+			, this->view.sampleNeighbourhood.getData());
 
 		//pick the closest pixel to use as a sample
 		for (auto & pixel : this->view.sampleNeighbourhood) {

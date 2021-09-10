@@ -111,7 +111,9 @@ void ofxGrabCam::end() {
 			
 			//draw line outer
 			glPolygonOffset(1.0f, -1.0f);
+#ifndef TARGET_LINUX
 			glEnable(GL_POLYGON_OFFSET_LINE);
+#endif
 			ofSetColor(0);
 			ofSetLineWidth(4.0f);
 			size += pxToWorldAtCursor * 4.0f;

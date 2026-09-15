@@ -40,6 +40,8 @@ Left click drag = rotate
 
 Right click drag = zoom
 
+Mouse wheel = zoom towards the point under the cursor (scroll up to zoom in)
+
 hold 'h' whilst left click drag = pan
 
 'r' key = reset

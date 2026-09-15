@@ -8,6 +8,7 @@
 
 #include "ofxGrabCam.h"
 #include "of3dGraphics.h"
+#include <cmath>
 
 #define OFXGRABCAM_SEARCH_WIDTH_PX 8
 #define OFXGRABCAM_RESET_HOLD_MS 500
@@ -79,6 +80,19 @@ void ofxGrabCam::end() {
 	if (this->tracking.findMouseThisFrame) {
 		findCursor();
 		this->tracking.findMouseThisFrame = false; //lower the flag
+	}
+
+	// Dolly after sampling this frame's depth so wheel zoom follows the point under the mouse.
+	if (this->tracking.pendingScroll != 0) {
+		const auto cameraToMouse = this->tracking.mouse.world - this->getPosition();
+		const auto distance = glm::length(cameraToMouse);
+		if (this->userSettings.mouseActionsEnabled && std::isfinite(distance) && distance > 0) {
+			const auto factor = std::exp(-this->tracking.pendingScroll * 0.1f);
+			const auto minimumDistance = std::max(this->getNearClip() * 2.0f, 0.0001f);
+			const auto newDistance = std::max(distance * factor, std::min(distance, minimumDistance));
+			this->move(cameraToMouse * (1.0f - newDistance / distance));
+		}
+		this->tracking.pendingScroll = 0;
 	}
 	
 	//--
@@ -436,6 +450,21 @@ void ofxGrabCam::mouseDragged(ofMouseEventArgs & args) {
 }
 
 //--------------------------
+void ofxGrabCam::mouseScrolled(ofMouseEventArgs & args) {
+	if (!this->userSettings.mouseActionsEnabled || this->inputState.mouseDown.down
+		|| !std::isfinite(args.scrollY) || args.scrollY == 0) {
+		return;
+	}
+	const auto mouse = this->getMouseInViewport(args);
+	if (!mouse.withinViewport) {
+		return;
+	}
+	this->tracking.mouse.viewport = mouse;
+	this->tracking.findMouseThisFrame = true;
+	this->tracking.pendingScroll = ofClamp(this->tracking.pendingScroll + args.scrollY, -20.0f, 20.0f);
+}
+
+//--------------------------
 void ofxGrabCam::keyPressed(ofKeyEventArgs & args) {
 	if (args.key == 'r') {
 		if (!this->inputState.keysDown.r) {
@@ -477,6 +506,7 @@ void ofxGrabCam::addListeners() {
 	ofAddListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
 	ofAddListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
 	ofAddListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+	ofAddListener(ofEvents().mouseScrolled, this, &ofxGrabCam::mouseScrolled);
 	ofAddListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
 	ofAddListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
 
@@ -491,6 +521,7 @@ void ofxGrabCam::removeListeners() {
 		ofRemoveListener(ofEvents().mousePressed, this, &ofxGrabCam::mousePressed);
 		ofRemoveListener(ofEvents().mouseReleased, this, &ofxGrabCam::mouseReleased);
 		ofRemoveListener(ofEvents().mouseDragged, this, &ofxGrabCam::mouseDragged);
+		ofRemoveListener(ofEvents().mouseScrolled, this, &ofxGrabCam::mouseScrolled);
 		ofRemoveListener(ofEvents().keyPressed, this, &ofxGrabCam::keyPressed);
 		ofRemoveListener(ofEvents().keyReleased, this, &ofxGrabCam::keyReleased);
 
@@ -538,8 +569,8 @@ void ofxGrabCam::findCursor() {
 		}
 
 		//sample depth pixels in the neighbourhood of the mouse
-		glReadPixels(sampleRect.x
-			, sampleRect.y
+		glReadPixels(sampleRect.x + this->view.opengl.viewport[0]
+			, sampleRect.y + this->view.opengl.viewport[1]
 			, sampleRect.width
 			, sampleRect.height
 			, GL_DEPTH_COMPONENT

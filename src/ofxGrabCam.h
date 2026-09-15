@@ -55,6 +55,7 @@ public:
 	void	mousePressed(ofMouseEventArgs & args);
 	void	mouseReleased(ofMouseEventArgs & args);
 	void	mouseDragged(ofMouseEventArgs & args);
+	void	mouseScrolled(ofMouseEventArgs & args);
 	void	keyPressed(ofKeyEventArgs & args);
 	void	keyReleased(ofKeyEventArgs & args);
 	//
@@ -92,6 +93,7 @@ protected:
 	struct {	
 		glm::quat rotation;
 		bool findMouseThisFrame;
+		float pendingScroll = 0.0f;
 
 		struct {
 			MouseInViewport viewport; // within viewport pixels
